@@ -1,25 +1,20 @@
-<h1> Listado de funcionarios </h1>
 <?php
-echo 'Probando la vista index!!';
+/* @var $this FuncionarioController */
+/* @var $dataProvider CActiveDataProvider */
+
+$this->breadcrumbs=array(
+	'Funcionarios',
+);
+
+$this->menu=array(
+	array('label'=>'Create Funcionario', 'url'=>array('create')),
+	array('label'=>'Manage Funcionario', 'url'=>array('admin')),
+);
 ?>
-<table>
 
-	<tr>
-	<th>Numero</th>
-	<th>Nombre</th>
-	<th>Cargo</th>
-	<th>Ver</th>
-	<th>Editar</th>
+<h1>Funcionarios</h1>
 
-	</tr>	
-	<?php foreach ($funcionario as $t){?>
-	<tr>	
-	<td><?php echo $t->nu_funcionario;?></td>
-	<td><?php echo $t->al_nombre_funcionario;?></td>
-	<td><?php echo $t->al_cargo_funcionario;?></td>
-	<td><?php echo CHtml::link('Ver',array('view','nu_funcionario'=>$t->nu_funcionario))?></td>
-	<td><?php echo CHtml::link('Editar',array('edit','nu_funcionario'=>$t->nu_funcionario))?></td>
-	
-	</tr>
-	<?php } ?> 
-</table>
+<?php $this->widget('zii.widgets.CListView', array(
+	'dataProvider'=>$dataProvider,
+	'itemView'=>'_view',
+)); ?>
