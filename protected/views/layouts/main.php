@@ -30,10 +30,14 @@
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Inicio', 'url'=>array('/site/index')),
-				array('label'=>'Saludo', 'url'=>array('/saludo/index')),
-				array('label'=>'Sobre', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contacto', 'url'=>array('/site/contact')),
+				array('label'=>'Solicitudes', 'url'=>array('/saludo/index')),
+				array('label'=>'Planificacion', 'url'=>array('/saludo/index')),
 				array('label'=>'Funcionarios','url'=>array('funcionario/index')),
+				array('label'=>'Articulos','url'=>array('articuloTecnologico/index')),
+				array('label'=>'Roles', 'url'=>array('/rolFuncionario/index')),
+				array('label'=>'Tipo', 'url'=>array('/tipoArticulo/index')),
+				array('label'=>'Clasificar', 'url'=>array('/clasificacionArticulo/index')),
+				
 				array('label'=>'Entrar', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Salir ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),

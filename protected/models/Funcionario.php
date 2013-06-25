@@ -12,11 +12,6 @@
  * @property string $al_clave_login
  * @property string $al_apellido_funcionario
  * @property integer $nu_cedula_funcionario
- *
- * The followings are the available model relations:
- * @property Departamento[] $departamentos
- * @property RequisicionCompra[] $requisicionCompras
- * @property RolFuncionario $nuRol
  */
 class Funcionario extends CActiveRecord
 {
@@ -62,9 +57,6 @@ class Funcionario extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'departamentos' => array(self::HAS_MANY, 'Departamento', 'nu_funcionario'),
-			'requisicionCompras' => array(self::HAS_MANY, 'RequisicionCompra', 'nu_funcionario'),
-			'nuRol' => array(self::BELONGS_TO, 'RolFuncionario', 'nu_rol'),
 		);
 	}
 
@@ -75,13 +67,14 @@ class Funcionario extends CActiveRecord
 	{
 		return array(
 			'nu_funcionario' => 'Nu Funcionario',
-			'nu_rol' => 'Rol',
 			'al_nombre_funcionario' => 'Nombre de funcionario',
+			'al_apellido_funcionario' => 'Apellido funcionario',
+			'nu_cedula_funcionario' => 'Cedula de funcionario',
 			'al_cargo_funcionario' => 'Cargo de funcionario',
-			'al_usuario_login' => 'Usuario de login',
-			'al_clave_login' => 'Clave de login',
-			'al_apellido_funcionario' => 'Apellido de funcionario',
-			'nu_cedula_funcionario' => 'Cedula funcionario',
+			'nu_rol' => 'Rol de funcionario',
+			'al_usuario_login' => 'Usuario de entrada',
+			'al_clave_login' => 'Clave de entrada',
+			
 		);
 	}
 

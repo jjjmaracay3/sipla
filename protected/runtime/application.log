@@ -504,3 +504,1003 @@ Stack trace:
 REQUEST_URI=/Sipla/funcionario/create.jsp
 HTTP_REFERER=http://localhost/Sipla/funcionario/create.jsp
 ---
+2013/06/24 13:27:22 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «al_usuario_loguin»
+DETAIL:  Ya existe la llave (al_usuario_login)=(jmaracay).. La sentencia SQL ejecutada fue: INSERT INTO "funcionario" ("al_nombre_funcionario", "nu_rol", "al_cargo_funcionario", "al_usuario_login", "al_clave_login", "al_apellido_funcionario", "nu_cedula_funcionario") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6).
+in /var/www/Sipla/protected/controllers/FuncionarioController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 13:27:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «al_usuario_loguin»
+DETAIL:  Ya existe la llave (al_usuario_login)=(jmaracay).. The SQL statement executed was: INSERT INTO "funcionario" ("al_nombre_funcionario", "nu_rol", "al_cargo_funcionario", "al_usuario_login", "al_clave_login", "al_apellido_funcionario", "nu_cedula_funcionario") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/FuncionarioController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): FuncionarioController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('funcionario/cre...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/funcionario/create.jsp
+HTTP_REFERER=http://localhost/Sipla/funcionario/create.jsp
+---
+2013/06/24 14:48:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "articulo"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articulo')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sipla/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sipla/articulo
+---
+2013/06/24 14:49:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "artiulotecnologico/index"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('artiulotecnolog...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sipla/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sipla/artiulotecnologico/index.jsp
+---
+2013/06/24 15:35:36 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[22021]: Character not in repertoire: 7 ERROR:  secuencia de bytes no válida para codificación «UTF8»: 0xf36e2075. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 15:35:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[22021]: Character not in repertoire: 7 ERROR:  secuencia de bytes no válida para codificación «UTF8»: 0xf36e2075. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 15:36:04 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[22021]: Character not in repertoire: 7 ERROR:  secuencia de bytes no válida para codificación «UTF8»: 0xf36e2075. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 15:36:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[22021]: Character not in repertoire: 7 ERROR:  secuencia de bytes no válida para codificación «UTF8»: 0xf36e2075. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 15:36:27 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para el tipo numeric: «150,00». La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 15:36:27 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para el tipo numeric: «150,00». The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 15:41:06 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[22021]: Character not in repertoire: 7 ERROR:  secuencia de bytes no válida para codificación «UTF8»: 0xf36e2062. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 15:41:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[22021]: Character not in repertoire: 7 ERROR:  secuencia de bytes no válida para codificación «UTF8»: 0xf36e2062. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 15:41:24 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[22021]: Character not in repertoire: 7 ERROR:  secuencia de bytes no válida para codificación «UTF8»: 0xf36e2062. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 15:41:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[22021]: Character not in repertoire: 7 ERROR:  secuencia de bytes no válida para codificación «UTF8»: 0xf36e2062. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 15:41:36 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[22021]: Character not in repertoire: 7 ERROR:  secuencia de bytes no válida para codificación «UTF8»: 0xf36e2062. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 15:41:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[22021]: Character not in repertoire: 7 ERROR:  secuencia de bytes no válida para codificación «UTF8»: 0xf36e2062. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 15:41:46 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[22021]: Character not in repertoire: 7 ERROR:  secuencia de bytes no válida para codificación «UTF8»: 0xf36e2062. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 15:41:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[22021]: Character not in repertoire: 7 ERROR:  secuencia de bytes no válida para codificación «UTF8»: 0xf36e2062. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 15:41:52 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[22021]: Character not in repertoire: 7 ERROR:  secuencia de bytes no válida para codificación «UTF8»: 0xf36e2062. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 15:41:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[22021]: Character not in repertoire: 7 ERROR:  secuencia de bytes no válida para codificación «UTF8»: 0xf36e2062. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 15:42:03 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[22021]: Character not in repertoire: 7 ERROR:  secuencia de bytes no válida para codificación «UTF8»: 0xf36e2062. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 15:42:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[22021]: Character not in repertoire: 7 ERROR:  secuencia de bytes no válida para codificación «UTF8»: 0xf36e2062. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 15:47:44 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_pk»
+DETAIL:  Ya existe la llave (nu_articulo)=(1).. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 15:47:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_pk»
+DETAIL:  Ya existe la llave (nu_articulo)=(1).. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 15:51:45 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_pk»
+DETAIL:  Ya existe la llave (nu_articulo)=(2).. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 15:51:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_pk»
+DETAIL:  Ya existe la llave (nu_articulo)=(2).. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 15:52:06 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 15:52:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 15:56:44 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 15:56:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 15:58:42 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 15:58:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 15:59:15 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 15:59:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 19:13:51 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 19:13:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 19:25:52 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 19:25:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 21:27:10 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 21:27:10 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 21:27:17 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 21:27:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 21:27:21 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 21:27:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 21:27:26 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 21:27:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 21:32:19 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 21:32:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 21:35:16 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 21:35:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 21:45:46 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 21:45:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 21:46:06 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 21:46:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 21:48:14 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 21:48:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 21:53:04 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «funcionario» viola la llave foránea «rol_funcionario_funcionario_fk»
+DETAIL:  La llave (nu_rol)=(2) no está presente en la tabla «rol_funcionario».. La sentencia SQL ejecutada fue: INSERT INTO "funcionario" ("nu_rol", "al_nombre_funcionario", "al_cargo_funcionario", "al_usuario_login", "al_clave_login", "al_apellido_funcionario", "nu_cedula_funcionario") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6).
+in /var/www/Sipla/protected/controllers/FuncionarioController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 21:53:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «funcionario» viola la llave foránea «rol_funcionario_funcionario_fk»
+DETAIL:  La llave (nu_rol)=(2) no está presente en la tabla «rol_funcionario».. The SQL statement executed was: INSERT INTO "funcionario" ("nu_rol", "al_nombre_funcionario", "al_cargo_funcionario", "al_usuario_login", "al_clave_login", "al_apellido_funcionario", "nu_cedula_funcionario") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/FuncionarioController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): FuncionarioController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('funcionario/cre...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/funcionario/create.jsp
+HTTP_REFERER=http://localhost/Sipla/funcionario/create.jsp
+---
+2013/06/24 21:53:19 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «funcionario» viola la llave foránea «rol_funcionario_funcionario_fk»
+DETAIL:  La llave (nu_rol)=(2) no está presente en la tabla «rol_funcionario».. La sentencia SQL ejecutada fue: INSERT INTO "funcionario" ("nu_rol", "al_nombre_funcionario", "al_cargo_funcionario", "al_usuario_login", "al_clave_login", "al_apellido_funcionario", "nu_cedula_funcionario") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6).
+in /var/www/Sipla/protected/controllers/FuncionarioController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 21:53:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «funcionario» viola la llave foránea «rol_funcionario_funcionario_fk»
+DETAIL:  La llave (nu_rol)=(2) no está presente en la tabla «rol_funcionario».. The SQL statement executed was: INSERT INTO "funcionario" ("nu_rol", "al_nombre_funcionario", "al_cargo_funcionario", "al_usuario_login", "al_clave_login", "al_apellido_funcionario", "nu_cedula_funcionario") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/FuncionarioController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): FuncionarioController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('funcionario/cre...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/funcionario/create.jsp
+HTTP_REFERER=http://localhost/Sipla/funcionario/create.jsp
+---
+2013/06/24 21:53:36 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «funcionario» viola la llave foránea «rol_funcionario_funcionario_fk»
+DETAIL:  La llave (nu_rol)=(2) no está presente en la tabla «rol_funcionario».. La sentencia SQL ejecutada fue: INSERT INTO "funcionario" ("nu_rol", "al_nombre_funcionario", "al_cargo_funcionario", "al_usuario_login", "al_clave_login", "al_apellido_funcionario", "nu_cedula_funcionario") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6).
+in /var/www/Sipla/protected/controllers/FuncionarioController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 21:53:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «funcionario» viola la llave foránea «rol_funcionario_funcionario_fk»
+DETAIL:  La llave (nu_rol)=(2) no está presente en la tabla «rol_funcionario».. The SQL statement executed was: INSERT INTO "funcionario" ("nu_rol", "al_nombre_funcionario", "al_cargo_funcionario", "al_usuario_login", "al_clave_login", "al_apellido_funcionario", "nu_cedula_funcionario") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/FuncionarioController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): FuncionarioController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('funcionario/cre...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/funcionario/create.jsp
+HTTP_REFERER=http://localhost/Sipla/funcionario/create.jsp
+---
+2013/06/24 21:55:10 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 21:55:10 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 21:55:17 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «al_modelo_articulo»
+DETAIL:  Ya existe la llave (al_modelo_articulo)=(das).. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 21:55:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «al_modelo_articulo»
+DETAIL:  Ya existe la llave (al_modelo_articulo)=(das).. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 21:55:25 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «al_modelo_articulo»
+DETAIL:  Ya existe la llave (al_modelo_articulo)=(das).. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 21:55:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «al_modelo_articulo»
+DETAIL:  Ya existe la llave (al_modelo_articulo)=(das).. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 21:55:40 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «al_modelo_articulo»
+DETAIL:  Ya existe la llave (al_modelo_articulo)=(das).. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 21:55:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «al_modelo_articulo»
+DETAIL:  Ya existe la llave (al_modelo_articulo)=(das).. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 21:55:56 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «al_modelo_articulo»
+DETAIL:  Ya existe la llave (al_modelo_articulo)=(das).. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 21:55:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «al_modelo_articulo»
+DETAIL:  Ya existe la llave (al_modelo_articulo)=(das).. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 21:56:40 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/24 21:56:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_descripcion_articulo", "al_marca_articulo", "al_modelo_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/06/24 21:57:18 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. La sentencia SQL ejecutada fue: UPDATE "articulo_tecnologico" SET "nu_articulo"=:yp0, "nu_tipo_articulo"=:yp1, "al_nombre_articulo"=:yp2, "al_descripcion_articulo"=:yp3, "al_marca_articulo"=:yp4, "al_modelo_articulo"=:yp5, "de_precio_unitario"=:yp6, "al_color_articulo"=:yp7, "al_unidad_medida"=:yp8 WHERE "articulo_tecnologico"."nu_articulo"=27.
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (97)
+in /var/www/Sipla/index.php (13)
+2013/06/24 21:57:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «articulo_tecnologico_idx»
+DETAIL:  Ya existe la llave (al_nombre_articulo)=(Mouse).. The SQL statement executed was: UPDATE "articulo_tecnologico" SET "nu_articulo"=:yp0, "nu_tipo_articulo"=:yp1, "al_nombre_articulo"=:yp2, "al_descripcion_articulo"=:yp3, "al_marca_articulo"=:yp4, "al_modelo_articulo"=:yp5, "de_precio_unitario"=:yp6, "al_color_articulo"=:yp7, "al_unidad_medida"=:yp8 WHERE "articulo_tecnologico"."nu_articulo"=27' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1691): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1070): CActiveRecord->updateByPk(27, Array)
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->update(NULL)
+#3 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(97): CActiveRecord->save()
+#4 [internal function]: ArticuloTecnologicoController->actionUpdate('27')
+#5 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ArticuloTecnologicoController), Array)
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ArticuloTecnologicoController), Object(ReflectionMethod), Array)
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#17 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /var/www/Sipla/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/update/27.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/update/27.jsp
+---
