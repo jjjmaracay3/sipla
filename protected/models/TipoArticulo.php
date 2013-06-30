@@ -58,7 +58,7 @@ class TipoArticulo extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'articuloTecnologicos' => array(self::HAS_MANY, 'ArticuloTecnologico', 'nu_tipo_articulo'),
-			'nuClasificacionArticulo' => array(self::BELONGS_TO, 'ClasificacionArticulo', 'nu_clasificacion_articulo'),
+			'clasificacion' => array(self::BELONGS_TO, 'ClasificacionArticulo', 'nu_clasificacion_articulo'),
 		);
 	}
 
@@ -68,10 +68,10 @@ class TipoArticulo extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'nu_tipo_articulo' => 'Nu Tipo Articulo',
-			'nu_clasificacion_articulo' => 'Nu Clasificacion Articulo',
-			'al_nombre_tipo' => 'Al Nombre Tipo',
-			'al_descripcion_tipo' => 'Al Descripcion Tipo',
+			'nu_tipo_articulo' => 'Numero Tipo Articulo',
+			'nu_clasificacion_articulo' => 'Clasificacion Articulo',
+			'al_nombre_tipo' => 'Nombre Tipo',
+			'al_descripcion_tipo' => 'Descripcion Tipo',
 		);
 	}
 

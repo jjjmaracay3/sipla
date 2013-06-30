@@ -6,7 +6,7 @@
  * The followings are the available columns in table 'clasificacion_articulo':
  * @property integer $nu_clasificacion_articulo
  * @property string $al_nombre_clasificacion
- * @property string $al_descripcion_articulo
+ * @property string $al_descripcion_clasificacion
  *
  * The followings are the available model relations:
  * @property TipoArticulo[] $tipoArticulos
@@ -39,10 +39,11 @@ class ClasificacionArticulo extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('al_nombre_clasificacion, al_descripcion_articulo', 'required'),
+			array('al_nombre_clasificacion', 'required'),
+			array('al_descripcion_clasificacion', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('nu_clasificacion_articulo, al_nombre_clasificacion, al_descripcion_articulo', 'safe', 'on'=>'search'),
+			array('nu_clasificacion_articulo, al_nombre_clasificacion, al_descripcion_clasificacion', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,9 +65,9 @@ class ClasificacionArticulo extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'nu_clasificacion_articulo' => 'Nu Clasificacion Articulo',
-			'al_nombre_clasificacion' => 'Al Nombre Clasificacion',
-			'al_descripcion_articulo' => 'Al Descripcion Articulo',
+			'nu_clasificacion_articulo' => 'Numero Clasificacion Articulo',
+			'al_nombre_clasificacion' => 'Nombre Clasificacion',
+			'al_descripcion_clasificacion' => 'Descripcion Clasificacion',
 		);
 	}
 
@@ -83,7 +84,7 @@ class ClasificacionArticulo extends CActiveRecord
 
 		$criteria->compare('nu_clasificacion_articulo',$this->nu_clasificacion_articulo);
 		$criteria->compare('al_nombre_clasificacion',$this->al_nombre_clasificacion,true);
-		$criteria->compare('al_descripcion_articulo',$this->al_descripcion_articulo,true);
+		$criteria->compare('al_descripcion_clasificacion',$this->al_descripcion_clasificacion,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

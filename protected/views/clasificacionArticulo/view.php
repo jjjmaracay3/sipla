@@ -23,6 +23,6 @@ $this->menu=array(
 	'attributes'=>array(
 		'nu_clasificacion_articulo',
 		'al_nombre_clasificacion',
-		'al_descripcion_articulo',
+		'al_descripcion_clasificacion',
 	),
 )); ?>

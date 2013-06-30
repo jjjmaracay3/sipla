@@ -10,15 +10,11 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nu_tipo_articulo')); ?>:</b>
-	<?php echo CHtml::encode($data->nu_tipo_articulo); ?>
+	<?php echo CHtml::encode($data->tipo->al_nombre_tipo); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('al_nombre_articulo')); ?>:</b>
 	<?php echo CHtml::encode($data->al_nombre_articulo); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('al_descripcion_articulo')); ?>:</b>
-	<?php echo CHtml::encode($data->al_descripcion_articulo); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('al_marca_articulo')); ?>:</b>
@@ -27,6 +23,10 @@
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('al_modelo_articulo')); ?>:</b>
 	<?php echo CHtml::encode($data->al_modelo_articulo); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('al_descripcion_articulo')); ?>:</b>
+	<?php echo CHtml::encode($data->al_descripcion_articulo); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('de_precio_unitario')); ?>:</b>

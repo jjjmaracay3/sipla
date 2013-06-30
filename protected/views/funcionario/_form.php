@@ -16,6 +16,12 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'nu_numero_departamento'); ?>
+		<?php echo $form->textField($model,'nu_numero_departamento'); ?>
+		<?php echo $form->error($model,'nu_numero_departamento'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'nu_rol'); ?>
 		<?php echo $form->textField($model,'nu_rol'); ?>
 		<?php echo $form->error($model,'nu_rol'); ?>
@@ -28,9 +34,27 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'al_apellido_funcionario'); ?>
+		<?php echo $form->textField($model,'al_apellido_funcionario'); ?>
+		<?php echo $form->error($model,'al_apellido_funcionario'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'nu_cedula_funcionario'); ?>
+		<?php echo $form->textField($model,'nu_cedula_funcionario'); ?>
+		<?php echo $form->error($model,'nu_cedula_funcionario'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'al_cargo_funcionario'); ?>
 		<?php echo $form->textField($model,'al_cargo_funcionario'); ?>
 		<?php echo $form->error($model,'al_cargo_funcionario'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'al_correo_funcionario'); ?>
+		<?php echo $form->textField($model,'al_correo_funcionario'); ?>
+		<?php echo $form->error($model,'al_correo_funcionario'); ?>
 	</div>
 
 	<div class="row">
@@ -43,18 +67,6 @@
 		<?php echo $form->labelEx($model,'al_clave_login'); ?>
 		<?php echo $form->textField($model,'al_clave_login'); ?>
 		<?php echo $form->error($model,'al_clave_login'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'al_apellido_funcionario'); ?>
-		<?php echo $form->textField($model,'al_apellido_funcionario'); ?>
-		<?php echo $form->error($model,'al_apellido_funcionario'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'nu_cedula_funcionario'); ?>
-		<?php echo $form->textField($model,'nu_cedula_funcionario'); ?>
-		<?php echo $form->error($model,'nu_cedula_funcionario'); ?>
 	</div>
 
 	<div class="row buttons">

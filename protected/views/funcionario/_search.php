@@ -17,6 +17,11 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'nu_numero_departamento'); ?>
+		<?php echo $form->textField($model,'nu_numero_departamento'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'nu_rol'); ?>
 		<?php echo $form->textField($model,'nu_rol'); ?>
 	</div>
@@ -27,8 +32,23 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'al_apellido_funcionario'); ?>
+		<?php echo $form->textField($model,'al_apellido_funcionario'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'nu_cedula_funcionario'); ?>
+		<?php echo $form->textField($model,'nu_cedula_funcionario'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'al_cargo_funcionario'); ?>
 		<?php echo $form->textField($model,'al_cargo_funcionario'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'al_correo_funcionario'); ?>
+		<?php echo $form->textField($model,'al_correo_funcionario'); ?>
 	</div>
 
 	<div class="row">
@@ -39,16 +59,6 @@
 	<div class="row">
 		<?php echo $form->label($model,'al_clave_login'); ?>
 		<?php echo $form->textField($model,'al_clave_login'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'al_apellido_funcionario'); ?>
-		<?php echo $form->textField($model,'al_apellido_funcionario'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'nu_cedula_funcionario'); ?>
-		<?php echo $form->textField($model,'nu_cedula_funcionario'); ?>
 	</div>
 
 	<div class="row buttons">

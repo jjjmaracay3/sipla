@@ -28,12 +28,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'al_descripcion_articulo'); ?>
-		<?php echo $form->textField($model,'al_descripcion_articulo'); ?>
-		<?php echo $form->error($model,'al_descripcion_articulo'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'al_marca_articulo'); ?>
 		<?php echo $form->textField($model,'al_marca_articulo'); ?>
 		<?php echo $form->error($model,'al_marca_articulo'); ?>
@@ -43,6 +37,12 @@
 		<?php echo $form->labelEx($model,'al_modelo_articulo'); ?>
 		<?php echo $form->textField($model,'al_modelo_articulo'); ?>
 		<?php echo $form->error($model,'al_modelo_articulo'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'al_descripcion_articulo'); ?>
+		<?php echo $form->textField($model,'al_descripcion_articulo'); ?>
+		<?php echo $form->error($model,'al_descripcion_articulo'); ?>
 	</div>
 
 	<div class="row">

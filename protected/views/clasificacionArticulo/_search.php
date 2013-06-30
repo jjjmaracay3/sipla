@@ -22,8 +22,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'al_descripcion_articulo'); ?>
-		<?php echo $form->textField($model,'al_descripcion_articulo'); ?>
+		<?php echo $form->label($model,'al_descripcion_clasificacion'); ?>
+		<?php echo $form->textField($model,'al_descripcion_clasificacion'); ?>
 	</div>
 
 	<div class="row buttons">

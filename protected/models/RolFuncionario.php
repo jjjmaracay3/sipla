@@ -9,8 +9,8 @@
  * @property string $al_descipcion_rol
  *
  * The followings are the available model relations:
- * @property Seccion[] $seccions
  * @property Funcionario[] $funcionarios
+ * @property RolModulo $rolModulo
  */
 class RolFuncionario extends CActiveRecord
 {
@@ -55,8 +55,8 @@ class RolFuncionario extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'seccions' => array(self::HAS_MANY, 'Seccion', 'nu_rol'),
 			'funcionarios' => array(self::HAS_MANY, 'Funcionario', 'nu_rol'),
+			'rolModulo' => array(self::HAS_ONE, 'RolModulo', 'nu_rol'),
 		);
 	}
 
@@ -66,9 +66,9 @@ class RolFuncionario extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'nu_rol' => 'Nu Rol',
-			'al_nombre_rol' => 'Al Nombre Rol',
-			'al_descipcion_rol' => 'Al Descipcion Rol',
+			'nu_rol' => 'Numero Rol',
+			'al_nombre_rol' => 'Nombre Rol',
+			'al_descipcion_rol' => 'Descipcion Rol',
 		);
 	}
 

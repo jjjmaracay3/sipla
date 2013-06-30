@@ -30,11 +30,12 @@
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Inicio', 'url'=>array('/site/index')),
-				array('label'=>'Solicitudes', 'url'=>array('/saludo/index')),
-				array('label'=>'Planificacion', 'url'=>array('/saludo/index')),
+				array('label'=>'Solicitudes', 'url'=>array('/solicitud/index')),
+				array('label'=>'Detalle', 'url'=>array('/detalleSolicitud/index')),
+				array('label'=>'Departamento', 'url'=>array('/departamento/index')),
 				array('label'=>'Funcionarios','url'=>array('funcionario/index')),
-				array('label'=>'Articulos','url'=>array('articuloTecnologico/index')),
 				array('label'=>'Roles', 'url'=>array('/rolFuncionario/index')),
+				array('label'=>'Articulos','url'=>array('articuloTecnologico/index')),
 				array('label'=>'Tipo', 'url'=>array('/tipoArticulo/index')),
 				array('label'=>'Clasificar', 'url'=>array('/clasificacionArticulo/index')),
 				

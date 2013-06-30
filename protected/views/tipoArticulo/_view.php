@@ -10,7 +10,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nu_clasificacion_articulo')); ?>:</b>
-	<?php echo CHtml::encode($data->nu_clasificacion_articulo); ?>
+	<?php echo CHtml::encode($data->clasificacion->al_nombre_clasificacion); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('al_nombre_tipo')); ?>:</b>

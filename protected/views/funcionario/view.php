@@ -22,12 +22,14 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'nu_funcionario',
+		'nu_numero_departamento',
 		'nu_rol',
 		'al_nombre_funcionario',
-		'al_cargo_funcionario',
-		'al_usuario_login',
-		'al_clave_login',
 		'al_apellido_funcionario',
 		'nu_cedula_funcionario',
+		'al_cargo_funcionario',
+		'al_correo_funcionario',
+		'al_usuario_login',
+		'al_clave_login',
 	),
 )); ?>

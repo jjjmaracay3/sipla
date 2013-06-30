@@ -27,11 +27,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'al_descripcion_articulo'); ?>
-		<?php echo $form->textField($model,'al_descripcion_articulo'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'al_marca_articulo'); ?>
 		<?php echo $form->textField($model,'al_marca_articulo'); ?>
 	</div>
@@ -39,6 +34,11 @@
 	<div class="row">
 		<?php echo $form->label($model,'al_modelo_articulo'); ?>
 		<?php echo $form->textField($model,'al_modelo_articulo'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'al_descripcion_articulo'); ?>
+		<?php echo $form->textField($model,'al_descripcion_articulo'); ?>
 	</div>
 
 	<div class="row">
