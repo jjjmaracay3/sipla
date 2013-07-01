@@ -63,7 +63,7 @@ class Solicitud extends CActiveRecord
 			'notaEntregas' => array(self::HAS_MANY, 'NotaEntrega', 'nu_solicitud'),
 			'departamento' => array(self::BELONGS_TO, 'Departamento', 'nu_numero_departamento'),
 			'funcionario' => array(self::BELONGS_TO, 'Funcionario', 'nu_funcionario'),
-			'detalleSolicituds' => array(self::HAS_MANY, 'DetalleSolicitud', 'nu_solicitud'),
+			'detalle' => array(self::HAS_MANY, 'DetalleSolicitud', 'nu_solicitud'),
 		);
 	}
 

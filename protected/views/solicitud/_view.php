@@ -21,13 +21,11 @@
 	<?php echo CHtml::encode($data->al_estado_solicitud); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('al_estado_solicitud')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Articulos')); ?>:</b>
 	<?php 
-
-	foreach ($data->detalleSolicituds as $det) {
+	foreach ($data->detalle as $det) {
+	echo '<br>'.$det->nu_cantidad_solicitada.'<br>';
 	echo $det->nu_articulo.'<br>';
-
-
 	} ?>
 	<br />
 

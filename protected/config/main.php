@@ -63,6 +63,10 @@ return array(
 			'password' => 'bd12345',
 			'charset' => 'utf8',
 		),
+
+		'coreMessages'=>array (
+				'basePath'=>'protected/messages'
+			),
 		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors

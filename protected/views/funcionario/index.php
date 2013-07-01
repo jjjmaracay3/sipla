@@ -11,6 +11,12 @@ $this->menu=array(
 	array('label'=>'Manage Funcionario', 'url'=>array('admin')),
 );
 ?>
+<?php echo Yii::t('app','Name'); ?>
+<?php echo Yii::t('app','Save'); ?>
+<?php 
+$var=10;
+echo Yii::t('app',"Update # {VAR}",array('{VAR}'=>$var)); ?>
+
 
 <h1>Funcionarios</h1>
 

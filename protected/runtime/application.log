@@ -3114,3 +3114,422 @@ Stack trace:
 REQUEST_URI=/Sipla/solicitud/index.jsp
 HTTP_REFERER=http://localhost/Sipla/solicitud/index.jsp
 ---
+2013/06/30 03:06:56 [error] [exception.CException] exception 'CException' with message 'Propiedad "DetalleSolicitud"."al_nombre_articulo" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('al_nombre_artic...')
+#1 /var/www/Sipla/protected/views/solicitud/_view.php(27): CActiveRecord->__get('al_nombre_artic...')
+#2 /var/www/yii/framework/web/CBaseController.php(130): require('/var/www/Sipla/...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, false)
+#4 /var/www/yii/framework/zii/widgets/CListView.php(281): CBaseController->renderFile('/var/www/Sipla/...', Array)
+#5 /var/www/yii/framework/zii/widgets/CBaseListView.php(160): CListView->renderItems()
+#6 [internal function]: CBaseListView->renderSection(Array)
+#7 /var/www/yii/framework/zii/widgets/CBaseListView.php(143): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#8 /var/www/yii/framework/zii/widgets/CBaseListView.php(128): CBaseListView->renderContent()
+#9 /var/www/yii/framework/web/CBaseController.php(173): CBaseListView->run()
+#10 /var/www/Sipla/protected/views/solicitud/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#12 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#13 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#14 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#15 /var/www/Sipla/protected/controllers/SolicitudController.php(128): CController->render('index', Array)
+#16 /var/www/yii/framework/web/actions/CInlineAction.php(49): SolicitudController->actionIndex()
+#17 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#18 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#20 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#24 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#26 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('solicitud/index')
+#27 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#28 /var/www/Sipla/index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/Sipla/solicitud/index.jsp
+HTTP_REFERER=http://localhost/Sipla/solicitud/index.jsp
+---
+2013/06/30 03:07:00 [error] [exception.CException] exception 'CException' with message 'Propiedad "DetalleSolicitud"."al_nombre_articulo" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('al_nombre_artic...')
+#1 /var/www/Sipla/protected/views/solicitud/_view.php(27): CActiveRecord->__get('al_nombre_artic...')
+#2 /var/www/yii/framework/web/CBaseController.php(130): require('/var/www/Sipla/...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, false)
+#4 /var/www/yii/framework/zii/widgets/CListView.php(281): CBaseController->renderFile('/var/www/Sipla/...', Array)
+#5 /var/www/yii/framework/zii/widgets/CBaseListView.php(160): CListView->renderItems()
+#6 [internal function]: CBaseListView->renderSection(Array)
+#7 /var/www/yii/framework/zii/widgets/CBaseListView.php(143): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#8 /var/www/yii/framework/zii/widgets/CBaseListView.php(128): CBaseListView->renderContent()
+#9 /var/www/yii/framework/web/CBaseController.php(173): CBaseListView->run()
+#10 /var/www/Sipla/protected/views/solicitud/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#12 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#13 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#14 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#15 /var/www/Sipla/protected/controllers/SolicitudController.php(128): CController->render('index', Array)
+#16 /var/www/yii/framework/web/actions/CInlineAction.php(49): SolicitudController->actionIndex()
+#17 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#18 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#20 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#24 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#26 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('solicitud/index')
+#27 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#28 /var/www/Sipla/index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/Sipla/solicitud/index.jsp
+HTTP_REFERER=http://localhost/Sipla/detalleSolicitud/index.jsp
+---
+2013/06/30 03:08:37 [error] [php] Trying to get property of non-object (/var/www/Sipla/protected/views/solicitud/_view.php:27)
+Stack trace:
+#0 /var/www/yii/framework/zii/widgets/CListView.php(281): SolicitudController->renderFile()
+#1 /var/www/yii/framework/zii/widgets/CBaseListView.php(160): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 /var/www/yii/framework/zii/widgets/CBaseListView.php(143): preg_replace_callback()
+#4 /var/www/yii/framework/zii/widgets/CBaseListView.php(128): CListView->renderContent()
+#5 /var/www/yii/framework/web/CBaseController.php(173): CListView->run()
+#6 /var/www/Sipla/protected/views/solicitud/index.php(20): SolicitudController->widget()
+#7 /var/www/yii/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii/framework/web/CBaseController.php(95): SolicitudController->renderInternal()
+#9 /var/www/yii/framework/web/CController.php(869): SolicitudController->renderFile()
+#10 /var/www/yii/framework/web/CController.php(782): SolicitudController->renderPartial()
+#11 /var/www/Sipla/protected/controllers/SolicitudController.php(128): SolicitudController->render()
+#12 /var/www/yii/framework/web/actions/CInlineAction.php(49): SolicitudController->actionIndex()
+#13 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /var/www/yii/framework/web/filters/CFilterChain.php(133): SolicitudController->runAction()
+#15 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /var/www/yii/framework/web/filters/CInlineFilter.php(58): SolicitudController->filterAccessControl()
+#18 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#20 /var/www/yii/framework/web/CController.php(265): SolicitudController->runActionWithFilters()
+#21 /var/www/yii/framework/web/CWebApplication.php(282): SolicitudController->run()
+#22 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#24 /var/www/Sipla/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sipla/solicitud/index.jsp
+in /var/www/Sipla/protected/views/solicitud/_view.php (27)
+in /var/www/Sipla/protected/views/solicitud/index.php (20)
+in /var/www/Sipla/protected/controllers/SolicitudController.php (128)
+2013/06/30 03:08:50 [error] [php] Trying to get property of non-object (/var/www/Sipla/protected/views/solicitud/_view.php:27)
+Stack trace:
+#0 /var/www/yii/framework/zii/widgets/CListView.php(281): SolicitudController->renderFile()
+#1 /var/www/yii/framework/zii/widgets/CBaseListView.php(160): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 /var/www/yii/framework/zii/widgets/CBaseListView.php(143): preg_replace_callback()
+#4 /var/www/yii/framework/zii/widgets/CBaseListView.php(128): CListView->renderContent()
+#5 /var/www/yii/framework/web/CBaseController.php(173): CListView->run()
+#6 /var/www/Sipla/protected/views/solicitud/index.php(20): SolicitudController->widget()
+#7 /var/www/yii/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii/framework/web/CBaseController.php(95): SolicitudController->renderInternal()
+#9 /var/www/yii/framework/web/CController.php(869): SolicitudController->renderFile()
+#10 /var/www/yii/framework/web/CController.php(782): SolicitudController->renderPartial()
+#11 /var/www/Sipla/protected/controllers/SolicitudController.php(128): SolicitudController->render()
+#12 /var/www/yii/framework/web/actions/CInlineAction.php(49): SolicitudController->actionIndex()
+#13 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /var/www/yii/framework/web/filters/CFilterChain.php(133): SolicitudController->runAction()
+#15 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /var/www/yii/framework/web/filters/CInlineFilter.php(58): SolicitudController->filterAccessControl()
+#18 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#20 /var/www/yii/framework/web/CController.php(265): SolicitudController->runActionWithFilters()
+#21 /var/www/yii/framework/web/CWebApplication.php(282): SolicitudController->run()
+#22 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#24 /var/www/Sipla/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sipla/solicitud/index.jsp
+in /var/www/Sipla/protected/views/solicitud/_view.php (27)
+in /var/www/Sipla/protected/views/solicitud/index.php (20)
+in /var/www/Sipla/protected/controllers/SolicitudController.php (128)
+2013/06/30 03:25:21 [error] [php] Trying to get property of non-object (/var/www/Sipla/protected/views/solicitud/_view.php:34)
+Stack trace:
+#0 /var/www/yii/framework/zii/widgets/CListView.php(281): SolicitudController->renderFile()
+#1 /var/www/yii/framework/zii/widgets/CBaseListView.php(160): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 /var/www/yii/framework/zii/widgets/CBaseListView.php(143): preg_replace_callback()
+#4 /var/www/yii/framework/zii/widgets/CBaseListView.php(128): CListView->renderContent()
+#5 /var/www/yii/framework/web/CBaseController.php(173): CListView->run()
+#6 /var/www/Sipla/protected/views/solicitud/index.php(20): SolicitudController->widget()
+#7 /var/www/yii/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii/framework/web/CBaseController.php(95): SolicitudController->renderInternal()
+#9 /var/www/yii/framework/web/CController.php(869): SolicitudController->renderFile()
+#10 /var/www/yii/framework/web/CController.php(782): SolicitudController->renderPartial()
+#11 /var/www/Sipla/protected/controllers/SolicitudController.php(128): SolicitudController->render()
+#12 /var/www/yii/framework/web/actions/CInlineAction.php(49): SolicitudController->actionIndex()
+#13 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /var/www/yii/framework/web/filters/CFilterChain.php(133): SolicitudController->runAction()
+#15 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /var/www/yii/framework/web/filters/CInlineFilter.php(58): SolicitudController->filterAccessControl()
+#18 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#20 /var/www/yii/framework/web/CController.php(265): SolicitudController->runActionWithFilters()
+#21 /var/www/yii/framework/web/CWebApplication.php(282): SolicitudController->run()
+#22 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#24 /var/www/Sipla/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sipla/solicitud/index.jsp
+in /var/www/Sipla/protected/views/solicitud/_view.php (34)
+in /var/www/Sipla/protected/views/solicitud/index.php (20)
+in /var/www/Sipla/protected/controllers/SolicitudController.php (128)
+2013/06/30 03:25:48 [error] [system.db.CDbCommand] CDbCommand::fetchAll() falló: SQLSTATE[42703]: Undefined column: 7 ERROR:  no existe la columna detalle.nu_detallesolicitud
+LINE 1: ...t1_c4" FROM "detalle_solicitud" "detalle"  WHERE ("detalle"....
+                                                             ^. La sentencia SQL ejecutada fue: SELECT "detalle"."nu_detalle_solicitud" AS "t1_c0", "detalle"."nu_solicitud" AS "t1_c1", "detalle"."nu_articulo" AS "t1_c2", "detalle"."nu_cantidad_solicitada" AS "t1_c3", "detalle"."al_justificacion" AS "t1_c4" FROM "detalle_solicitud" "detalle"  WHERE ("detalle"."nu_detallesolicitud"=:ypl0).
+in /var/www/Sipla/protected/views/solicitud/_view.php (26)
+in /var/www/Sipla/protected/views/solicitud/index.php (20)
+in /var/www/Sipla/protected/controllers/SolicitudController.php (128)
+2013/06/30 03:25:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42703]: Undefined column: 7 ERROR:  no existe la columna detalle.nu_detallesolicitud
+LINE 1: ...t1_c4" FROM "detalle_solicitud" "detalle"  WHERE ("detalle"....
+                                                             ^. The SQL statement executed was: SELECT "detalle"."nu_detalle_solicitud" AS "t1_c0", "detalle"."nu_solicitud" AS "t1_c1", "detalle"."nu_articulo" AS "t1_c2", "detalle"."nu_cantidad_solicitada" AS "t1_c3", "detalle"."al_justificacion" AS "t1_c4" FROM "detalle_solicitud" "detalle"  WHERE ("detalle"."nu_detallesolicitud"=:ypl0)' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/yii/framework/db/ar/CActiveFinder.php(761): CDbCommand->queryAll()
+#2 /var/www/yii/framework/db/ar/CActiveFinder.php(489): CJoinElement->runQuery(Object(CJoinQuery))
+#3 /var/www/yii/framework/db/ar/CActiveFinder.php(163): CJoinElement->lazyFind(Object(Solicitud))
+#4 /var/www/yii/framework/db/ar/CActiveRecord.php(272): CActiveFinder->lazyFind(Object(Solicitud))
+#5 /var/www/yii/framework/db/ar/CActiveRecord.php(141): CActiveRecord->getRelated('detalle')
+#6 /var/www/Sipla/protected/views/solicitud/_view.php(26): CActiveRecord->__get('detalle')
+#7 /var/www/yii/framework/web/CBaseController.php(130): require('/var/www/Sipla/...')
+#8 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, false)
+#9 /var/www/yii/framework/zii/widgets/CListView.php(281): CBaseController->renderFile('/var/www/Sipla/...', Array)
+#10 /var/www/yii/framework/zii/widgets/CBaseListView.php(160): CListView->renderItems()
+#11 [internal function]: CBaseListView->renderSection(Array)
+#12 /var/www/yii/framework/zii/widgets/CBaseListView.php(143): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#13 /var/www/yii/framework/zii/widgets/CBaseListView.php(128): CBaseListView->renderContent()
+#14 /var/www/yii/framework/web/CBaseController.php(173): CBaseListView->run()
+#15 /var/www/Sipla/protected/views/solicitud/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#16 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#17 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#18 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#19 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#20 /var/www/Sipla/protected/controllers/SolicitudController.php(128): CController->render('index', Array)
+#21 /var/www/yii/framework/web/actions/CInlineAction.php(49): SolicitudController->actionIndex()
+#22 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#23 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#24 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#25 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#26 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#27 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#28 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#29 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#31 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('solicitud/index')
+#32 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#33 /var/www/Sipla/index.php(13): CApplication->run()
+#34 {main}
+REQUEST_URI=/Sipla/solicitud/index.jsp
+HTTP_REFERER=http://localhost/Sipla/solicitud/index.jsp
+---
+2013/06/30 23:03:44 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «solicitud» viola la llave foránea «funcionario_solicitud_fk»
+DETAIL:  La llave (nu_funcionario)=(1) no está presente en la tabla «funcionario».. La sentencia SQL ejecutada fue: INSERT INTO "solicitud" ("nu_funcionario", "nu_numero_departamento", "al_estado_solicitud", "fe_solicitud") VALUES (:yp0, :yp1, :yp2, :yp3).
+in /var/www/Sipla/protected/controllers/SolicitudController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/30 23:03:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «solicitud» viola la llave foránea «funcionario_solicitud_fk»
+DETAIL:  La llave (nu_funcionario)=(1) no está presente en la tabla «funcionario».. The SQL statement executed was: INSERT INTO "solicitud" ("nu_funcionario", "nu_numero_departamento", "al_estado_solicitud", "fe_solicitud") VALUES (:yp0, :yp1, :yp2, :yp3)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/SolicitudController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): SolicitudController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('solicitud/creat...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/solicitud/create.jsp
+HTTP_REFERER=http://localhost/Sipla/solicitud/create.jsp
+---
+2013/06/30 23:03:48 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «solicitud» viola la llave foránea «funcionario_solicitud_fk»
+DETAIL:  La llave (nu_funcionario)=(1) no está presente en la tabla «funcionario».. La sentencia SQL ejecutada fue: INSERT INTO "solicitud" ("nu_funcionario", "nu_numero_departamento", "al_estado_solicitud", "fe_solicitud") VALUES (:yp0, :yp1, :yp2, :yp3).
+in /var/www/Sipla/protected/controllers/SolicitudController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/30 23:03:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «solicitud» viola la llave foránea «funcionario_solicitud_fk»
+DETAIL:  La llave (nu_funcionario)=(1) no está presente en la tabla «funcionario».. The SQL statement executed was: INSERT INTO "solicitud" ("nu_funcionario", "nu_numero_departamento", "al_estado_solicitud", "fe_solicitud") VALUES (:yp0, :yp1, :yp2, :yp3)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/SolicitudController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): SolicitudController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('solicitud/creat...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/solicitud/create.jsp
+HTTP_REFERER=http://localhost/Sipla/solicitud/create.jsp
+---
+2013/06/30 23:03:54 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «solicitud» viola la llave foránea «funcionario_solicitud_fk»
+DETAIL:  La llave (nu_funcionario)=(1) no está presente en la tabla «funcionario».. La sentencia SQL ejecutada fue: INSERT INTO "solicitud" ("nu_funcionario", "nu_numero_departamento", "al_estado_solicitud", "fe_solicitud") VALUES (:yp0, :yp1, :yp2, :yp3).
+in /var/www/Sipla/protected/controllers/SolicitudController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/06/30 23:03:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «solicitud» viola la llave foránea «funcionario_solicitud_fk»
+DETAIL:  La llave (nu_funcionario)=(1) no está presente en la tabla «funcionario».. The SQL statement executed was: INSERT INTO "solicitud" ("nu_funcionario", "nu_numero_departamento", "al_estado_solicitud", "fe_solicitud") VALUES (:yp0, :yp1, :yp2, :yp3)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/SolicitudController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): SolicitudController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('solicitud/creat...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/solicitud/create.jsp
+HTTP_REFERER=http://localhost/Sipla/solicitud/create.jsp
+---
+2013/07/01 00:06:40 [error] [php] Missing argument 2 for YiiBase::t(), called in /var/www/Sipla/protected/views/funcionario/index.php on line 14 and defined (/var/www/yii/framework/YiiBase.php:571)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): FuncionarioController->renderInternal()
+#1 /var/www/yii/framework/web/CController.php(869): FuncionarioController->renderFile()
+#2 /var/www/yii/framework/web/CController.php(782): FuncionarioController->renderPartial()
+#3 /var/www/Sipla/protected/controllers/FuncionarioController.php(128): FuncionarioController->render()
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(49): FuncionarioController->actionIndex()
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /var/www/yii/framework/web/filters/CFilterChain.php(133): FuncionarioController->runAction()
+#7 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#9 /var/www/yii/framework/web/filters/CInlineFilter.php(58): FuncionarioController->filterAccessControl()
+#10 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#11 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/yii/framework/web/CController.php(265): FuncionarioController->runActionWithFilters()
+#13 /var/www/yii/framework/web/CWebApplication.php(282): FuncionarioController->run()
+#14 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/Sipla/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sipla/funcionario/index.jsp
+in /var/www/Sipla/protected/views/funcionario/index.php (14)
+in /var/www/Sipla/protected/controllers/FuncionarioController.php (128)
+in /var/www/Sipla/index.php (13)
+2013/07/01 00:07:15 [error] [php] Missing argument 2 for YiiBase::t(), called in /var/www/Sipla/protected/views/funcionario/index.php on line 14 and defined (/var/www/yii/framework/YiiBase.php:571)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): FuncionarioController->renderInternal()
+#1 /var/www/yii/framework/web/CController.php(869): FuncionarioController->renderFile()
+#2 /var/www/yii/framework/web/CController.php(782): FuncionarioController->renderPartial()
+#3 /var/www/Sipla/protected/controllers/FuncionarioController.php(128): FuncionarioController->render()
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(49): FuncionarioController->actionIndex()
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /var/www/yii/framework/web/filters/CFilterChain.php(133): FuncionarioController->runAction()
+#7 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#9 /var/www/yii/framework/web/filters/CInlineFilter.php(58): FuncionarioController->filterAccessControl()
+#10 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#11 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/yii/framework/web/CController.php(265): FuncionarioController->runActionWithFilters()
+#13 /var/www/yii/framework/web/CWebApplication.php(282): FuncionarioController->run()
+#14 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/Sipla/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sipla/funcionario/index.jsp
+in /var/www/Sipla/protected/views/funcionario/index.php (14)
+in /var/www/Sipla/protected/controllers/FuncionarioController.php (128)
+in /var/www/Sipla/index.php (13)
+2013/07/01 16:20:51 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «solicitud» viola la llave foránea «departamento_solicitud_fk»
+DETAIL:  La llave (nu_numero_departamento)=(2127665432) no está presente en la tabla «departamento».. La sentencia SQL ejecutada fue: INSERT INTO "solicitud" ("nu_funcionario", "nu_numero_departamento", "al_estado_solicitud", "fe_solicitud") VALUES (:yp0, :yp1, :yp2, :yp3).
+in /var/www/Sipla/protected/controllers/SolicitudController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/07/01 16:20:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «solicitud» viola la llave foránea «departamento_solicitud_fk»
+DETAIL:  La llave (nu_numero_departamento)=(2127665432) no está presente en la tabla «departamento».. The SQL statement executed was: INSERT INTO "solicitud" ("nu_funcionario", "nu_numero_departamento", "al_estado_solicitud", "fe_solicitud") VALUES (:yp0, :yp1, :yp2, :yp3)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/SolicitudController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): SolicitudController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('solicitud/creat...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/solicitud/create.jsp
+HTTP_REFERER=http://localhost/Sipla/solicitud/create.jsp
+---
+2013/07/01 16:20:56 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «solicitud» viola la llave foránea «departamento_solicitud_fk»
+DETAIL:  La llave (nu_numero_departamento)=(2127665432) no está presente en la tabla «departamento».. La sentencia SQL ejecutada fue: INSERT INTO "solicitud" ("nu_funcionario", "nu_numero_departamento", "al_estado_solicitud", "fe_solicitud") VALUES (:yp0, :yp1, :yp2, :yp3).
+in /var/www/Sipla/protected/controllers/SolicitudController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/07/01 16:20:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «solicitud» viola la llave foránea «departamento_solicitud_fk»
+DETAIL:  La llave (nu_numero_departamento)=(2127665432) no está presente en la tabla «departamento».. The SQL statement executed was: INSERT INTO "solicitud" ("nu_funcionario", "nu_numero_departamento", "al_estado_solicitud", "fe_solicitud") VALUES (:yp0, :yp1, :yp2, :yp3)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/SolicitudController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): SolicitudController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('solicitud/creat...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/solicitud/create.jsp
+HTTP_REFERER=http://localhost/Sipla/solicitud/create.jsp
+---
+2013/07/01 16:21:59 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «solicitud» viola la llave foránea «departamento_solicitud_fk»
+DETAIL:  La llave (nu_numero_departamento)=(2127665432) no está presente en la tabla «departamento».. La sentencia SQL ejecutada fue: INSERT INTO "solicitud" ("nu_funcionario", "nu_numero_departamento", "al_estado_solicitud", "fe_solicitud") VALUES (:yp0, :yp1, :yp2, :yp3).
+in /var/www/Sipla/protected/controllers/SolicitudController.php (73)
+in /var/www/Sipla/index.php (13)
+2013/07/01 16:21:59 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «solicitud» viola la llave foránea «departamento_solicitud_fk»
+DETAIL:  La llave (nu_numero_departamento)=(2127665432) no está presente en la tabla «departamento».. The SQL statement executed was: INSERT INTO "solicitud" ("nu_funcionario", "nu_numero_departamento", "al_estado_solicitud", "fe_solicitud") VALUES (:yp0, :yp1, :yp2, :yp3)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/SolicitudController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): SolicitudController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('solicitud/creat...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/solicitud/create.jsp
+HTTP_REFERER=http://localhost/Sipla/solicitud/create.jsp
+---
