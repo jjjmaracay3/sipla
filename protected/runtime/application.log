@@ -3533,3 +3533,177 @@ Stack trace:
 REQUEST_URI=/Sipla/solicitud/create.jsp
 HTTP_REFERER=http://localhost/Sipla/solicitud/create.jsp
 ---
+2013/07/01 17:54:50 [error] [php] Undefined variable: modelb (/var/www/Sipla/protected/views/solicitud/create.php:18)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): SolicitudController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): SolicitudController->renderPartial()
+#2 /var/www/Sipla/protected/controllers/SolicitudController.php(82): SolicitudController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): SolicitudController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): SolicitudController->runAction()
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): SolicitudController->filterAccessControl()
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): SolicitudController->runActionWithFilters()
+#12 /var/www/yii/framework/web/CWebApplication.php(282): SolicitudController->run()
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sipla/solicitud/create.jsp
+in /var/www/Sipla/protected/views/solicitud/create.php (18)
+in /var/www/Sipla/protected/controllers/SolicitudController.php (82)
+in /var/www/Sipla/index.php (13)
+2013/07/01 18:01:59 [error] [php] Undefined variable: modelb (/var/www/Sipla/protected/views/solicitud/create.php:18)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): SolicitudController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): SolicitudController->renderPartial()
+#2 /var/www/Sipla/protected/controllers/SolicitudController.php(82): SolicitudController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): SolicitudController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): SolicitudController->runAction()
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): SolicitudController->filterAccessControl()
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): SolicitudController->runActionWithFilters()
+#12 /var/www/yii/framework/web/CWebApplication.php(282): SolicitudController->run()
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sipla/solicitud/create.jsp
+in /var/www/Sipla/protected/views/solicitud/create.php (18)
+in /var/www/Sipla/protected/controllers/SolicitudController.php (82)
+in /var/www/Sipla/index.php (13)
+2013/07/01 18:12:57 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «detalle_solicitud» viola la llave foránea «solicitud_detalle_solicitud_fk»
+DETAIL:  La llave (nu_solicitud)=(6) no está presente en la tabla «solicitud».. La sentencia SQL ejecutada fue: INSERT INTO "detalle_solicitud" ("nu_solicitud", "nu_articulo", "nu_cantidad_solicitada", "al_justificacion") VALUES (:yp0, :yp1, :yp2, :yp3).
+in /var/www/Sipla/protected/controllers/SolicitudController.php (76)
+in /var/www/Sipla/index.php (13)
+2013/07/01 18:12:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «detalle_solicitud» viola la llave foránea «solicitud_detalle_solicitud_fk»
+DETAIL:  La llave (nu_solicitud)=(6) no está presente en la tabla «solicitud».. The SQL statement executed was: INSERT INTO "detalle_solicitud" ("nu_solicitud", "nu_articulo", "nu_cantidad_solicitada", "al_justificacion") VALUES (:yp0, :yp1, :yp2, :yp3)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/SolicitudController.php(76): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): SolicitudController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('solicitud/creat...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/solicitud/create.jsp
+HTTP_REFERER=http://localhost/Sipla/solicitud/create.jsp
+---
+2013/07/01 18:13:05 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «detalle_solicitud» viola la llave foránea «solicitud_detalle_solicitud_fk»
+DETAIL:  La llave (nu_solicitud)=(7) no está presente en la tabla «solicitud».. La sentencia SQL ejecutada fue: INSERT INTO "detalle_solicitud" ("nu_solicitud", "nu_articulo", "nu_cantidad_solicitada", "al_justificacion") VALUES (:yp0, :yp1, :yp2, :yp3).
+in /var/www/Sipla/protected/controllers/SolicitudController.php (76)
+in /var/www/Sipla/index.php (13)
+2013/07/01 18:13:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «detalle_solicitud» viola la llave foránea «solicitud_detalle_solicitud_fk»
+DETAIL:  La llave (nu_solicitud)=(7) no está presente en la tabla «solicitud».. The SQL statement executed was: INSERT INTO "detalle_solicitud" ("nu_solicitud", "nu_articulo", "nu_cantidad_solicitada", "al_justificacion") VALUES (:yp0, :yp1, :yp2, :yp3)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/SolicitudController.php(76): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): SolicitudController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('solicitud/creat...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/solicitud/create.jsp
+HTTP_REFERER=http://localhost/Sipla/solicitud/create.jsp
+---
+2013/07/01 18:14:30 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «detalle_solicitud» viola la llave foránea «solicitud_detalle_solicitud_fk»
+DETAIL:  La llave (nu_solicitud)=(8) no está presente en la tabla «solicitud».. La sentencia SQL ejecutada fue: INSERT INTO "detalle_solicitud" ("nu_solicitud", "nu_articulo", "nu_cantidad_solicitada", "al_justificacion") VALUES (:yp0, :yp1, :yp2, :yp3).
+in /var/www/Sipla/protected/controllers/SolicitudController.php (76)
+in /var/www/Sipla/index.php (13)
+2013/07/01 18:14:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «detalle_solicitud» viola la llave foránea «solicitud_detalle_solicitud_fk»
+DETAIL:  La llave (nu_solicitud)=(8) no está presente en la tabla «solicitud».. The SQL statement executed was: INSERT INTO "detalle_solicitud" ("nu_solicitud", "nu_articulo", "nu_cantidad_solicitada", "al_justificacion") VALUES (:yp0, :yp1, :yp2, :yp3)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/SolicitudController.php(76): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): SolicitudController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('solicitud/creat...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/solicitud/create.jsp
+HTTP_REFERER=http://localhost/Sipla/solicitud/create.jsp
+---
+2013/07/01 18:29:54 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «solicitud» viola la llave foránea «funcionario_solicitud_fk»
+DETAIL:  La llave (nu_funcionario)=(1) no está presente en la tabla «funcionario».. La sentencia SQL ejecutada fue: INSERT INTO "solicitud" ("nu_funcionario", "nu_numero_departamento", "al_estado_solicitud", "fe_solicitud") VALUES (:yp0, :yp1, :yp2, :yp3).
+in /var/www/Sipla/protected/controllers/SolicitudController.php (76)
+in /var/www/Sipla/index.php (13)
+2013/07/01 18:29:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «solicitud» viola la llave foránea «funcionario_solicitud_fk»
+DETAIL:  La llave (nu_funcionario)=(1) no está presente en la tabla «funcionario».. The SQL statement executed was: INSERT INTO "solicitud" ("nu_funcionario", "nu_numero_departamento", "al_estado_solicitud", "fe_solicitud") VALUES (:yp0, :yp1, :yp2, :yp3)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/SolicitudController.php(76): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): SolicitudController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('solicitud/creat...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/solicitud/create.jsp
+HTTP_REFERER=http://localhost/Sipla/solicitud/create.jsp
+---
+2013/07/01 18:30:45 [error] [php] Indirect modification of overloaded property DetalleSolicitud::$nu_solicitud has no effect (/var/www/Sipla/protected/controllers/SolicitudController.php:78)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): SolicitudController->runAction()
+#1 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): SolicitudController->filterAccessControl()
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): SolicitudController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): SolicitudController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sipla/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sipla/solicitud/create.jsp
+in /var/www/Sipla/protected/controllers/SolicitudController.php (78)
+in /var/www/Sipla/index.php (13)
+2013/07/01 18:31:32 [warning] [application] Error al definir unsafe el atributo "0" de "DetalleSolicitud".
+in /var/www/Sipla/protected/controllers/SolicitudController.php (78)
+in /var/www/Sipla/index.php (13)
+2013/07/01 18:32:59 [warning] [application] Error al definir unsafe el atributo "0" de "DetalleSolicitud".
+in /var/www/Sipla/protected/controllers/SolicitudController.php (78)
+in /var/www/Sipla/index.php (13)

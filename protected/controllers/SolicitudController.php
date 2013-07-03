@@ -63,19 +63,27 @@ class SolicitudController extends Controller
 	public function actionCreate()
 	{
 		$model=new Solicitud;
+		$modelb=new DetalleSolicitud;//incorporamos los dos modelos a xx
+	
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Solicitud']))
+		if(isset($_POST['Solicitud'],$_POST['DetalleSolicitud']))
 		{
 			$model->attributes=$_POST['Solicitud'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->nu_solicitud));
+
+			$modelb->attributes=$_POST['DetalleSolicitud'];
+
+			$model->save();
+				$nu_solicitud = $model->ObtenerNumero();
+				$modelb->nu_solicitud=$nu_solicitud[0]['nu_solicitud'];//asignamos del arreglo, el pos "0" dentro de XX
+				if ($modelb->save())
+					$this->redirect(array('view','id'=>$model->nu_solicitud));
 		}
 
 		$this->render('create',array(
-			'model'=>$model,
+			'model'=>$model,'modelb'=>$modelb,
 		));
 	}
 

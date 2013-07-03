@@ -102,4 +102,10 @@ class Solicitud extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+	public function ObtenerNumero(){
+		$sql="SELECT nu_solicitud FROM solicitud ORDER BY nu_solicitud DESC LIMIT 1";
+		$numero=Yii::app()->db->createCommand($sql)->queryAll();
+		return $numero;
+	}
 }
