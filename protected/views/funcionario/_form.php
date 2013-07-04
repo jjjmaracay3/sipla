@@ -58,15 +58,21 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'al_usuario_login'); ?>
-		<?php echo $form->textField($model,'al_usuario_login'); ?>
-		<?php echo $form->error($model,'al_usuario_login'); ?>
+		<?php echo $form->labelEx($model,'username'); ?>
+		<?php echo $form->textField($model,'username'); ?>
+		<?php echo $form->error($model,'username'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'al_clave_login'); ?>
-		<?php echo $form->textField($model,'al_clave_login'); ?>
-		<?php echo $form->error($model,'al_clave_login'); ?>
+		<?php echo $form->labelEx($model,'password'); ?>
+		<?php echo $form->passwordField($model,'password'); ?>
+		<?php echo $form->error($model,'password'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'session'); ?>
+		<?php echo $form->textArea($model,'session',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'session'); ?>
 	</div>
 
 	<div class="row buttons">

@@ -10,11 +10,11 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nu_numero_departamento')); ?>:</b>
-	<?php echo CHtml::encode($data->departamento->al_nombre_departamento); ?>
+	<?php echo CHtml::encode($data->nu_numero_departamento); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nu_rol')); ?>:</b>
-	<?php echo CHtml::encode($data->rol->al_nombre_rol); ?>
+	<?php echo CHtml::encode($data->nu_rol); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('al_nombre_funcionario')); ?>:</b>
@@ -38,12 +38,16 @@
 	<?php echo CHtml::encode($data->al_correo_funcionario); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('al_usuario_login')); ?>:</b>
-	<?php echo CHtml::encode($data->al_usuario_login); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('username')); ?>:</b>
+	<?php echo CHtml::encode($data->username); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('al_clave_login')); ?>:</b>
-	<?php echo CHtml::encode($data->al_clave_login); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('password')); ?>:</b>
+	<?php echo CHtml::encode($data->password); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('session')); ?>:</b>
+	<?php echo CHtml::encode($data->session); ?>
 	<br />
 
 	*/ ?>

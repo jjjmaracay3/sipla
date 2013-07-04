@@ -54,8 +54,9 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		/*
 		'al_cargo_funcionario',
 		'al_correo_funcionario',
-		'al_usuario_login',
-		'al_clave_login',
+		'username',
+		'password',
+		'session',
 		*/
 		array(
 			'class'=>'CButtonColumn',

@@ -12,15 +12,16 @@
  * @property integer $nu_cedula_funcionario
  * @property string $al_cargo_funcionario
  * @property string $al_correo_funcionario
- * @property string $al_usuario_login
- * @property string $al_clave_login
+ * @property string $username
+ * @property string $password
+ * @property string $session
  *
  * The followings are the available model relations:
  * @property NotaEntrega[] $notaEntregas
  * @property Solicitud[] $solicituds
+ * @property RequisicionCompra[] $requisicionCompras
  * @property Departamento $nuNumeroDepartamento
  * @property RolFuncionario $nuRol
- * @property RequisicionCompra[] $requisicionCompras
  */
 class Funcionario extends CActiveRecord
 {
@@ -50,12 +51,12 @@ class Funcionario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nu_numero_departamento, nu_rol, al_nombre_funcionario, al_apellido_funcionario, al_usuario_login, al_clave_login', 'required'),
+			array('nu_numero_departamento, nu_rol, al_nombre_funcionario, al_apellido_funcionario, nu_cedula_funcionario, al_cargo_funcionario, username, password', 'required'),
 			array('nu_numero_departamento, nu_rol, nu_cedula_funcionario', 'numerical', 'integerOnly'=>true),
-			array('al_cargo_funcionario, al_correo_funcionario', 'safe'),
+			array('al_correo_funcionario, session', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('nu_funcionario, nu_numero_departamento, nu_rol, al_nombre_funcionario, al_apellido_funcionario, nu_cedula_funcionario, al_cargo_funcionario, al_correo_funcionario, al_usuario_login, al_clave_login', 'safe', 'on'=>'search'),
+			array('nu_funcionario, nu_numero_departamento, nu_rol, al_nombre_funcionario, al_apellido_funcionario, nu_cedula_funcionario, al_cargo_funcionario, al_correo_funcionario, username, password, session', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -67,12 +68,11 @@ class Funcionario extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			//'departamento'=>array(self::BELONGS_TO,'Departamento','nu_numero_departamento')
 			'notaEntregas' => array(self::HAS_MANY, 'NotaEntrega', 'nu_funcionario'),
 			'solicituds' => array(self::HAS_MANY, 'Solicitud', 'nu_funcionario'),
-			'departamento' => array(self::BELONGS_TO, 'Departamento', 'nu_numero_departamento'),
-			'rol' => array(self::BELONGS_TO, 'RolFuncionario', 'nu_rol'),
 			'requisicionCompras' => array(self::HAS_MANY, 'RequisicionCompra', 'nu_funcionario'),
+			'nuNumeroDepartamento' => array(self::BELONGS_TO, 'Departamento', 'nu_numero_departamento'),
+			'nuRol' => array(self::BELONGS_TO, 'RolFuncionario', 'nu_rol'),
 		);
 	}
 
@@ -82,17 +82,35 @@ class Funcionario extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'nu_funcionario' => 'Numero Funcionario',
-			'nu_numero_departamento' => 'Departamento',
-			'nu_rol' => 'Rol',
-			'al_nombre_funcionario' => 'Nombre Funcionario',
-			'al_apellido_funcionario' => 'Apellido Funcionario',
-			'nu_cedula_funcionario' => 'Cedula Funcionario',
-			'al_cargo_funcionario' => 'Cargo Funcionario',
-			'al_correo_funcionario' => 'Correo Funcionario',
-			'al_usuario_login' => 'Usuario Login',
-			'al_clave_login' => 'Clave Login',
+			'nu_funcionario' => 'Nu Funcionario',
+			'nu_numero_departamento' => 'Nu Numero Departamento',
+			'nu_rol' => 'Nu Rol',
+			'al_nombre_funcionario' => 'Al Nombre Funcionario',
+			'al_apellido_funcionario' => 'Al Apellido Funcionario',
+			'nu_cedula_funcionario' => 'Nu Cedula Funcionario',
+			'al_cargo_funcionario' => 'Al Cargo Funcionario',
+			'al_correo_funcionario' => 'Al Correo Funcionario',
+			'username' => 'Username',
+			'password' => 'Password',
+			'session' => 'Session',
 		);
+	}
+
+	public function validatePassword($password)
+	{
+		return $this->hashPassword($password,$this->session)==$this->password;
+	}
+
+	/**
+	 * Generates the password hash.
+	 * @param string password
+	 * @param string salt
+	 * @return string hash
+	 */
+	public function hashPassword($password,$salt)
+	{
+		#return md5($salt.$password);
+		return $password;
 	}
 
 	/**
@@ -114,8 +132,9 @@ class Funcionario extends CActiveRecord
 		$criteria->compare('nu_cedula_funcionario',$this->nu_cedula_funcionario);
 		$criteria->compare('al_cargo_funcionario',$this->al_cargo_funcionario,true);
 		$criteria->compare('al_correo_funcionario',$this->al_correo_funcionario,true);
-		$criteria->compare('al_usuario_login',$this->al_usuario_login,true);
-		$criteria->compare('al_clave_login',$this->al_clave_login,true);
+		$criteria->compare('username',$this->username,true);
+		$criteria->compare('password',$this->password,true);
+		$criteria->compare('session',$this->session,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

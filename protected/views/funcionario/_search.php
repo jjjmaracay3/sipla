@@ -52,13 +52,13 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'al_usuario_login'); ?>
-		<?php echo $form->textField($model,'al_usuario_login'); ?>
+		<?php echo $form->label($model,'username'); ?>
+		<?php echo $form->textField($model,'username'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'al_clave_login'); ?>
-		<?php echo $form->textField($model,'al_clave_login'); ?>
+		<?php echo $form->label($model,'session'); ?>
+		<?php echo $form->textArea($model,'session',array('rows'=>6, 'cols'=>50)); ?>
 	</div>
 
 	<div class="row buttons">
