@@ -2,10 +2,11 @@
 
 /**
  * UserIdentity represents the data needed to identity a user.
- * It contains the authentication method that checks if the provided
+ * It contains the authentication method that ch:>:ecks if the provided
  * data can identity the user.
  */
-class UserIdentity extends CUserIdentity
+
+//logueo con bd
 {
 private $_id;
 	
@@ -39,7 +40,7 @@ private $_id;
 	 * against some persistent user identity storage (e.g. database).
 	 * @return boolean whether authentication succeeds.
 	 */
-/*	public function authenticate()
+	/*public function authenticate()
 	{
 		$users=array(
 			// username => password
@@ -53,5 +54,5 @@ private $_id;
 		else
 			$this->errorCode=self::ERROR_NONE;
 		return !$this->errorCode;
-	}
-*/}
+	}*/
+}
