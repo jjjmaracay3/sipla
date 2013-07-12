@@ -57,7 +57,7 @@ class TipoArticulo extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'articuloTecnologicos' => array(self::HAS_MANY, 'ArticuloTecnologico', 'nu_tipo_articulo'),
+			'articulo' => array(self::HAS_MANY, 'ArticuloTecnologico', 'nu_tipo_articulo'),
 			'clasificacion' => array(self::BELONGS_TO, 'ClasificacionArticulo', 'nu_clasificacion_articulo'),
 		);
 	}

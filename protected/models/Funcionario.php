@@ -71,8 +71,8 @@ class Funcionario extends CActiveRecord
 			'notaEntregas' => array(self::HAS_MANY, 'NotaEntrega', 'nu_funcionario'),
 			'solicituds' => array(self::HAS_MANY, 'Solicitud', 'nu_funcionario'),
 			'requisicionCompras' => array(self::HAS_MANY, 'RequisicionCompra', 'nu_funcionario'),
-			'nuNumeroDepartamento' => array(self::BELONGS_TO, 'Departamento', 'nu_numero_departamento'),
-			'nuRol' => array(self::BELONGS_TO, 'RolFuncionario', 'nu_rol'),
+			'departamento' => array(self::BELONGS_TO, 'Departamento', 'nu_numero_departamento'),
+			'rol' => array(self::BELONGS_TO, 'RolFuncionario', 'nu_rol'),
 		);
 	}
 

@@ -17,7 +17,8 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'nu_tipo_articulo'); ?>
-		<?php echo $form->textField($model,'nu_tipo_articulo'); ?>
+		<?php echo $form->dropdownList($model,'nu_tipo_articulo',CHtml::listData(TipoArticulo::model()->findAll(),
+		'nu_tipo_articulo','al_nombre_tipo'),array('empty'=>'Seleccione tipo')); ?>
 		<?php echo $form->error($model,'nu_tipo_articulo'); ?>
 	</div>
 

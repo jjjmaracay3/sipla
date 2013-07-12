@@ -29,13 +29,27 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'al_estado_solicitud'); ?>
-		<?php echo $form->textField($model,'al_estado_solicitud'); ?>
+		<?php echo $form->dropdownList($model,'nu_numero_departamento',array('1'=>'Activa','0'=>'Atendida')); ?>
 		<?php echo $form->error($model,'al_estado_solicitud'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'fe_solicitud'); ?>
-		<?php echo $form->textField($model,'fe_solicitud'); ?>
+		<?php #echo $form->textField($model,'fe_solicitud');
+		$this->widget('zii.widgets.jui.CJuiDatePicker',
+			array(
+			'model'=>$model,
+			'attribute'=>'fe_solicitud',
+			'language' => 'es',
+			'options' => array(
+								'dateFormat'=>'yy-mm-dd',
+								'constrainInput'=>'false',
+								'duration'=>'fast',
+								'showAnim'=>'slide',
+								)) );
+
+
+		 ?>
 		<?php echo $form->error($model,'fe_solicitud'); ?>
 	</div>
 

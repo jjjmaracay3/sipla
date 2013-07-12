@@ -23,6 +23,7 @@ $this->menu=array(
 	'attributes'=>array(
 		'nu_tipo_articulo',
 		'nu_clasificacion_articulo',
+		
 		'al_nombre_tipo',
 		'al_descripcion_tipo',
 	),

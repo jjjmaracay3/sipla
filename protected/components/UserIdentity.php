@@ -7,6 +7,8 @@
  */
 
 //logueo con bd
+class UserIdentity extends CUserIdentity
+
 {
 private $_id;
 	

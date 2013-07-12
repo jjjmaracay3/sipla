@@ -10,11 +10,11 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nu_numero_departamento')); ?>:</b>
-	<?php echo CHtml::encode($data->nu_numero_departamento); ?>
+	<?php echo CHtml::encode($data->departamento->al_nombre_departamento); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nu_rol')); ?>:</b>
-	<?php echo CHtml::encode($data->nu_rol); ?>
+	<?php echo CHtml::encode($data->rol->al_nombre_rol); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('al_nombre_funcionario')); ?>:</b>

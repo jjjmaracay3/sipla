@@ -17,13 +17,15 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'nu_numero_departamento'); ?>
-		<?php echo $form->textField($model,'nu_numero_departamento'); ?>
+		<?php echo $form->dropdownList($model,'nu_numero_departamento',CHtml::listData(Departamento::model()->findAll(),
+		'nu_numero_departamento','al_nombre_departamento'),array('empty'=>'Seleccione Departamento')); ?>
 		<?php echo $form->error($model,'nu_numero_departamento'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'nu_rol'); ?>
-		<?php echo $form->textField($model,'nu_rol'); ?>
+		<?php echo $form->dropdownList($model,'nu_rol',CHtml::listData(RolFuncionario::model()->findAll(),
+		'nu_rol','al_nombre_rol'),array('empty'=>'Seleccione rol del funcionario')); ?>
 		<?php echo $form->error($model,'nu_rol'); ?>
 	</div>
 

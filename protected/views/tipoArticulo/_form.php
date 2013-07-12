@@ -17,7 +17,8 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'nu_clasificacion_articulo'); ?>
-		<?php echo $form->textField($model,'nu_clasificacion_articulo'); ?>
+		<?php echo $form->dropdownList($model,'nu_clasificacion_articulo',CHtml::listData(ClasificacionArticulo::model()->findAll(),
+		'nu_clasificacion_articulo','al_nombre_clasificacion'),array('empty'=>'Seleccione Clase')); ?>
 		<?php echo $form->error($model,'nu_clasificacion_articulo'); ?>
 	</div>
 
