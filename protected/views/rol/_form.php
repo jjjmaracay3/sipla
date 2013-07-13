@@ -1,9 +1,11 @@
 <?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
-	'action'=>Yii::app()->createUrl($this->route),
-	'method'=>'get',
+	'id'=>'rol-form',
+	'enableAjaxValidation'=>false,
 )); ?>
 
-	<?php echo $form->textFieldRow($model,'nu_rol',array('class'=>'span5')); ?>
+	<p class="help-block">Fields with <span class="required">*</span> are required.</p>
+
+	<?php echo $form->errorSummary($model); ?>
 
 	<?php echo $form->textFieldRow($model,'al_nombre_rol',array('class'=>'span5')); ?>
 
@@ -13,7 +15,7 @@
 		<?php $this->widget('bootstrap.widgets.TbButton', array(
 			'buttonType'=>'submit',
 			'type'=>'primary',
-			'label'=>'Search',
+			'label'=>$model->isNewRecord ? 'Create' : 'Save',
 		)); ?>
 	</div>
 

@@ -1,6 +1,6 @@
 <?php
 
-class RolFuncionarioController extends Controller
+class RolController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -61,14 +61,14 @@ class RolFuncionarioController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new RolFuncionario;
+		$model=new Rol;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['RolFuncionario']))
+		if(isset($_POST['Rol']))
 		{
-			$model->attributes=$_POST['RolFuncionario'];
+			$model->attributes=$_POST['Rol'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->nu_rol));
 		}
@@ -90,9 +90,9 @@ class RolFuncionarioController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['RolFuncionario']))
+		if(isset($_POST['Rol']))
 		{
-			$model->attributes=$_POST['RolFuncionario'];
+			$model->attributes=$_POST['Rol'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->nu_rol));
 		}
@@ -127,7 +127,7 @@ class RolFuncionarioController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('RolFuncionario');
+		$dataProvider=new CActiveDataProvider('Rol');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -138,10 +138,10 @@ class RolFuncionarioController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new RolFuncionario('search');
+		$model=new Rol('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['RolFuncionario']))
-			$model->attributes=$_GET['RolFuncionario'];
+		if(isset($_GET['Rol']))
+			$model->attributes=$_GET['Rol'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -155,7 +155,7 @@ class RolFuncionarioController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=RolFuncionario::model()->findByPk($id);
+		$model=Rol::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -167,7 +167,7 @@ class RolFuncionarioController extends Controller
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='rol-funcionario-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='rol-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

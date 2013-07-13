@@ -1,15 +1,12 @@
 <?php
-/* @var $this RolFuncionarioController */
-/* @var $model RolFuncionario */
-
 $this->breadcrumbs=array(
 	'Rol Funcionarios'=>array('index'),
 	'Create',
 );
 
 $this->menu=array(
-	array('label'=>'List RolFuncionario', 'url'=>array('index')),
-	array('label'=>'Manage RolFuncionario', 'url'=>array('admin')),
+	array('label'=>'List RolFuncionario','url'=>array('index')),
+	array('label'=>'Manage RolFuncionario','url'=>array('admin')),
 );
 ?>
 

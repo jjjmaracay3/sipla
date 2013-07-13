@@ -12,12 +12,12 @@
  * @property Funcionario[] $funcionarios
  * @property RolModulo[] $rolModulos
  */
-class RolFuncionario extends CActiveRecord
+class Rol extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return RolFuncionario the static model class
+	 * @return Rol the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

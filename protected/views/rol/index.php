@@ -1,15 +1,15 @@
 <?php
 $this->breadcrumbs=array(
-	'Rol Funcionarios',
+	'Rols',
 );
 
 $this->menu=array(
-	array('label'=>'Create RolFuncionario','url'=>array('create')),
-	array('label'=>'Manage RolFuncionario','url'=>array('admin')),
+	array('label'=>'Create Rol','url'=>array('create')),
+	array('label'=>'Manage Rol','url'=>array('admin')),
 );
 ?>
 
-<h1>Rol Funcionarios</h1>
+<h1>Rols</h1>
 
 <?php $this->widget('bootstrap.widgets.TbListView',array(
 	'dataProvider'=>$dataProvider,
