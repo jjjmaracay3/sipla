@@ -37,7 +37,7 @@ class SolicitudController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('*'),
+				'users'=>array('@'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -94,20 +94,26 @@ class SolicitudController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
+		$model=new Solicitud;
+		$modelb=new DetalleSolicitud;//incorporamos los dos modelos a xx
+
 		$model=$this->loadModel($id);
 
-		// Uncomment the following line if AJAX validation is needed
+			// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Solicitud']))
-		{
-			$model->attributes=$_POST['Solicitud'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->nu_solicitud));
+			if(isset($_POST['Solicitud'],$_POST['DetalleSolicitud']))
+			{
+				$model->attributes=$_POST['Solicitud'];
+				$modelb->attributes=$_POST['DetalleSolicitud'];
+				$modelb->nu_solicitud=$model->nu_solicitud;
+				$modelb->setIsNewRecord(false);
+
+				if($model->save() && $modelb->update())
+						$this->redirect(array('view','id'=>$model->nu_solicitud));
 		}
 
-		$this->render('update',array(
-			'model'=>$model,
+		$this->render('update',array('model'=>$model,'modelb'=>$modelb,
 		));
 	}
 

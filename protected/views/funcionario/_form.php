@@ -54,7 +54,7 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'al_correo_funcionario'); ?>
+				<?php echo $form->labelEx($model,'al_correo_funcionario'); ?>
 		<?php echo $form->textField($model,'al_correo_funcionario'); ?>
 		<?php echo $form->error($model,'al_correo_funcionario'); ?>
 	</div>

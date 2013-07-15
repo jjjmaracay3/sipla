@@ -13,7 +13,9 @@
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
-	<?php echo $form->errorSummary($model,$modelb); ?>
+	<?php if($model->isNewRecord==false){$modelb=DetalleSolicitud::model()->findByPk($model->nu_solicitud);}
+
+	echo $form->errorSummary($model,$modelb); ?>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'nu_funcionario'); ?>
@@ -29,7 +31,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'al_estado_solicitud'); ?>
-		<?php echo $form->dropdownList($model,'nu_numero_departamento',array('1'=>'Activa','0'=>'Atendida')); ?>
+		<?php echo $form->dropdownList($model,'al_estado_solicitud',array('1'=>'Activa','0'=>'Atendida')); ?>
 		<?php echo $form->error($model,'al_estado_solicitud'); ?>
 	</div>
 
@@ -75,7 +77,7 @@
 	<div class="row buttons">
 		<?php $this->widget('bootstrap.widgets.TbButton', array(
 			'buttonType'=>'submit',
-			'type'=>'primary',
+			'type'=>'success',
 			'label'=>$model->isNewRecord ? 'Create' : 'Save',
 		)); ?>
 	</div>

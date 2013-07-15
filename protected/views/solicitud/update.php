@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update Solicitud <?php echo $model->nu_solicitud; ?></h1>
+<h1>Update Solicitud <?php echo $model->nu_solicitud; ?><?php echo $modelb->nu_solicitud;?></h1>
 
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php echo $this->renderPartial('_form', array('model'=>$model,'modelb'=>$modelb)); ?>
