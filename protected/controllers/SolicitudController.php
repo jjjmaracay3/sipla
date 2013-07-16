@@ -96,21 +96,29 @@ class SolicitudController extends Controller
 	{
 		$model=new Solicitud;
 		$modelb=new DetalleSolicitud;//incorporamos los dos modelos a xx
-
 		$model=$this->loadModel($id);
+
+
 
 			// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-			if(isset($_POST['Solicitud'],$_POST['DetalleSolicitud']))
+		if(isset($_POST['Solicitud'],$_POST['DetalleSolicitud']))
 			{
+				$modelb->attributes=$_POST['DetalleSolicitud'];
+				$modelb->setIsNewRecord(false);
+				$modelb->scenario='update';
+				$modelb->nu_solicitud=$model->nu_solicitud;
+				$modelb->save($modelb,'update');
+
+				/*
 				$model->attributes=$_POST['Solicitud'];
 				$modelb->attributes=$_POST['DetalleSolicitud'];
 				$modelb->nu_solicitud=$model->nu_solicitud;
 				$modelb->setIsNewRecord(false);
 
 				if($model->save() && $modelb->update())
-						$this->redirect(array('view','id'=>$model->nu_solicitud));
+						$this->redirect(array('view','id'=>$model->nu_solicitud));*/
 		}
 
 		$this->render('update',array('model'=>$model,'modelb'=>$modelb,
