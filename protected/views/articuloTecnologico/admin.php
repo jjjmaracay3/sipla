@@ -45,10 +45,10 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'nu_articulo',
 		'nu_tipo_articulo',
 		'al_nombre_articulo',
-		'al_marca_articulo',
+		/*'al_marca_articulo',
 		'al_modelo_articulo',
 		'al_descripcion_articulo',
-		/*
+		
 		'de_precio_unitario',
 		'al_color_articulo',
 		'al_unidad_medida',

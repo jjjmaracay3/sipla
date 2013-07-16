@@ -5,7 +5,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nu_tipo_articulo')); ?>:</b>
-	<?php echo CHtml::encode($data->nu_tipo_articulo); ?>
+	<?php echo CHtml::encode($data->nuTipoArticulo->al_nombre_tipo); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('al_nombre_articulo')); ?>:</b>

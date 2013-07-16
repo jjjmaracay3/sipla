@@ -19,7 +19,9 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'nu_articulo',
-		'nu_tipo_articulo',
+	//	'nu_tipo_articulo',
+	//	'nu_tipo_articulo',
+		'nuTipoArticulo.al_nombre_tipo',
 		'al_nombre_articulo',
 		'al_marca_articulo',
 		'al_modelo_articulo',

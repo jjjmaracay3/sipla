@@ -18,8 +18,10 @@ $this->menu=array(
 <?php $this->widget('bootstrap.widgets.TbDetailView',array(
 	'data'=>$model,
 	'attributes'=>array(
-		'nu_tipo_articulo',
+		//'nu_tipo_articulo',
 		'nu_clasificacion_articulo',
+		'clasificacion.al_nombre_clasificacion', //alias definido en el modelo seguido del controlador
+		//punto
 		'al_nombre_tipo',
 		'al_descripcion_tipo',
 	),
