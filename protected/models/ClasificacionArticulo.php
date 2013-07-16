@@ -10,6 +10,7 @@
  *
  * The followings are the available model relations:
  * @property TipoArticulo[] $tipoArticulos
+ * @property DetalleSolicitud[] $detalleSolicituds
  */
 class ClasificacionArticulo extends CActiveRecord
 {
@@ -39,8 +40,7 @@ class ClasificacionArticulo extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('al_nombre_clasificacion', 'required'),
-			array('al_descripcion_clasificacion', 'safe'),
+			array('al_nombre_clasificacion, al_descripcion_clasificacion', 'required'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('nu_clasificacion_articulo, al_nombre_clasificacion, al_descripcion_clasificacion', 'safe', 'on'=>'search'),
@@ -56,6 +56,7 @@ class ClasificacionArticulo extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'tipoArticulos' => array(self::HAS_MANY, 'TipoArticulo', 'nu_clasificacion_articulo'),
+			'detalleSolicituds' => array(self::HAS_MANY, 'DetalleSolicitud', 'nu_clasificacion_articulo'),
 		);
 	}
 
@@ -65,9 +66,9 @@ class ClasificacionArticulo extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'nu_clasificacion_articulo' => 'Numero Clasificacion Articulo',
-			'al_nombre_clasificacion' => 'Nombre Clasificacion',
-			'al_descripcion_clasificacion' => 'Descripcion Clasificacion',
+			'nu_clasificacion_articulo' => 'Nu Clasificacion Articulo',
+			'al_nombre_clasificacion' => 'Al Nombre Clasificacion',
+			'al_descripcion_clasificacion' => 'Al Descripcion Clasificacion',
 		);
 	}
 

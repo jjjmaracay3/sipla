@@ -1,12 +1,7 @@
-<?php
-/* @var $this ClasificacionArticuloController */
-/* @var $data ClasificacionArticulo */
-?>
-
 <div class="view">
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nu_clasificacion_articulo')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->nu_clasificacion_articulo), array('view', 'id'=>$data->nu_clasificacion_articulo)); ?>
+	<?php echo CHtml::link(CHtml::encode($data->nu_clasificacion_articulo),array('view','id'=>$data->nu_clasificacion_articulo)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('al_nombre_clasificacion')); ?>:</b>

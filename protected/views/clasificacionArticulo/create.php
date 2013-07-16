@@ -1,15 +1,12 @@
 <?php
-/* @var $this ClasificacionArticuloController */
-/* @var $model ClasificacionArticulo */
-
 $this->breadcrumbs=array(
 	'Clasificacion Articulos'=>array('index'),
 	'Create',
 );
 
 $this->menu=array(
-	array('label'=>'List ClasificacionArticulo', 'url'=>array('index')),
-	array('label'=>'Manage ClasificacionArticulo', 'url'=>array('admin')),
+	array('label'=>'List ClasificacionArticulo','url'=>array('index')),
+	array('label'=>'Manage ClasificacionArticulo','url'=>array('admin')),
 );
 ?>
 
