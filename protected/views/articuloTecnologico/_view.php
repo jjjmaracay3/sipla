@@ -1,16 +1,11 @@
-<?php
-/* @var $this ArticuloTecnologicoController */
-/* @var $data ArticuloTecnologico */
-?>
-
 <div class="view">
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nu_articulo')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->nu_articulo), array('view', 'id'=>$data->nu_articulo)); ?>
+	<?php echo CHtml::link(CHtml::encode($data->nu_articulo),array('view','id'=>$data->nu_articulo)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nu_tipo_articulo')); ?>:</b>
-	<?php echo CHtml::encode($data->tipo->al_nombre_tipo); ?>
+	<?php echo CHtml::encode($data->nu_tipo_articulo); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('al_nombre_articulo')); ?>:</b>

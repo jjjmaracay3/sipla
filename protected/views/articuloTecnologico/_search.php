@@ -1,65 +1,32 @@
-<?php
-/* @var $this ArticuloTecnologicoController */
-/* @var $model ArticuloTecnologico */
-/* @var $form CActiveForm */
-?>
-
-<div class="wide form">
-
-<?php $form=$this->beginWidget('CActiveForm', array(
+<?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 	'action'=>Yii::app()->createUrl($this->route),
 	'method'=>'get',
 )); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'nu_articulo'); ?>
-		<?php echo $form->textField($model,'nu_articulo'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'nu_articulo',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'nu_tipo_articulo'); ?>
-		<?php echo $form->textField($model,'nu_tipo_articulo'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'nu_tipo_articulo',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'al_nombre_articulo'); ?>
-		<?php echo $form->textField($model,'al_nombre_articulo'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'al_nombre_articulo',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'al_marca_articulo'); ?>
-		<?php echo $form->textField($model,'al_marca_articulo'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'al_marca_articulo',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'al_modelo_articulo'); ?>
-		<?php echo $form->textField($model,'al_modelo_articulo'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'al_modelo_articulo',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'al_descripcion_articulo'); ?>
-		<?php echo $form->textField($model,'al_descripcion_articulo'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'al_descripcion_articulo',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'de_precio_unitario'); ?>
-		<?php echo $form->textField($model,'de_precio_unitario'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'de_precio_unitario',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'al_color_articulo'); ?>
-		<?php echo $form->textField($model,'al_color_articulo'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'al_color_articulo',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'al_unidad_medida'); ?>
-		<?php echo $form->textField($model,'al_unidad_medida'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'al_unidad_medida',array('class'=>'span5')); ?>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
+	<div class="form-actions">
+		<?php $this->widget('bootstrap.widgets.TbButton', array(
+			'buttonType'=>'submit',
+			'type'=>'primary',
+			'label'=>'Search',
+		)); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
-
-</div><!-- search-form -->

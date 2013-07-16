@@ -1,15 +1,12 @@
 <?php
-/* @var $this ArticuloTecnologicoController */
-/* @var $model ArticuloTecnologico */
-
 $this->breadcrumbs=array(
 	'Articulo Tecnologicos'=>array('index'),
 	'Create',
 );
 
 $this->menu=array(
-	array('label'=>'List ArticuloTecnologico', 'url'=>array('index')),
-	array('label'=>'Manage ArticuloTecnologico', 'url'=>array('admin')),
+	array('label'=>'List ArticuloTecnologico','url'=>array('index')),
+	array('label'=>'Manage ArticuloTecnologico','url'=>array('admin')),
 );
 ?>
 

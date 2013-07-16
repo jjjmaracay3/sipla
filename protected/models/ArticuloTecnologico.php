@@ -15,9 +15,9 @@
  * @property string $al_unidad_medida
  *
  * The followings are the available model relations:
- * @property DetalleSolicitud[] $detalleSolicituds
- * @property PlanCompra[] $planCompras
  * @property DetalleRequisicion[] $detalleRequisicions
+ * @property PlanCompra[] $planCompras
+ * @property DetalleSolicitud[] $detalleSolicituds
  * @property TipoArticulo $nuTipoArticulo
  */
 class ArticuloTecnologico extends CActiveRecord
@@ -65,10 +65,10 @@ class ArticuloTecnologico extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'detalleSolicituds' => array(self::HAS_MANY, 'DetalleSolicitud', 'nu_articulo'),
-			'planCompras' => array(self::HAS_MANY, 'PlanCompra', 'nu_articulo'),
 			'detalleRequisicions' => array(self::HAS_MANY, 'DetalleRequisicion', 'nu_articulo'),
-			'tipo' => array(self::BELONGS_TO, 'TipoArticulo', 'nu_tipo_articulo'),
+			'planCompras' => array(self::HAS_MANY, 'PlanCompra', 'nu_articulo'),
+			'detalleSolicituds' => array(self::HAS_MANY, 'DetalleSolicitud', 'nu_articulo'),
+			'nuTipoArticulo' => array(self::BELONGS_TO, 'TipoArticulo', 'nu_tipo_articulo'),
 		);
 	}
 
@@ -78,15 +78,15 @@ class ArticuloTecnologico extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'nu_articulo' => 'Numero Articulo',
-			'nu_tipo_articulo' => 'Tipo Articulo',
-			'al_nombre_articulo' => 'Nombre Articulo',
-			'al_marca_articulo' => 'Marca Articulo',
-			'al_modelo_articulo' => 'Modelo Articulo',
-			'al_descripcion_articulo' => 'Descripcion Articulo',
-			'de_precio_unitario' => 'Precio Unitario',
-			'al_color_articulo' => 'Color Articulo',
-			'al_unidad_medida' => 'Unidad Medida',
+			'nu_articulo' => 'Nu Articulo',
+			'nu_tipo_articulo' => 'Nu Tipo Articulo',
+			'al_nombre_articulo' => 'Al Nombre Articulo',
+			'al_marca_articulo' => 'Al Marca Articulo',
+			'al_modelo_articulo' => 'Al Modelo Articulo',
+			'al_descripcion_articulo' => 'Al Descripcion Articulo',
+			'de_precio_unitario' => 'De Precio Unitario',
+			'al_color_articulo' => 'Al Color Articulo',
+			'al_unidad_medida' => 'Al Unidad Medida',
 		);
 	}
 
