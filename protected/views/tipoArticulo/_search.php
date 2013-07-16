@@ -1,40 +1,22 @@
-<?php
-/* @var $this TipoArticuloController */
-/* @var $model TipoArticulo */
-/* @var $form CActiveForm */
-?>
-
-<div class="wide form">
-
-<?php $form=$this->beginWidget('CActiveForm', array(
+<?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 	'action'=>Yii::app()->createUrl($this->route),
 	'method'=>'get',
 )); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'nu_tipo_articulo'); ?>
-		<?php echo $form->textField($model,'nu_tipo_articulo'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'nu_tipo_articulo',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'nu_clasificacion_articulo'); ?>
-		<?php echo $form->textField($model,'nu_clasificacion_articulo'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'nu_clasificacion_articulo',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'al_nombre_tipo'); ?>
-		<?php echo $form->textField($model,'al_nombre_tipo'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'al_nombre_tipo',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'al_descripcion_tipo'); ?>
-		<?php echo $form->textField($model,'al_descripcion_tipo'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'al_descripcion_tipo',array('class'=>'span5')); ?>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
+	<div class="form-actions">
+		<?php $this->widget('bootstrap.widgets.TbButton', array(
+			'buttonType'=>'submit',
+			'type'=>'primary',
+			'label'=>'Search',
+		)); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
-
-</div><!-- search-form -->

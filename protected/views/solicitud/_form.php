@@ -52,6 +52,7 @@
 
 
 		 ?>
+		 
 		<?php echo $form->error($model,'fe_solicitud'); ?>
 	</div>
 

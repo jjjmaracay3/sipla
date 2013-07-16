@@ -10,8 +10,9 @@
  * @property string $al_descripcion_tipo
  *
  * The followings are the available model relations:
- * @property ArticuloTecnologico[] $articuloTecnologicos
  * @property ClasificacionArticulo $nuClasificacionArticulo
+ * @property DetalleSolicitud[] $detalleSolicituds
+ * @property ArticuloTecnologico[] $articuloTecnologicos
  */
 class TipoArticulo extends CActiveRecord
 {
@@ -57,8 +58,9 @@ class TipoArticulo extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'articulo' => array(self::HAS_MANY, 'ArticuloTecnologico', 'nu_tipo_articulo'),
 			'clasificacion' => array(self::BELONGS_TO, 'ClasificacionArticulo', 'nu_clasificacion_articulo'),
+			'detalleSolicituds' => array(self::HAS_MANY, 'DetalleSolicitud', 'nu_tipo_articulo'),
+			'articuloTecnologicos' => array(self::HAS_MANY, 'ArticuloTecnologico', 'nu_tipo_articulo'),
 		);
 	}
 
@@ -68,10 +70,10 @@ class TipoArticulo extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'nu_tipo_articulo' => 'Numero Tipo Articulo',
-			'nu_clasificacion_articulo' => 'Clasificacion Articulo',
-			'al_nombre_tipo' => 'Nombre Tipo',
-			'al_descripcion_tipo' => 'Descripcion Tipo',
+			'nu_tipo_articulo' => 'Nu Tipo Articulo',
+			'nu_clasificacion_articulo' => 'Nu Clasificacion Articulo',
+			'al_nombre_tipo' => 'Al Nombre Tipo',
+			'al_descripcion_tipo' => 'Al Descripcion Tipo',
 		);
 	}
 

@@ -1,12 +1,7 @@
-<?php
-/* @var $this TipoArticuloController */
-/* @var $data TipoArticulo */
-?>
-
 <div class="view">
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nu_tipo_articulo')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->nu_tipo_articulo), array('view', 'id'=>$data->nu_tipo_articulo)); ?>
+	<?php echo CHtml::link(CHtml::encode($data->nu_tipo_articulo),array('view','id'=>$data->nu_tipo_articulo)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nu_clasificacion_articulo')); ?>:</b>
