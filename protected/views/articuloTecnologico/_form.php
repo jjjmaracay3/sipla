@@ -7,7 +7,8 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<?php echo $form->textFieldRow($model,'nu_tipo_articulo',array('class'=>'span5')); ?>
+	<?php echo $form->dropdownList($model,'nu_tipo_articulo',CHtml::listData(TipoArticulo::model()->findAll(),
+		'nu_tipo_articulo','al_nombre_tipo'),array('empty'=>'Seleccione Clasificacion')); ?>
 
 	<?php echo $form->textFieldRow($model,'al_nombre_articulo',array('class'=>'span5')); ?>
 
