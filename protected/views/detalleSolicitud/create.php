@@ -1,15 +1,12 @@
 <?php
-/* @var $this DetalleSolicitudController */
-/* @var $model DetalleSolicitud */
-
 $this->breadcrumbs=array(
 	'Detalle Solicituds'=>array('index'),
 	'Create',
 );
 
 $this->menu=array(
-	array('label'=>'List DetalleSolicitud', 'url'=>array('index')),
-	array('label'=>'Manage DetalleSolicitud', 'url'=>array('admin')),
+	array('label'=>'List DetalleSolicitud','url'=>array('index')),
+	array('label'=>'Manage DetalleSolicitud','url'=>array('admin')),
 );
 ?>
 

@@ -56,11 +56,25 @@
 	</div>
 
 	
-	<div class="row">
+<div class="row">
+		<?php echo $form->labelEx($modelb,'nu_clasificacion_articulo'); ?>
+		<?php echo $form->textField($modelb,'nu_clasificacion_articulo'); ?>
+		<?php echo $form->error($modelb,'nu_clasificacion_articulo'); ?>
+	</div>
+
+<div class="row">
+		<?php echo $form->labelEx($modelb,'nu_tipo_articulo'); ?>
+		<?php echo $form->textField($modelb,'nu_tipo_articulo'); ?>
+		<?php echo $form->error($modelb,'nu_tipo_articulo'); ?>
+	</div>
+
+<div class="row">
 		<?php echo $form->labelEx($modelb,'nu_articulo'); ?>
 		<?php echo $form->textField($modelb,'nu_articulo'); ?>
 		<?php echo $form->error($modelb,'nu_articulo'); ?>
 	</div>
+
+
 
 	<div class="row">
 		<?php echo $form->labelEx($modelb,'nu_cantidad_solicitada'); ?>

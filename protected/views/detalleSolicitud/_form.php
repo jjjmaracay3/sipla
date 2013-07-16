@@ -1,48 +1,30 @@
-<?php
-/* @var $this DetalleSolicitudController */
-/* @var $model DetalleSolicitud */
-/* @var $form CActiveForm */
-?>
-
-<div class="form">
-
-<?php $form=$this->beginWidget('CActiveForm', array(
+<?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 	'id'=>'detalle-solicitud-form',
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="help-block">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'nu_solicitud'); ?>
-		<?php echo $form->textField($model,'nu_solicitud'); ?>
-		<?php echo $form->error($model,'nu_solicitud'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'nu_solicitud',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'nu_articulo'); ?>
-		<?php echo $form->textField($model,'nu_articulo'); ?>
-		<?php echo $form->error($model,'nu_articulo'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'nu_clasificacion_articulo',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'nu_cantidad_solicitada'); ?>
-		<?php echo $form->textField($model,'nu_cantidad_solicitada'); ?>
-		<?php echo $form->error($model,'nu_cantidad_solicitada'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'nu_tipo_articulo',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'al_justificacion'); ?>
-		<?php echo $form->textField($model,'al_justificacion'); ?>
-		<?php echo $form->error($model,'al_justificacion'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'nu_articulo',array('class'=>'span5')); ?>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+	<?php echo $form->textFieldRow($model,'nu_cantidad_solicitada',array('class'=>'span5')); ?>
+
+	<?php echo $form->textFieldRow($model,'al_justificacion',array('class'=>'span5')); ?>
+
+	<div class="form-actions">
+		<?php $this->widget('bootstrap.widgets.TbButton', array(
+			'buttonType'=>'submit',
+			'type'=>'primary',
+			'label'=>$model->isNewRecord ? 'Create' : 'Save',
+		)); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
-
-</div><!-- form -->
