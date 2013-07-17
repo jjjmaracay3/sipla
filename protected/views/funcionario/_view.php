@@ -1,20 +1,15 @@
-<?php
-/* @var $this FuncionarioController */
-/* @var $data Funcionario */
-?>
-
 <div class="view">
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nu_funcionario')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->nu_funcionario), array('view', 'id'=>$data->nu_funcionario)); ?>
+	<?php echo CHtml::link(CHtml::encode($data->nu_funcionario),array('view','id'=>$data->nu_funcionario)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nu_numero_departamento')); ?>:</b>
-	<?php echo CHtml::encode($data->departamento->al_nombre_departamento); ?>
+	<?php echo CHtml::encode($data->nuNumeroDepartamento->al_nombre_departamento); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nu_rol')); ?>:</b>
-	<?php echo CHtml::encode($data->rol->al_nombre_rol); ?>
+	<?php echo CHtml::encode($data->nuRol->al_nombre_rol); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('al_nombre_funcionario')); ?>:</b>

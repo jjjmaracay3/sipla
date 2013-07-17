@@ -17,11 +17,11 @@
  * @property string $session
  *
  * The followings are the available model relations:
- * @property NotaEntrega[] $notaEntregas
  * @property Solicitud[] $solicituds
- * @property RequisicionCompra[] $requisicionCompras
+ * @property NotaEntrega[] $notaEntregas
  * @property Departamento $nuNumeroDepartamento
  * @property RolFuncionario $nuRol
+ * @property RequisicionCompra[] $requisicionCompras
  */
 class Funcionario extends CActiveRecord
 {
@@ -60,6 +60,7 @@ class Funcionario extends CActiveRecord
 		);
 	}
 
+
 	/**
 	 * @return array relational rules.
 	 */
@@ -68,11 +69,11 @@ class Funcionario extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'notaEntregas' => array(self::HAS_MANY, 'NotaEntrega', 'nu_funcionario'),
 			'solicituds' => array(self::HAS_MANY, 'Solicitud', 'nu_funcionario'),
+			'notaEntregas' => array(self::HAS_MANY, 'NotaEntrega', 'nu_funcionario'),
+			'nuNumeroDepartamento' => array(self::BELONGS_TO, 'Departamento', 'nu_numero_departamento'),
+			'nuRol' => array(self::BELONGS_TO, 'RolFuncionario', 'nu_rol'),
 			'requisicionCompras' => array(self::HAS_MANY, 'RequisicionCompra', 'nu_funcionario'),
-			'departamento' => array(self::BELONGS_TO, 'Departamento', 'nu_numero_departamento'),
-			'rol' => array(self::BELONGS_TO, 'RolFuncionario', 'nu_rol'),
 		);
 	}
 

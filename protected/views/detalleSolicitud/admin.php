@@ -38,15 +38,17 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </div><!-- search-form -->
 
 <?php $this->widget('bootstrap.widgets.TbGridView',array(
+	'type'=>'striped bordered condensed',
 	'id'=>'detalle-solicitud-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'nu_detalle_solicitud',
+		//'nu_detalle_solicitud',
 		'nu_solicitud',
-		'nu_clasificacion_articulo',
-		'nu_tipo_articulo',
-		'nu_articulo',
+		//'nu_clasificacion_articulo',
+		//'nu_tipo_articulo',
+		'nuArticulo.al_nombre_articulo',
+		//'nu_articulo',
 		'nu_cantidad_solicitada',
 		/*
 		'al_justificacion',

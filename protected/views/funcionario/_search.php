@@ -1,70 +1,34 @@
-<?php
-/* @var $this FuncionarioController */
-/* @var $model Funcionario */
-/* @var $form CActiveForm */
-?>
-
-<div class="wide form">
-
-<?php $form=$this->beginWidget('CActiveForm', array(
+<?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 	'action'=>Yii::app()->createUrl($this->route),
 	'method'=>'get',
 )); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'nu_funcionario'); ?>
-		<?php echo $form->textField($model,'nu_funcionario'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'nu_funcionario',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'nu_numero_departamento'); ?>
-		<?php echo $form->textField($model,'nu_numero_departamento'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'nu_numero_departamento',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'nu_rol'); ?>
-		<?php echo $form->textField($model,'nu_rol'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'nu_rol',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'al_nombre_funcionario'); ?>
-		<?php echo $form->textField($model,'al_nombre_funcionario'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'al_nombre_funcionario',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'al_apellido_funcionario'); ?>
-		<?php echo $form->textField($model,'al_apellido_funcionario'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'al_apellido_funcionario',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'nu_cedula_funcionario'); ?>
-		<?php echo $form->textField($model,'nu_cedula_funcionario'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'nu_cedula_funcionario',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'al_cargo_funcionario'); ?>
-		<?php echo $form->textField($model,'al_cargo_funcionario'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'al_cargo_funcionario',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'al_correo_funcionario'); ?>
-		<?php echo $form->textField($model,'al_correo_funcionario'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'al_correo_funcionario',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'username'); ?>
-		<?php echo $form->textField($model,'username'); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'username',array('class'=>'span5')); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'session'); ?>
-		<?php echo $form->textArea($model,'session',array('rows'=>6, 'cols'=>50)); ?>
-	</div>
+	<?php echo $form->textFieldRow($model,'session',array('class'=>'span5')); ?>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
+	<div class="form-actions">
+		<?php $this->widget('bootstrap.widgets.TbButton', array(
+			'buttonType'=>'submit',
+			'type'=>'primary',
+			'label'=>'Search',
+		)); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
-
-</div><!-- search-form -->
