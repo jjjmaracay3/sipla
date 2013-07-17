@@ -1,7 +1,7 @@
 <?php
 /* @var $this SolicitudController */
 /* @var $model Solicitud */
-/* @var $form CActiveForm */
+/* @var $form CActiveForm wqwq*/
 ?>
 
 <div class="form">
