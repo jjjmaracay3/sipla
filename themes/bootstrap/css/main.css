@@ -4,22 +4,26 @@ body
         padding: 0;
         color: #555;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        background: #EFEFEF;
+        background: url("../img/bg.png") no-repeat fixed right bottom #b0c2b3;        
 }
  
 #page
 {
-        margin-top: 5px;
+        margin-top: 30px;
         margin-bottom: 5px;
-        background: white;
-        border: 1px solid #C9E0ED;
+        background:#ffffff;
+        background: rgba(255, 255, 255, 0.90);
+        box-shadow: 0 4px 10px -1px rgba(119, 119, 119, 0.7);
+        border: 10px solid rgba(185, 185, 185, 0.3);
+        -webkit-border-radius: 13px;
+            -moz-border-radius: 13px;
+                border-radius: 13px;
 }
  
 #header
 {
         margin: 0;
         padding: 0;
-        border-top: 3px solid #C9E0ED;
 }
  
 #content
@@ -34,20 +38,20 @@ body
  
 #footer
 {
-        padding: 10px;
-        margin: 10px 20px;
+        padding: 30px;
+        
         font-size: 0.8em;
-        text-align: center;
-        border-top: 1px solid #C9E0ED;
+        text-align: center;        
 }
  
 #logo
 {
-        padding: 10px 20px;
+    margin: 20px 0 0 20px;
+        padding: 0;
         font-size: 200%;
+        background: url('../img/logo') no-repeat;
+        height:100px;
 }
- 
- 
  
 div.flash-error, div.flash-notice, div.flash-success
 {
@@ -127,7 +131,7 @@ div.search-form
 }
  
 a {
-  color: #0088cc;
+  color: #3C7E80;
   text-decoration: none;
 }
  

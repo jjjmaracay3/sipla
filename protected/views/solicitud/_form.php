@@ -89,6 +89,8 @@
 		<?php echo $form->error($modelb,'al_justificacion'); ?>
 	</div>
 
+
+
 	<div class="row buttons">
 		<?php $this->widget('bootstrap.widgets.TbButton', array(
 			'buttonType'=>'submit',
@@ -96,6 +98,20 @@
 			'label'=>$model->isNewRecord ? 'Create' : 'Save',
 		)); ?>
 	</div>
+
+	<div class="btn-group">
+  <a class="btn btn-danger dropdown-toggle" data-toggle="dropdown" href="#">
+    Danger 
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
 
 <?php $this->endWidget(); ?>
 

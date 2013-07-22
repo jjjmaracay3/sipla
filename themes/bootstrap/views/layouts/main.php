@@ -21,7 +21,7 @@
 <div class="container" id="page">
 
 	<div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
+		<a href="/Sipla/site/index.jsp"><div id="logo"></div></a>
 	</div><!-- header -->
 
 	<div id="mainmenu">
@@ -70,13 +70,19 @@
 
 	<div class="clear"></div>
 
-	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
-		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?>
-	</div><!-- footer -->
+	
 
 </div><!-- page -->
+
+<div class="clear"></div>
+
+<div id="footer">
+	<hr class="soften">
+		<p style="font-weight:bold;">Sistema de Planificaci&oacute;n de Adquisiciones Tecnol&oacute;gicas</p>
+		<p>&copy; SIPLA <?php echo date('Y'); ?>. - <?php echo Yii::powered(); ?></p>
+	</div><!-- footer -->
+
+	<script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/bootstrap.js"></script>
 
 </body>
 </html>
