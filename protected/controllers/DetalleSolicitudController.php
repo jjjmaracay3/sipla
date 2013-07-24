@@ -27,7 +27,7 @@ class DetalleSolicitudController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','Selectdos','Selecttres'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -172,5 +172,34 @@ class DetalleSolicitudController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+	public function actionSelectdos()
+	{
+		$id_uno = $_POST['DetalleSolicitud']['nu_clasificacion_articulo'];
+		$lista = TipoArticulo::model()->findAll('nu_clasificacion_articulo = :id_uno',array(':id_uno'=>$id_uno));
+		$lista = CHtml::listData($lista,'nu_tipo_articulo','al_nombre_tipo');
+
+		echo CHtml::tag('option',array('value'=>''),'Seleccione', true);
+		
+		foreach ($lista as $valor => $descripcion)
+		{
+			echo CHtml::tag('option',array('value'=>$valor),CHtml::encode($descripcion), true );
+		}
+		
+	}
+
+	public function actionSelecttres()
+	{
+		$id_uno = $_POST['DetalleSolicitud']['nu_clasificacion_articulo'];
+		$lista = TipoArticulo::model()->findAll('nu_clasificacion_articulo = :id_uno',array(':id_uno'=>$id_uno));
+		$lista = CHtml::listData($lista,'nu_tipo_articulo','al_nombre_tipo');
+		
+		echo CHtml::tag('option',array('value'=>''),'Seleccione', true);
+		
+		foreach ($lista as $valor => $descripcion)
+		{
+			echo CHtml::tag('option',array('value'=>$valor),CHtml::encode($descripcion), true );
+		}
+		
 	}
 }

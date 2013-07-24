@@ -7721,3 +7721,309 @@ Stack trace:
 REQUEST_URI=/Sipla/solicitud/create.jsp
 HTTP_REFERER=http://localhost/Sipla/solicitud/index.jsp
 ---
+2013/07/23 20:23:03 [error] [exception.CException] exception 'CException' with message 'CActiveForm y sus behaviors no tienen un método o closure llamado "dropdownListRow".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/Sipla/protected/views/solicitud/_form.php(62): CComponent->__call('dropdownListRow', Array)
+#1 /var/www/Sipla/protected/views/solicitud/_form.php(62): CActiveForm->dropdownListRow(Object(Solicitud), 'nu_clasificacio...', Array, Array)
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#5 /var/www/Sipla/protected/views/solicitud/create.php(18): CController->renderPartial('_form', Array)
+#6 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#7 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#8 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#9 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#10 /var/www/Sipla/protected/controllers/SolicitudController.php(87): CController->render('create', Array)
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): SolicitudController->actionCreate()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#21 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('solicitud/creat...')
+#22 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/Sipla/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/Sipla/solicitud/create.jsp
+HTTP_REFERER=http://localhost/Sipla/solicitud/index.jsp
+---
+2013/07/23 20:25:39 [error] [exception.CException] exception 'CException' with message 'CActiveForm y sus behaviors no tienen un método o closure llamado "dropdownListRow".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/Sipla/protected/views/solicitud/_form.php(62): CComponent->__call('dropdownListRow', Array)
+#1 /var/www/Sipla/protected/views/solicitud/_form.php(62): CActiveForm->dropdownListRow(Object(DetalleSolicitud), 'nu_clasificacio...', Array, Array)
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#5 /var/www/Sipla/protected/views/solicitud/create.php(18): CController->renderPartial('_form', Array)
+#6 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#7 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#8 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#9 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#10 /var/www/Sipla/protected/controllers/SolicitudController.php(87): CController->render('create', Array)
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): SolicitudController->actionCreate()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#21 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('solicitud/creat...')
+#22 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/Sipla/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/Sipla/solicitud/create.jsp
+HTTP_REFERER=http://localhost/Sipla/solicitud/index.jsp
+---
+2013/07/23 20:25:41 [error] [exception.CException] exception 'CException' with message 'CActiveForm y sus behaviors no tienen un método o closure llamado "dropdownListRow".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/Sipla/protected/views/solicitud/_form.php(62): CComponent->__call('dropdownListRow', Array)
+#1 /var/www/Sipla/protected/views/solicitud/_form.php(62): CActiveForm->dropdownListRow(Object(DetalleSolicitud), 'nu_clasificacio...', Array, Array)
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#5 /var/www/Sipla/protected/views/solicitud/create.php(18): CController->renderPartial('_form', Array)
+#6 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#7 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#8 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#9 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#10 /var/www/Sipla/protected/controllers/SolicitudController.php(87): CController->render('create', Array)
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): SolicitudController->actionCreate()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#21 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('solicitud/creat...')
+#22 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/Sipla/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/Sipla/solicitud/create.jsp
+HTTP_REFERER=http://localhost/Sipla/solicitud/index.jsp
+---
+2013/07/23 20:25:41 [error] [exception.CException] exception 'CException' with message 'CActiveForm y sus behaviors no tienen un método o closure llamado "dropdownListRow".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/Sipla/protected/views/solicitud/_form.php(62): CComponent->__call('dropdownListRow', Array)
+#1 /var/www/Sipla/protected/views/solicitud/_form.php(62): CActiveForm->dropdownListRow(Object(DetalleSolicitud), 'nu_clasificacio...', Array, Array)
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#5 /var/www/Sipla/protected/views/solicitud/create.php(18): CController->renderPartial('_form', Array)
+#6 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#7 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#8 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#9 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#10 /var/www/Sipla/protected/controllers/SolicitudController.php(87): CController->render('create', Array)
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): SolicitudController->actionCreate()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#21 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('solicitud/creat...')
+#22 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/Sipla/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/Sipla/solicitud/create.jsp
+HTTP_REFERER=http://localhost/Sipla/solicitud/index.jsp
+---
+2013/07/23 20:28:13 [error] [exception.CException] exception 'CException' with message 'CActiveForm y sus behaviors no tienen un método o closure llamado "dropdownListRow".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/Sipla/protected/views/solicitud/_form.php(62): CComponent->__call('dropdownListRow', Array)
+#1 /var/www/Sipla/protected/views/solicitud/_form.php(62): CActiveForm->dropdownListRow(Object(DetalleSolicitud), 'nu_clasificacio...', Array, Array)
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#5 /var/www/Sipla/protected/views/solicitud/create.php(18): CController->renderPartial('_form', Array)
+#6 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#7 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#8 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#9 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#10 /var/www/Sipla/protected/controllers/SolicitudController.php(87): CController->render('create', Array)
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): SolicitudController->actionCreate()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#21 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('solicitud/creat...')
+#22 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/Sipla/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/Sipla/solicitud/create.jsp
+HTTP_REFERER=http://localhost/Sipla/solicitud/index.jsp
+---
+2013/07/23 20:42:04 [error] [exception.CException] exception 'CException' with message 'Propiedad "DetalleSolicitud"."nu_numero_tipo" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('nu_numero_tipo')
+#1 /var/www/yii/framework/web/helpers/CHtml.php(2255): CActiveRecord->__get('nu_numero_tipo')
+#2 /var/www/yii/framework/web/helpers/CHtml.php(1565): CHtml::resolveValue(Object(DetalleSolicitud), 'nu_numero_tipo')
+#3 /var/www/yii/framework/web/widgets/CActiveForm.php(763): CHtml::activeDropDownList(Object(DetalleSolicitud), 'nu_numero_tipo', Array, Array)
+#4 /var/www/Sipla/protected/views/solicitud/_form.php(71): CActiveForm->dropDownList(Object(DetalleSolicitud), 'nu_numero_tipo', Array, Array)
+#5 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#6 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#7 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#8 /var/www/Sipla/protected/views/solicitud/create.php(18): CController->renderPartial('_form', Array)
+#9 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#10 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#11 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#12 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#13 /var/www/Sipla/protected/controllers/SolicitudController.php(87): CController->render('create', Array)
+#14 /var/www/yii/framework/web/actions/CInlineAction.php(49): SolicitudController->actionCreate()
+#15 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#16 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#18 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#22 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#24 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('solicitud/creat...')
+#25 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#26 /var/www/Sipla/index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/Sipla/solicitud/create.jsp
+HTTP_REFERER=http://localhost/Sipla/solicitud/index.jsp
+---
+2013/07/23 20:59:07 [error] [php] include(CalsificacionArticulo.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /var/www/Sipla/protected/views/solicitud/_form.php(66): spl_autoload_call()
+#1 /var/www/yii/framework/web/CBaseController.php(126): require()
+#2 /var/www/yii/framework/web/CBaseController.php(95): SolicitudController->renderInternal()
+#3 /var/www/yii/framework/web/CController.php(869): SolicitudController->renderFile()
+#4 /var/www/Sipla/protected/views/solicitud/create.php(18): SolicitudController->renderPartial()
+#5 /var/www/yii/framework/web/CBaseController.php(126): require()
+#6 /var/www/yii/framework/web/CBaseController.php(95): SolicitudController->renderInternal()
+#7 /var/www/yii/framework/web/CController.php(869): SolicitudController->renderFile()
+#8 /var/www/yii/framework/web/CController.php(782): SolicitudController->renderPartial()
+#9 /var/www/Sipla/protected/controllers/SolicitudController.php(87): SolicitudController->render()
+#10 /var/www/yii/framework/web/actions/CInlineAction.php(49): SolicitudController->actionCreate()
+#11 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(133): SolicitudController->runAction()
+#13 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#15 /var/www/yii/framework/web/filters/CInlineFilter.php(58): SolicitudController->filterAccessControl()
+#16 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#17 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#18 /var/www/yii/framework/web/CController.php(265): SolicitudController->runActionWithFilters()
+#19 /var/www/yii/framework/web/CWebApplication.php(282): SolicitudController->run()
+#20 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#21 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#22 /var/www/Sipla/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sipla/solicitud/create.jsp
+in /var/www/Sipla/protected/views/solicitud/_form.php (66)
+in /var/www/Sipla/protected/views/solicitud/create.php (18)
+in /var/www/Sipla/protected/controllers/SolicitudController.php (87)
+2013/07/23 20:59:30 [error] [system.db.CDbCommand] CDbCommand::fetchAll() falló: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «». La sentencia SQL ejecutada fue: SELECT * FROM "tipo_articulo" "t" WHERE nu_clasificacion_articulo = :id_uno.
+in /var/www/Sipla/protected/controllers/DetalleSolicitudController.php (179)
+in /var/www/Sipla/index.php (13)
+2013/07/23 20:59:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «». The SQL statement executed was: SELECT * FROM "tipo_articulo" "t" WHERE nu_clasificacion_articulo = :id_uno' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /var/www/Sipla/protected/controllers/DetalleSolicitudController.php(179): CActiveRecord->findAll('nu_clasificacio...', Array)
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(49): DetalleSolicitudController->actionSelectdos()
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('Selectdos')
+#14 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('DetalleSolicitu...')
+#15 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/Sipla/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/Sipla/DetalleSolicitud/Selectdos.jsp
+HTTP_REFERER=http://localhost/Sipla/solicitud/create.jsp
+---
+2013/07/23 20:59:52 [error] [system.db.CDbCommand] CDbCommand::fetchAll() falló: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «». La sentencia SQL ejecutada fue: SELECT * FROM "tipo_articulo" "t" WHERE nu_clasificacion_articulo = :id_uno.
+in /var/www/Sipla/protected/controllers/DetalleSolicitudController.php (179)
+in /var/www/Sipla/index.php (13)
+2013/07/23 20:59:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «». The SQL statement executed was: SELECT * FROM "tipo_articulo" "t" WHERE nu_clasificacion_articulo = :id_uno' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /var/www/Sipla/protected/controllers/DetalleSolicitudController.php(179): CActiveRecord->findAll('nu_clasificacio...', Array)
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(49): DetalleSolicitudController->actionSelectdos()
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('Selectdos')
+#14 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('DetalleSolicitu...')
+#15 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/Sipla/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/Sipla/DetalleSolicitud/Selectdos.jsp
+HTTP_REFERER=http://localhost/Sipla/solicitud/create.jsp
+---
+2013/07/23 21:02:11 [error] [system.db.CDbCommand] CDbCommand::fetchAll() falló: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «». La sentencia SQL ejecutada fue: SELECT * FROM "tipo_articulo" "t" WHERE nu_clasificacion_articulo = :id_uno.
+in /var/www/Sipla/protected/controllers/DetalleSolicitudController.php (179)
+in /var/www/Sipla/index.php (13)
+2013/07/23 21:02:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «». The SQL statement executed was: SELECT * FROM "tipo_articulo" "t" WHERE nu_clasificacion_articulo = :id_uno' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /var/www/Sipla/protected/controllers/DetalleSolicitudController.php(179): CActiveRecord->findAll('nu_clasificacio...', Array)
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(49): DetalleSolicitudController->actionSelectdos()
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('Selectdos')
+#14 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('DetalleSolicitu...')
+#15 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/Sipla/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/Sipla/DetalleSolicitud/Selectdos.jsp
+HTTP_REFERER=http://localhost/Sipla/solicitud/create.jsp
+---
+2013/07/23 21:03:19 [error] [php] Undefined index: DetalleSolicitud (/var/www/Sipla/protected/controllers/DetalleSolicitudController.php:178)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): DetalleSolicitudController->runAction()
+#1 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): DetalleSolicitudController->filterAccessControl()
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): DetalleSolicitudController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): DetalleSolicitudController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sipla/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sipla/DetalleSolicitud/Selectdos
+in /var/www/Sipla/protected/controllers/DetalleSolicitudController.php (178)
+in /var/www/Sipla/index.php (13)

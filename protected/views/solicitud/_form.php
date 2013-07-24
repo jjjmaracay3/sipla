@@ -56,22 +56,49 @@
 		<?php echo $form->error($model,'fe_solicitud'); ?>
 	</div>
 
-	
+
+
+
 <div class="row">
 		<?php echo $form->labelEx($modelb,'nu_clasificacion_articulo'); ?>
-		<?php echo $form->textField($modelb,'nu_clasificacion_articulo'); ?>
+		<?php echo $form->dropDownList($modelb,'nu_clasificacion_articulo',
+		CHtml::ListData(ClasificacionArticulo::model()->findAll(),'nu_clasificacion_articulo','al_nombre_clasificacion'),
+			array(
+				'ajax'=>array(
+					'type'=>'POST',
+					'url'=>CController::createUrl('DetalleSolicitud/Selectdos'),
+					'update'=>'#'.CHtml::activeId($modelb,'nu_tipo_articulo'),
+					'beforeSend' => 'function(){
+					   $("#Registro_id_nivel_dos").find("option").remove();
+					}',
+				),'prompt'=>'Seleccione'	
+			)
+		); ?>
 		<?php echo $form->error($modelb,'nu_clasificacion_articulo'); ?>
 	</div>
 
-<div class="row">
+    <div class="row">
 		<?php echo $form->labelEx($modelb,'nu_tipo_articulo'); ?>
-		<?php echo $form->textField($modelb,'nu_tipo_articulo'); ?>
+		<?php echo $form->dropDownList($modelb,'nu_tipo_articulo',array(
+				'ajax'=>array(
+					'type'=>'POST',
+					'url'=>CController::createUrl('DetalleSolicitud/Selecttres'),
+					'update'=>'#'.CHtml::activeId($modelb,'nu_articulo'),
+					'beforeSend' => 'function(){
+					   $("#Registro_id_nivel_dos").find("option").remove();
+					}',
+				),'prompt'=>'Seleccione'	
+			)
+		); ?>
 		<?php echo $form->error($modelb,'nu_tipo_articulo'); ?>
 	</div>
 
+
 <div class="row">
 		<?php echo $form->labelEx($modelb,'nu_articulo'); ?>
-		<?php echo $form->textField($modelb,'nu_articulo'); ?>
+		<?php echo $form->dropDownList($modelb,'nu_articulo',array(),
+			array('prompt'=>'Seleccione')
+		); ?>
 		<?php echo $form->error($modelb,'nu_articulo'); ?>
 	</div>
 
