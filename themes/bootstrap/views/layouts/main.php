@@ -25,6 +25,7 @@
 	</div><!-- header -->
 
 	<div id="mainmenu">
+
 		<?php $this->widget('bootstrap.widgets.TbNavbar', array(
                  'type'=>'default', // null or 'inverse'
                 //'brand'=>'',CHtml::image(Yii::app()->getBaseUrl(). '/images/header.png'),
@@ -34,18 +35,33 @@
                                 array(
                                         'class'=>'bootstrap.widgets.TbMenu',        
 			'items'=>array(
-				array('label'=>'Inicio', 'url'=>array('/site/index')),
-				array('label'=>'Solicitudes', 'url'=>array('/solicitud/index')),
+				array('label'=>'Inicio', 'icon'=>'home', 'url'=>array('/site/index')),
+				array('label'=>'Solicitudes', 'icon'=>'edit', 'url'=>array('/solicitud/index')),
 				array('label'=>'Detalle', 'url'=>array('/detalleSolicitud/index')),
-				array('label'=>'Departamento', 'url'=>array('/departamento/index')),
-				array('label'=>'Funcionarios','url'=>array('funcionario/index')),
-				array('label'=>'Roles', 'url'=>array('/rolFuncionario/index')),
-				array('label'=>'Articulos','url'=>array('articuloTecnologico/index')),
+				array('label'=>'Departamento', 'icon'=>'map-marker','url'=>array('/departamento/index')),
+				//array('label'=>'Funcionarios','url'=>array('funcionario/index')),
+				//array('label'=>'Roles', 'url'=>array('/rolFuncionario/index')),
+				//array('label'=>'Articulos','url'=>array('articuloTecnologico/index')),
 				array('label'=>'Tipo', 'url'=>array('/tipoArticulo/index')),
 				array('label'=>'Clasificar', 'url'=>array('/clasificacionArticulo/index')),
+
+				 //array('label'=>'Home', 'url'=>'#', 'active'=>true),
+                //array('label'=>'Link', 'url'=>'#'),
+                array('label'=>'Administrar', 'icon'=>'check', 'url'=>'#', 'items'=>array(
+                    array('label'=>'Articulos','icon'=>'plus-sign','url'=>array('articuloTecnologico/index')),
+                    array('label'=>'Funcionarios', 'icon'=>'plus-sign', 'url'=>array('funcionario/index')),
+                    array('label'=>'Something else here', 'url'=>'#'),
+                    '---',
+                    array('label'=>'Otros CRUD'),
+                    array('label'=>'Departamento', 'icon'=>'plus-sign', 'url'=>array('/departamento/index')),
+                    array('label'=>'Roles', 'icon'=>'plus-sign','url'=>array('/rolFuncionario/index')),
+                    array('label'=>'Clasificacion de un articulo', 'icon'=>'plus-sign', 'url'=>array('/clasificacionArticulo/index')),
+                    array('label'=>'Tipo de un articulo', 'icon'=>'plus-sign', 'url'=>array('/tipoArticulo/index')),
+                    //array('label'=>'One more separated link', 'url'=>'#'),
+                )),
 				
-				array('label'=>'Entrar', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Salir ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+							  array('label'=>'Entrar', 'url'=>array('/site/login'), 'icon'=>'lock', 'visible'=>Yii::app()->user->isGuest),
+							  array('label'=>'Salir ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'icon'=>'user', 'visible'=>!Yii::app()->user->isGuest)
 			),
 			)
 		))); ?>

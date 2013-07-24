@@ -7,8 +7,7 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'List ArticuloTecnologico','url'=>array('index')),
 	array('label'=>'Manage ArticuloTecnologico','url'=>array('admin')),
-);
-?>
+);?>
 
 <h1>Create ArticuloTecnologico</h1>
 
