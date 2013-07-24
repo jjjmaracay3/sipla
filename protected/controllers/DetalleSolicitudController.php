@@ -190,15 +190,26 @@ class DetalleSolicitudController extends Controller
 
 	public function actionSelecttres()
 	{
-		$id_uno = $_POST['DetalleSolicitud']['nu_clasificacion_articulo'];
-		$lista = TipoArticulo::model()->findAll('nu_clasificacion_articulo = :id_uno',array(':id_uno'=>$id_uno));
-		$lista = CHtml::listData($lista,'nu_tipo_articulo','al_nombre_tipo');
+		$id_uno = $_POST['DetalleSolicitud']['nu_tipo_articulo'];
+		$lista = Articulo::model()->findAll('nu_tipo_articulo = :id_uno',array(':id_uno'=>$id_uno));
+		$lista = CHtml::listData($lista,'nu_articulo','al_nombre_articulo');
 		
 		echo CHtml::tag('option',array('value'=>''),'Seleccione', true);
 		
 		foreach ($lista as $valor => $descripcion)
 		{
-			echo CHtml::tag('option',array('value'=>$valor),CHtml::encode($descripcion), true );
+			echo CHtml::tag('option',array('value'=>$valor),CHtml::encode($descripcion), true ),
+			array(
+				'ajax'=>array(
+					'type'=>'POST',
+					'url'=>CController::createUrl('DetalleSolicitud/Selecttres'),
+					'update'=>'#'.CHtml::activeId($modelb,'nu_articulo'),
+					'beforeSend' => 'function(){
+					   $("#Registro_id_nivel_dos").find("option").remove();
+					}',
+				),'prompt'=>'Seleccione'	
+			)
+			;
 		}
 		
 	}

@@ -79,16 +79,8 @@
 
     <div class="row">
 		<?php echo $form->labelEx($modelb,'nu_tipo_articulo'); ?>
-		<?php echo $form->dropDownList($modelb,'nu_tipo_articulo',array(
-				'ajax'=>array(
-					'type'=>'POST',
-					'url'=>CController::createUrl('DetalleSolicitud/Selecttres'),
-					'update'=>'#'.CHtml::activeId($modelb,'nu_articulo'),
-					'beforeSend' => 'function(){
-					   $("#Registro_id_nivel_dos").find("option").remove();
-					}',
-				),'prompt'=>'Seleccione'	
-			)
+		<?php echo $form->dropDownList($modelb,'nu_tipo_articulo',array(),
+			array('prompt'=>'Seleccione')
 		); ?>
 		<?php echo $form->error($modelb,'nu_tipo_articulo'); ?>
 	</div>

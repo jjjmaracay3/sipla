@@ -28,8 +28,8 @@
 	<?php echo CHtml::encode($data->de_precio_unitario); ?>
 	<br />
 
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('al_color_articulo')); ?>:</b>
+	 
+	<?php echo CHtml::encode($data->getAttributeLabel('al_color_articulo')); ?>:</b>
 	<?php echo CHtml::encode($data->al_color_articulo); ?>
 	<br />
 
@@ -37,6 +37,6 @@
 	<?php echo CHtml::encode($data->al_unidad_medida); ?>
 	<br />
 
-	*/ ?>
+	
 
 </div>
