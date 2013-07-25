@@ -10,7 +10,7 @@ return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Sipla',
 	'language'=>'es',
-	'sourceLanguage'=>'en',
+	'sourceLanguage'=>'es',
 	'charset'=>'utf-8',
 	'theme'=>'bootstrap',
 	// preloading 'log' component
@@ -71,9 +71,13 @@ return array(
 			'charset' => 'utf8',
 		),
 
-		'coreMessages'=>array (
+		'coreMessages'=>array(
 				'basePath'=>'protected/messages'
 			),
+
+		//'messages'=>array(
+		//	'onMissingTranslation'=>'array('GMensages','getNecesitoTraduccion')
+		//	),
 		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors

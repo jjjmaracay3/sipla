@@ -2,6 +2,18 @@
 	'id'=>'articulo-tecnologico-form',
 	'enableAjaxValidation'=>false,
 )); ?>
+
+<?php /** @var BootActiveForm $form */
+$form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
+    'id'=>'searchForm',
+    'type'=>'search',
+    'htmlOptions'=>array('class'=>'well'),
+)); ?>
+ 
+<?php echo $form->textFieldRow($model, 'textField', array('class'=>'input-medium', 'prepend'=>'<i class="icon-search"></i>')); ?>
+<?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'label'=>'Go')); ?>
+ 
+<?php $this->endWidget(); ?>
 	 
 
 	<p class="help-block">Fields with <span class="required">*</span> are required.</p>
@@ -37,10 +49,10 @@
 	<?php echo $form->textFieldRow($model,'al_unidad_medida',array('class'=>'span5')); ?>
 
 	<div class="form-actions">
-		<?php $this->widget('bootstrap.widgets.TbButton', array(
+		<?php  $this->widget('bootstrap.widgets.TbButton', array(
 			'buttonType'=>'submit',
 			'type'=>'primary',
-			'label'=>$model->isNewRecord ? 'Create' : 'Save',
+			'label'=>$model->isNewRecord ? 'Crear' : 'Guardar',
 		)); ?>
 	</div>
 

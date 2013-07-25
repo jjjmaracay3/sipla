@@ -1,4 +1,4 @@
-<?php
+ 	<?php
 
 /**
  * This is the model class for table "articulo_tecnologico".
@@ -78,15 +78,15 @@ class ArticuloTecnologico extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'nu_articulo' => 'Nu Articulo',
-			'nu_tipo_articulo' => 'Nu Tipo Articulo',
-			'al_nombre_articulo' => 'Al Nombre Articulo',
-			'al_marca_articulo' => 'Al Marca Articulo',
-			'al_modelo_articulo' => 'Al Modelo Articulo',
-			'al_descripcion_articulo' => 'Al Descripcion Articulo',
-			'de_precio_unitario' => 'De Precio Unitario',
-			'al_color_articulo' => 'Al Color Articulo',
-			'al_unidad_medida' => 'Al Unidad Medida',
+			'nu_articulo' => 'Articulo N°',
+			'nu_tipo_articulo' => 'Tipo de articulo',
+			'al_nombre_articulo' => 'Nombre de articulo',
+			'al_marca_articulo' => 'Marca de articulo',
+			'al_modelo_articulo' => 'Modelo de articulo',
+			'al_descripcion_articulo' => 'Descripcion de articulo',
+			'de_precio_unitario' => 'Precio unitario',
+			'al_color_articulo' => 'Color de articulo',
+			'al_unidad_medida' => 'Unidad de medida',
 		);
 	}
 

@@ -28,7 +28,7 @@
 
 		<?php $this->widget('bootstrap.widgets.TbNavbar', array(
                  'type'=>'default', // null or 'inverse'
-                //'brand'=>'',CHtml::image(Yii::app()->getBaseUrl(). '/images/header.png'),
+                'brand'=>'Sipla',
                 'brandUrl'=>'#',
                 'collapse'=>true,
                 'items'=>array(
@@ -47,9 +47,9 @@
 
 				 //array('label'=>'Home', 'url'=>'#', 'active'=>true),
                 //array('label'=>'Link', 'url'=>'#'),
-                array('label'=>'Administrar', 'icon'=>'check', 'url'=>'#', 'items'=>array(
-                    array('label'=>'Articulos','icon'=>'plus-sign','url'=>array('articuloTecnologico/index')),
-                    array('label'=>'Funcionarios', 'icon'=>'plus-sign', 'url'=>array('funcionario/index')),
+                array('label'=>'Administrar', 'icon'=>'tasks', 'url'=>'#', 'items'=>array(
+                    array('label'=>'Catalogo de articulos','icon'=>'ok-sign','url'=>array('articuloTecnologico/index')),
+                    array('label'=>'Funcionarios', 'icon'=>'ok-sign', 'url'=>array('funcionario/index')),
                     array('label'=>'Something else here', 'url'=>'#'),
                     '---',
                     array('label'=>'Otros CRUD'),
@@ -95,7 +95,7 @@
 <div id="footer">
 	<hr class="soften">
 		<p style="font-weight:bold;">Sistema de Planificaci&oacute;n de Adquisiciones Tecnol&oacute;gicas</p>
-		<p>&copy; SIPLA <?php echo date('Y'); ?>. - <?php echo Yii::powered(); ?></p>
+		<p>&copy; SIPLA <?php echo date('Y'); ?>. - <?php echo Yii::powered(); ?>. - <?php echo Yii::powered(); ?></p>
 	</div><!-- footer -->
 
 	<script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/bootstrap.js"></script>
