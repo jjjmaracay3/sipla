@@ -127,7 +127,19 @@ class ArticuloTecnologicoController extends Controller
 	 */
 	public function actionIndex()
 	{
+		
+
 		$dataProvider=new CActiveDataProvider('ArticuloTecnologico');
+		if(isset($_GET['pdf'])){
+			$this->layout="//layouts/pdf";
+			$mPDF1 = Yii::app()->ePdf->mpdf();
+			$mPDF1->WriteHTML($this->render('index',array(
+						'dataProvider'=>$dataProvider,
+						),true)
+				);
+			$mPDF1->Output();
+		}
+
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));

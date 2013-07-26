@@ -2,18 +2,6 @@
 	'id'=>'articulo-tecnologico-form',
 	'enableAjaxValidation'=>false,
 )); ?>
-
-<?php /** @var BootActiveForm $form */
-$form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
-    'id'=>'searchForm',
-    'type'=>'search',
-    'htmlOptions'=>array('class'=>'well'),
-)); ?>
- 
-<?php echo $form->textFieldRow($model, 'textField', array('class'=>'input-medium', 'prepend'=>'<i class="icon-search"></i>')); ?>
-<?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'label'=>'Go')); ?>
- 
-<?php $this->endWidget(); ?>
 	 
 
 	<p class="help-block">Fields with <span class="required">*</span> are required.</p>
@@ -30,8 +18,10 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 	<?php $this->widget('bootstrap.widgets.TbTypeahead', array(
     'name'=>'typeahead',
     'options'=>array(
-        'source'=>array('Acer', 'Apple', 'Asus', 'Cisco', 'Compaq', 'Dell', 'HP', 'IBM y Lenovo', 'Lanpro', 'Samsung', 'Siragon', 'Sony', 'Toshiba', '3com'),
-        'items'=>4,
+        'source'=>array('Acer', 'Apple', 'Asus', 'Cisco', 'Compaq', 'Dell', 'HP', 'IBM y Lenovo', 'Lanpro', 'Samsung', 'Siragon', 'Sony', 'Toshiba', '3com','Gennius','Microsoft','Taurus','Kingston','Assus','SoneView','Intel','AMD',
+        	'Biostar','MSI','Foxconn','Ashrock','ATI','Nvidia GeForce','Stylus','Lexmark','Canon','Xerox','Epson','Benq','MarkVision','Centon','Spectek','Sun','Kavac','Imation','Verbatim','Fujifilm','Quantum','Maxell','Adobe','Linksys','Tp-link','D-link',
+        	'Corsair','Apc','Avtek'),
+        'items'=>10,
         'matcher'=>"js:function(item) {
             return ~item.toLowerCase().indexOf(this.query.toLowerCase());
         }",
@@ -49,10 +39,10 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 	<?php echo $form->textFieldRow($model,'al_unidad_medida',array('class'=>'span5')); ?>
 
 	<div class="form-actions">
-		<?php  $this->widget('bootstrap.widgets.TbButton', array(
+		<?php $this->widget('bootstrap.widgets.TbButton', array(
 			'buttonType'=>'submit',
 			'type'=>'primary',
-			'label'=>$model->isNewRecord ? 'Crear' : 'Guardar',
+			'label'=>$model->isNewRecord ? 'Create' : 'Save',
 		)); ?>
 	</div>
 

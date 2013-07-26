@@ -59,6 +59,7 @@
 
 
 
+ <?php ////MANUEL: TRES COMBOS DEPENDIENTE //////////////////////////// ?>
 <div class="row">
 		<?php echo $form->labelEx($modelb,'nu_clasificacion_articulo'); ?>
 		<?php echo $form->dropDownList($modelb,'nu_clasificacion_articulo',
@@ -69,7 +70,8 @@
 					'url'=>CController::createUrl('DetalleSolicitud/Selectdos'),
 					'update'=>'#'.CHtml::activeId($modelb,'nu_tipo_articulo'),
 					'beforeSend' => 'function(){
-					   $("#Registro_id_nivel_dos").find("option").remove();
+					   $("#nu_tipo_articulo").find("option").remove();
+                       $("#nu_articulo").find("option").remove();					   					   
 					}',
 				),'prompt'=>'Seleccione'	
 			)
@@ -79,20 +81,47 @@
 
     <div class="row">
 		<?php echo $form->labelEx($modelb,'nu_tipo_articulo'); ?>
-		<?php echo $form->dropDownList($modelb,'nu_tipo_articulo',array(),
-			array('prompt'=>'Seleccione')
-		); ?>
+		<?php 
+		$lista_dos = array();
+		if(isset($modelb->nu_tipo_articulo)){
+			$id_uno = intval($modelb->nu_clasificacion_articulo); 
+			$lista_dos = CHtml::listData(TipoArticulo::model()->findAll("nu_clasificacion_articulo = '$id_uno'"),'nu_tipo_articulo','al_nombre_tipo');
+		}                
+		echo $form->dropDownList($modelb,'nu_tipo_articulo',$lista_dos,
+				array(
+					'ajax'=>array(
+					  'type'=>'POST',
+					  'url'=>CController::createUrl('DetalleSolicitud/Selecttres'),
+					  'update'=>'#'.CHtml::activeId($modelb,'nu_articulo'),
+					  'beforeSend' => 'function(){
+					  	$("#nu_articulo").find("option").remove();
+					  }',   
+						
+					),
+					
+					'prompt'=>'Seleccione')
+		); 
+		?>
 		<?php echo $form->error($modelb,'nu_tipo_articulo'); ?>
 	</div>
 
 
 <div class="row">
 		<?php echo $form->labelEx($modelb,'nu_articulo'); ?>
-		<?php echo $form->dropDownList($modelb,'nu_articulo',array(),
+		<?php 
+		$lista_tres = array();
+		if(isset($modelb->nu_articulo)){
+			$id_dos = intval($modelb->nu_tipo_articulo); 
+			$lista_tres = CHtml::listData(ArticuloTecnologico::model()->findAll("nu_tipo_articulo = '$id_dos'"),'nu_articulo','al_nombre_articulo');
+		}
+		echo $form->dropDownList($modelb,'nu_articulo',$lista_tres,
 			array('prompt'=>'Seleccione')
-		); ?>
+		); 
+		?>
 		<?php echo $form->error($modelb,'nu_articulo'); ?>
 	</div>
+
+
 
 
 
