@@ -9280,3 +9280,138 @@ Stack trace:
 REQUEST_URI=/Sipla/solicitud/index.jsp
 HTTP_REFERER=http://localhost/Sipla/solicitud/10.jsp
 ---
+2013/07/27 01:53:29 [error] [exception.CException] exception 'CException' with message 'ClasificacionArticuloController contiene etiquetas de widget en la vista "/var/www/Sipla/protected/views/clasificacionArticulo/_form.php" anidados incorrectamente. TbActiveForm widget no contiene la llamada a endWidget().' in /var/www/yii/framework/web/CBaseController.php:101
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#1 /var/www/Sipla/protected/views/clasificacionArticulo/create.php(15): CController->renderPartial('_form', Array)
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#6 /var/www/Sipla/protected/controllers/ClasificacionArticuloController.php(78): CController->render('create', Array)
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): ClasificacionArticuloController->actionCreate()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#17 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('clasificacionAr...')
+#18 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#19 /var/www/Sipla/index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/Sipla/clasificacionArticulo/create.jsp
+HTTP_REFERER=http://localhost/Sipla/clasificacionArticulo/index.jsp
+---
+2013/07/27 02:08:46 [error] [php] Use of undefined constant l - assumed 'l' (/var/www/Sipla/protected/views/site/login.php:60)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): SiteController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /var/www/Sipla/protected/controllers/SiteController.php(98): SiteController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sipla/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sipla/site/login.jsp
+in /var/www/Sipla/protected/views/site/login.php (60)
+in /var/www/Sipla/protected/controllers/SiteController.php (98)
+in /var/www/Sipla/index.php (13)
+2013/07/27 02:11:26 [error] [exception.CException] exception 'CException' with message 'El alias "bootstrap.widgets.TbTooltip" es inválido. Asegúrese de que apunta a un archivo PHP y el archivo tiene permisos de lectura.' in /var/www/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /var/www/yii/framework/web/CWidgetFactory.php(146): YiiBase::import('bootstrap.widge...', true)
+#1 /var/www/yii/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'bootstrap.widge...', Array)
+#2 /var/www/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 /var/www/Sipla/protected/views/site/login.php(29): CBaseController->widget('bootstrap.widge...', Array)
+#4 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#5 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#6 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#7 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('login', Array, true)
+#8 /var/www/Sipla/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#10 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#14 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#15 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/Sipla/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/Sipla/site/login.jsp
+HTTP_REFERER=http://localhost/Sipla/
+---
+2013/07/27 02:13:50 [error] [exception.CException] exception 'CException' with message 'El alias "bootstrap.widgets.TbTooltip" es inválido. Asegúrese de que apunta a un archivo PHP y el archivo tiene permisos de lectura.' in /var/www/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /var/www/yii/framework/web/CWidgetFactory.php(146): YiiBase::import('bootstrap.widge...', true)
+#1 /var/www/yii/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'bootstrap.widge...', Array)
+#2 /var/www/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 /var/www/Sipla/protected/views/site/login.php(62): CBaseController->widget('bootstrap.widge...', Array)
+#4 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#5 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#6 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#7 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('login', Array, true)
+#8 /var/www/Sipla/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#10 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#14 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#15 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/Sipla/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/Sipla/site/login.jsp
+HTTP_REFERER=http://localhost/Sipla/
+---
+2013/07/27 02:14:06 [error] [exception.CException] exception 'CException' with message 'El alias "bootstrap.widgets.TbTooltip" es inválido. Asegúrese de que apunta a un archivo PHP y el archivo tiene permisos de lectura.' in /var/www/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /var/www/yii/framework/web/CWidgetFactory.php(146): YiiBase::import('bootstrap.widge...', true)
+#1 /var/www/yii/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'bootstrap.widge...', Array)
+#2 /var/www/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 /var/www/Sipla/protected/views/site/login.php(62): CBaseController->widget('bootstrap.widge...', Array)
+#4 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#5 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#6 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#7 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('login', Array, true)
+#8 /var/www/Sipla/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#10 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#14 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#15 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/Sipla/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/Sipla/site/login.jsp
+HTTP_REFERER=http://localhost/Sipla/
+---
+2013/07/27 02:14:10 [error] [exception.CException] exception 'CException' with message 'El alias "bootstrap.widgets.TbTooltip" es inválido. Asegúrese de que apunta a un archivo PHP y el archivo tiene permisos de lectura.' in /var/www/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /var/www/yii/framework/web/CWidgetFactory.php(146): YiiBase::import('bootstrap.widge...', true)
+#1 /var/www/yii/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'bootstrap.widge...', Array)
+#2 /var/www/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 /var/www/Sipla/protected/views/site/login.php(62): CBaseController->widget('bootstrap.widge...', Array)
+#4 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#5 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#6 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#7 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('login', Array, true)
+#8 /var/www/Sipla/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#10 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#14 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#15 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/Sipla/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/Sipla/site/login.jsp
+HTTP_REFERER=http://localhost/Sipla/
+---

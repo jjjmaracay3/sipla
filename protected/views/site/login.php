@@ -52,8 +52,23 @@ $this->breadcrumbs=array(
 	</div>
 
 <?php $this->endWidget(); ?>
+
 </div><!-- form -->
 </fieldset>
 	</div>
-	<div class="span8">Descripci&oacute;n</div>
+	<div class="span8">Descripci&oacute;n
+	
+	
+	<p class="well">
+    Lorem ipsum dolor sit <a href="#" rel="tooltip" title="First tooltip">amet</a>,
+    consectetur adipiscing elit.
+    Fusce ut velit sem, id elementum elit. Quisque tincidunt magna in quam luctus a ultrices tellus luctus.
+    Pellentesque at tellus urna.
+    Ut congue, <a href="#" rel="tooltip" title="Another tooltip">nibh eu</a> interdum commodo,
+    ligula urna consequat tortor, at vehicula tellus est a orci.
+    Maecenas nec ligula sed ipsum posuere sollicitudin pretium ac sapien.
+    Sed odio dui, pretium eu pellentesque ac,
+    <a href="#" rel="tooltip" title="Yet another tooltip">tempor</a> sed sem.
+
+</p></div>
 </div>
