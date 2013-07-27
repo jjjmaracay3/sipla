@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update Funcionario <?php echo $model->nu_funcionario; ?></h1>
+<h3>Update Funcionario <?php echo $model->nu_funcionario; ?></h3>
 
 <?php echo $this->renderPartial('_form',array('model'=>$model)); ?>

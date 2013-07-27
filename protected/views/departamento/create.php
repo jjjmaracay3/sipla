@@ -10,6 +10,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create Departamento</h1>
+<h3>Create Departamento</h3>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

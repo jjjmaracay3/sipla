@@ -16,14 +16,14 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Solicitud #<?php echo $model->nu_solicitud; ?></h1>
+<h3>View Solicitud #<?php echo $model->nu_solicitud; ?></h3>
 
-<?php $this->widget('zii.widgets.CDetailView', array(
+<?php $this->widget('bootstrap.widgets.TbDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
 		'nu_solicitud',
-		'nu_funcionario',
-		'nu_numero_departamento',
+		'funcionario.al_nombre_funcionario',
+		'departamento.al_nombre_departamento',
 		'al_estado_solicitud',
 		'fe_solicitud',
 	),

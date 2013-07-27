@@ -9,7 +9,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>Clasificacion Articulos</h1>
+<h3>Clasificacion Articulos</h3>
 
 <?php $this->widget('bootstrap.widgets.TbListView',array(
 	'dataProvider'=>$dataProvider,

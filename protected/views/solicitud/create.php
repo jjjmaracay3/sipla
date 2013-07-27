@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create Solicitud</h1>
+<h4>Create Solicitud</h4>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model,'modelb'=>$modelb)); ?>

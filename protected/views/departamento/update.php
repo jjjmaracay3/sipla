@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update Departamento <?php echo $model->nu_numero_departamento; ?></h1>
+<h3>Update Departamento <?php echo $model->nu_numero_departamento; ?></h3>
 
 <?php echo $this->renderPartial('_form',array('model'=>$model)); ?>

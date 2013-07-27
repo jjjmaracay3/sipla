@@ -64,6 +64,7 @@ class Solicitud extends CActiveRecord
 			'departamento' => array(self::BELONGS_TO, 'Departamento', 'nu_numero_departamento'),
 			'funcionario' => array(self::BELONGS_TO, 'Funcionario', 'nu_funcionario'),
 			'detalle' => array(self::HAS_MANY, 'DetalleSolicitud', 'nu_solicitud'),
+			'nuArticulo' => array(self::BELONGS_TO, 'ArticuloTecnologico', 'nu_articulo'),
 		);
 	}
 
@@ -73,11 +74,11 @@ class Solicitud extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'nu_solicitud' => 'Nu Solicitud',
-			'nu_funcionario' => 'Nu Funcionario',
-			'nu_numero_departamento' => 'Nu Numero Departamento',
-			'al_estado_solicitud' => 'Al Estado Solicitud',
-			'fe_solicitud' => 'Fe Solicitud',
+			'nu_solicitud' => 'Numero de solicitud',
+			'nu_funcionario' => 'Numero de funcionario',
+			'nu_numero_departamento' => 'Numero de departamento',
+			'al_estado_solicitud' => 'Estado de solicitud',
+			'fe_solicitud' => 'Fecha de solicitud',
 		);
 	}
 

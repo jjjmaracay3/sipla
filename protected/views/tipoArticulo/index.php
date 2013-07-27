@@ -10,7 +10,7 @@ $this->menu=array(
 ?>
 
 
-<h1>Tipo Articulos</h1>
+<h3>Tipo Articulos</h3>
 
 <?php $this->widget('bootstrap.widgets.TbListView',array(
 	'dataProvider'=>$dataProvider,

@@ -19,7 +19,7 @@
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('al_estado_solicitud')); ?>:</b>
 	<?php echo CHtml::encode($data->al_estado_solicitud); ?>
-	<br />
+	<br/>
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('Articulos')); ?>:</b>
 	<?php 

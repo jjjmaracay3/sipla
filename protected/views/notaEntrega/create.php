@@ -10,6 +10,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create NotaEntrega</h1>
+<h3>Create NotaEntrega</h3>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

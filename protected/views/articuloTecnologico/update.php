@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update ArticuloTecnologico <?php echo $model->nu_articulo; ?></h1>
+<h3>Update ArticuloTecnologico <?php echo $model->nu_articulo; ?></h3>
 
 <?php echo $this->renderPartial('_form',array('model'=>$model)); ?>

@@ -75,13 +75,13 @@ class DetalleSolicitud extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'nu_detalle_solicitud' => 'Nu Detalle Solicitud',
-			'nu_solicitud' => 'Nu Solicitud',
-			'nu_clasificacion_articulo' => 'Nu Clasificacion Articulo',
-			'nu_tipo_articulo' => 'Nu Tipo Articulo',
-			'nu_articulo' => 'Nu Articulo',
-			'nu_cantidad_solicitada' => 'Nu Cantidad Solicitada',
-			'al_justificacion' => 'Al Justificacion',
+			'nu_detalle_solicitud' => 'Numero de detalle',
+			'nu_solicitud' => 'Numero de solicitud',
+			'nu_clasificacion_articulo' => 'Clasificacion articulo',
+			'nu_tipo_articulo' => 'Tipo Articulo',
+			'nu_articulo' => 'Articulo',
+			'nu_cantidad_solicitada' => 'Cantidad solicitada',
+			'al_justificacion' => 'Justificacion',
 		);
 	}
 

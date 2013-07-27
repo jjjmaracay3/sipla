@@ -17,7 +17,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View ArticuloTecnologico #<?php echo $model->nu_articulo; ?></h1>
+<h3>View ArticuloTecnologico #<?php echo $model->nu_articulo; ?></h3>
 
 <?php $this->widget('bootstrap.widgets.TbDetailView',array(
 	'data'=>$model,

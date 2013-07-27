@@ -10,6 +10,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create ClasificacionArticulo</h1>
+<h3>Create ClasificacionArticulo</h3>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

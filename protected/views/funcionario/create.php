@@ -10,6 +10,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create Funcionario</h1>
+<h3>Create Funcionario</h3>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

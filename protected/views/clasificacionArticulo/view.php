@@ -13,7 +13,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View ClasificacionArticulo #<?php echo $model->nu_clasificacion_articulo; ?></h1>
+<h3>View ClasificacionArticulo #<?php echo $model->nu_clasificacion_articulo; ?></h3>
 
 <?php $this->widget('bootstrap.widgets.TbDetailView',array(
 	'data'=>$model,

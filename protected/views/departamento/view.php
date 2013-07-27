@@ -13,7 +13,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Departamento #<?php echo $model->nu_numero_departamento; ?></h1>
+<h3>View Departamento #<?php echo $model->nu_numero_departamento; ?></h3>
 
 <?php $this->widget('bootstrap.widgets.TbDetailView',array(
 	'data'=>$model,

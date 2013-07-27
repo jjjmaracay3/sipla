@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update ClasificacionArticulo <?php echo $model->nu_clasificacion_articulo; ?></h1>
+<h3>Update ClasificacionArticulo <?php echo $model->nu_clasificacion_articulo; ?></h3>
 
 <?php echo $this->renderPartial('_form',array('model'=>$model)); ?>
