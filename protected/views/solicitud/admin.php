@@ -18,7 +18,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#solicitud-grid').yiiGridView('update', {
+	$.fn.yiiGridView.update('solicitud-grid', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -33,7 +33,7 @@ You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&g
 or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
 </p>
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button btn')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
@@ -41,17 +41,18 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </div><!-- search-form -->
 
 <?php $this->widget('bootstrap.widgets.TbGridView', array(
+	'type'=>'striped bordered condensed hover',
 	'id'=>'solicitud-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'nu_solicitud',
-		'nu_funcionario',
-		'nu_numero_departamento',
-		'al_estado_solicitud',
+		//'nu_solicitud',
+		'funcionario.username',
+		'departamento.al_nombre_departamento',
+		//'al_estado_solicitud',
 		'fe_solicitud',
 		array(
-			'class'=>'CButtonColumn',
+			'class'=>'bootstrap.widgets.TbButtonColumn',
 		),
 	),
 )); ?>

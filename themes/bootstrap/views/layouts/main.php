@@ -21,7 +21,7 @@
 <div class="container" id="page">
 
 	<div id="header">
-		<a href="/Sipla/site/login.jsp"><div id="logo"></div></a>
+		<a href="/Sipla/site/index.jsp"><div id="logo"></div></a>
 	</div><!-- header -->
 
 	<div id="mainmenu">
@@ -36,8 +36,8 @@
                                         'class'=>'bootstrap.widgets.TbMenu',        
 			'items'=>array(
 				array('label'=>'Inicio', 'icon'=>'home', 'url'=>array('/site/login')),
-				array('label'=>'Solicitudes', 'icon'=>'edit', 'url'=>array('/solicitud/index')),
-				array('label'=>'Detalle', 'url'=>array('/detalleSolicitud/index')),
+				array('label'=>'Solicitudes', 'icon'=>'inbox', 'url'=>array('/solicitud/index')),
+				array('label'=>'Nota entrega', 'url'=>array('/notaEntrega/index')),
 				array('label'=>'Departamento', 'icon'=>'map-marker','url'=>array('/departamento/index')),
 				//array('label'=>'Funcionarios','url'=>array('funcionario/index')),
 				//array('label'=>'Roles', 'url'=>array('/rolFuncionario/index')),
@@ -47,7 +47,7 @@
 
 				 //array('label'=>'Home', 'url'=>'#', 'active'=>true),
                 //array('label'=>'Link', 'url'=>'#'),
-                array('label'=>'Administrar', 'icon'=>'tasks', 'url'=>'#', 'items'=>array(
+                array('label'=>'Administrar', 'icon'=>'folder-open', 'url'=>'#', 'items'=>array(
                     array('label'=>'Catalogo de articulos','icon'=>'ok-sign','url'=>array('articuloTecnologico/index')),
                     array('label'=>'Funcionarios', 'icon'=>'ok-sign', 'url'=>array('funcionario/index')),
                     array('label'=>'Something else here', 'url'=>'#'),

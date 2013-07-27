@@ -8751,3 +8751,170 @@ Stack trace:
 REQUEST_URI=/Sipla/articuloTecnologico/update/5.jsp
 HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/update/5.jsp
 ---
+2013/07/27 00:06:26 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23502]: Not null violation: 7 ERROR:  el valor null para la columna «session» viola la restricción not null. La sentencia SQL ejecutada fue: INSERT INTO "funcionario" ("nu_numero_departamento", "nu_rol", "al_nombre_funcionario", "al_apellido_funcionario", "nu_cedula_funcionario", "al_cargo_funcionario", "al_correo_funcionario", "username", "password") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8).
+in /var/www/Sipla/protected/controllers/FuncionarioController.php (72)
+in /var/www/Sipla/index.php (13)
+2013/07/27 00:06:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23502]: Not null violation: 7 ERROR:  el valor null para la columna «session» viola la restricción not null. The SQL statement executed was: INSERT INTO "funcionario" ("nu_numero_departamento", "nu_rol", "al_nombre_funcionario", "al_apellido_funcionario", "nu_cedula_funcionario", "al_cargo_funcionario", "al_correo_funcionario", "username", "password") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/FuncionarioController.php(72): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): FuncionarioController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('funcionario/cre...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/funcionario/create.jsp
+HTTP_REFERER=http://localhost/Sipla/funcionario/create.jsp
+---
+2013/07/27 00:07:33 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23502]: Not null violation: 7 ERROR:  el valor null para la columna «session» viola la restricción not null. La sentencia SQL ejecutada fue: INSERT INTO "funcionario" ("nu_numero_departamento", "nu_rol", "al_nombre_funcionario", "al_apellido_funcionario", "nu_cedula_funcionario", "al_cargo_funcionario", "al_correo_funcionario", "username", "password") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8).
+in /var/www/Sipla/protected/controllers/FuncionarioController.php (72)
+in /var/www/Sipla/index.php (13)
+2013/07/27 00:07:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23502]: Not null violation: 7 ERROR:  el valor null para la columna «session» viola la restricción not null. The SQL statement executed was: INSERT INTO "funcionario" ("nu_numero_departamento", "nu_rol", "al_nombre_funcionario", "al_apellido_funcionario", "nu_cedula_funcionario", "al_cargo_funcionario", "al_correo_funcionario", "username", "password") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/FuncionarioController.php(72): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): FuncionarioController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('funcionario/cre...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/funcionario/create.jsp
+HTTP_REFERER=http://localhost/Sipla/funcionario/create.jsp
+---
+2013/07/27 00:09:14 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23502]: Not null violation: 7 ERROR:  el valor null para la columna «session» viola la restricción not null. La sentencia SQL ejecutada fue: INSERT INTO "funcionario" ("nu_numero_departamento", "nu_rol", "al_nombre_funcionario", "al_apellido_funcionario", "nu_cedula_funcionario", "al_cargo_funcionario", "al_correo_funcionario", "username", "password") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8).
+in /var/www/Sipla/protected/controllers/FuncionarioController.php (72)
+in /var/www/Sipla/index.php (13)
+2013/07/27 00:09:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23502]: Not null violation: 7 ERROR:  el valor null para la columna «session» viola la restricción not null. The SQL statement executed was: INSERT INTO "funcionario" ("nu_numero_departamento", "nu_rol", "al_nombre_funcionario", "al_apellido_funcionario", "nu_cedula_funcionario", "al_cargo_funcionario", "al_correo_funcionario", "username", "password") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/FuncionarioController.php(72): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): FuncionarioController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('funcionario/cre...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/funcionario/create.jsp
+HTTP_REFERER=http://localhost/Sipla/funcionario/create.jsp
+---
+2013/07/27 00:10:06 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23502]: Not null violation: 7 ERROR:  el valor null para la columna «session» viola la restricción not null. La sentencia SQL ejecutada fue: INSERT INTO "funcionario" ("nu_numero_departamento", "nu_rol", "al_nombre_funcionario", "al_apellido_funcionario", "nu_cedula_funcionario", "al_cargo_funcionario", "al_correo_funcionario", "username", "password") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8).
+in /var/www/Sipla/protected/controllers/FuncionarioController.php (72)
+in /var/www/Sipla/index.php (13)
+2013/07/27 00:10:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23502]: Not null violation: 7 ERROR:  el valor null para la columna «session» viola la restricción not null. The SQL statement executed was: INSERT INTO "funcionario" ("nu_numero_departamento", "nu_rol", "al_nombre_funcionario", "al_apellido_funcionario", "nu_cedula_funcionario", "al_cargo_funcionario", "al_correo_funcionario", "username", "password") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/FuncionarioController.php(72): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): FuncionarioController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('funcionario/cre...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/funcionario/create.jsp
+HTTP_REFERER=http://localhost/Sipla/funcionario/create.jsp
+---
+2013/07/27 00:38:29 [error] [exception.CException] exception 'CException' with message 'Propiedad "NotaEntrega"."fe_solicitud" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('fe_solicitud')
+#1 /var/www/yii/framework/web/helpers/CHtml.php(2255): CActiveRecord->__get('fe_solicitud')
+#2 /var/www/yii/framework/web/helpers/CHtml.php(1980): CHtml::resolveValue(Object(NotaEntrega), 'fe_solicitud')
+#3 /var/www/yii/framework/web/helpers/CHtml.php(1257): CHtml::activeInputField('text', Object(NotaEntrega), 'fe_solicitud', Array)
+#4 /var/www/yii/framework/zii/widgets/jui/CJuiDatePicker.php(82): CHtml::activeTextField(Object(NotaEntrega), 'fe_solicitud', Array)
+#5 /var/www/yii/framework/web/CBaseController.php(173): CJuiDatePicker->run()
+#6 /var/www/Sipla/protected/views/notaEntrega/_form.php(27): CBaseController->widget('zii.widgets.jui...', Array)
+#7 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#8 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#9 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#10 /var/www/Sipla/protected/views/notaEntrega/create.php(15): CController->renderPartial('_form', Array)
+#11 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#12 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#13 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#14 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#15 /var/www/Sipla/protected/controllers/NotaEntregaController.php(78): CController->render('create', Array)
+#16 /var/www/yii/framework/web/actions/CInlineAction.php(49): NotaEntregaController->actionCreate()
+#17 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#18 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#20 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#24 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#26 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('notaEntrega/cre...')
+#27 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#28 /var/www/Sipla/index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/Sipla/notaEntrega/create.jsp
+HTTP_REFERER=http://localhost/Sipla/notaEntrega/index.jsp
+---
+2013/07/27 00:40:27 [error] [exception.CException] exception 'CException' with message 'El alias "bootstrap.widgets.jui.CJuiDatePicker" es inválido. Asegúrese de que apunta a un archivo PHP y el archivo tiene permisos de lectura.' in /var/www/yii/framework/YiiBase.php:316
+Stack trace:
+#0 /var/www/yii/framework/web/CWidgetFactory.php(146): YiiBase::import('bootstrap.widge...', true)
+#1 /var/www/yii/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(SolicitudController), 'bootstrap.widge...', Array)
+#2 /var/www/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 /var/www/Sipla/protected/views/solicitud/_form.php(51): CBaseController->widget('bootstrap.widge...', Array)
+#4 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#5 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#6 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#7 /var/www/Sipla/protected/views/solicitud/create.php(18): CController->renderPartial('_form', Array)
+#8 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#9 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#10 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#11 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#12 /var/www/Sipla/protected/controllers/SolicitudController.php(87): CController->render('create', Array)
+#13 /var/www/yii/framework/web/actions/CInlineAction.php(49): SolicitudController->actionCreate()
+#14 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#15 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#17 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#21 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#23 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('solicitud/creat...')
+#24 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#25 /var/www/Sipla/index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/Sipla/solicitud/create.jsp
+HTTP_REFERER=http://localhost/Sipla/solicitud/index.jsp
+---

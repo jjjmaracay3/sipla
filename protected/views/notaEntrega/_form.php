@@ -9,9 +9,22 @@
 
 	<?php echo $form->textFieldRow($model,'nu_solicitud',array('class'=>'span5')); ?>
 
-	<?php echo $form->textFieldRow($model,'nu_funcionario',array('class'=>'span5')); ?>
+	<?php echo $form->textFieldRow($model,'nu_funcionario',array('class'=>'span4')); ?>
 
-	<?php echo $form->textFieldRow($model,'fe_fecha_nota',array('class'=>'span5')); ?>
+	<?php echo $form->labelEx($model,'fe_fecha_nota');
+		$this->widget('zii.widgets.jui.CJuiDatePicker',
+			array(
+			'model'=>$model,
+			'attribute'=>'fe_fecha_nota',
+			'language' => 'es',
+			'options' => array(
+								'dateFormat'=>'yy-mm-dd',
+								'constrainInput'=>'false',
+								'duration'=>'fast',
+								'showAnim'=>'slide',))); 
+
+								?>
+			
 
 	<?php echo $form->textFieldRow($model,'nu_cantidad_entregada',array('class'=>'span5')); ?>
 
