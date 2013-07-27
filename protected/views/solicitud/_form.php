@@ -142,81 +142,12 @@
 	<div class="row buttons">
 		<?php $this->widget('bootstrap.widgets.TbButton', array(
 			'buttonType'=>'submit',
-			'type'=>'success',
+			'type'=>'primary',
 			'label'=>$model->isNewRecord ? 'Create' : 'Save',
 		)); ?>
 	</div>
 
 
-<table class="templateFrame grid" cellspacing="0">
-                <thead class="templateHead">
-                    <tr>
-                        <td>
-                            <?php echo $form->labelEx(DetalleSolicitud::model(),'nu_clasificacion_articulo');/* estos son los labels */?>
-                        </td>
-                        <td>
-                            <?php echo $form->labelEx(DetalleSolicitud::model(),'nu_tipo_articulo');?>
-                        </td>
-                        <td colspan="2">
-                            <?php echo $form->labelEx(DetalleSolicitud::model(),'nu_articulo');?>
-                        </td>
-                    </tr>
-                </thead>
-                Aca es donde se van a mostrar tooodo lo que se clone del textarea
-                <tbody class="templateTarget">
-                <?php 
-                         $i = 0;
-                         $detalles=array();//por ahora es vacio pero este por lo general es Person::model()->findAll() con las condiciones que necesites
-                         foreach($detalles as $detalle): 
-                 ?>
-                    <tr class="templateContent">
-                        <td>
-                            <?php echo $form->textField($detalle,"[$i]nu_clasificacion_articulo",array('style'=>'width:100px')); ?>
-                        </td>
-                        <td>
-                            <?php echo $form->textField($detalle,"[$i]nu_tipo_articulo",array('style'=>'width:100px')); ?>
-                        </td>
-                        <td>
-                            <?php echo $form->dropDownList($detalle,"[$i]nu_articulo",array('1'=>'color 1','2'=>'color 2'),array('style'=>'width:100px','prompt'=>'')); ?>
-                        </td>
-                        <td>
-                            <div class="remove"><?php echo Yii::t('ui','Remove');?>
-                             <?php echo CHtml::hiddenField("rowIndex_$i",$i,array('class'=>'rowIndex'));?>
-                        </td>
-                    </tr>
-                    <?php
-                         $i++;
-                        endforeach;
-                    ?>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="4">
-                            <div class="add"><?php echo Yii::t('ui','New');//aca puedes colocar un texto un boton o lo que quieras?></div>
-                             Todo lo que hay dentro del textarea es lo que se va a clonar, el {0} se usa para llevar el numero de la fila 
-                             que empieza en cero y va aumentando
-                          <!-- form   <textarea class="template" rows="0" cols="0">-->
-                                <tr class="templateContent">
-                                    <td>
-                                        <?php echo CHtml::textField("Person[{0}][firstname]",'',array('style'=>'width:100px')); ?>
-                                    </td>
-                                    <td>
-                                        <?php echo CHtml::textField("Person[{0}][lastname]",'',array('style'=>'width:100px')); ?>
-                                    </td>
-                                    <td>
-                                        <?php echo CHtml::dropDownList("Person[{0}][eyecolor_code]",'',array('1'=>'color 1','2'=>'color 2'),array('style'=>'width:100px','prompt'=>'')); ?>
-                                    </td>
-                                    <td>
-                                        <div class="remove"><?php echo Yii::t('ui','Remove');// tambn puedes colcar texto o cual quier boton ?></div>
-                                        <?php echo CHtml::hiddenField('rowIndex_{0}','{0}',array('class'=>'rowIndex'));?>Este campo es el que tiene en cuenta desde donde debe 
-                                         empezar a aumentar el numero por defecto es "0" pero aumenta en caso de que ya hayan registros
-                                    </td>
-                                </tr>
-                            </textarea>
-                        </td>
-                    </tr>
-                </tfoot>
-            </table>
 
 
 <?php $this->endWidget(); ?>
