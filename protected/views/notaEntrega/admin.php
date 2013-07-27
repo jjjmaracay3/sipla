@@ -1,12 +1,12 @@
 <?php
 $this->breadcrumbs=array(
-	'Tipo Articulos'=>array('index'),
+	'Nota Entregas'=>array('index'),
 	'Manage',
 );
 
 $this->menu=array(
-	array('label'=>'List TipoArticulo','url'=>array('index')),
-	array('label'=>'Create TipoArticulo','url'=>array('create')),
+	array('label'=>'List NotaEntrega','url'=>array('index')),
+	array('label'=>'Create NotaEntrega','url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -15,7 +15,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$.fn.yiiGridView.update('tipo-articulo-grid', {
+	$.fn.yiiGridView.update('nota-entrega-grid', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -23,7 +23,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Tipo Articulos</h1>
+<h1>Manage Nota Entregas</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -38,15 +38,16 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </div><!-- search-form -->
 
 <?php $this->widget('bootstrap.widgets.TbGridView',array(
-	'type'=>'striped bordered condensed hover',
-	'id'=>'tipo-articulo-grid',
+	'id'=>'nota-entrega-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'nu_tipo_articulo',
-		'nu_clasificacion_articulo',
-		'al_nombre_tipo',
-				array(
+		'nu_nota',
+		'nu_solicitud',
+		'nu_funcionario',
+		'fe_fecha_nota',
+		'nu_cantidad_entregada',
+		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
 		),
 	),

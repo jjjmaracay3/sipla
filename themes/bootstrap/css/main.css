@@ -4,7 +4,7 @@ body
         padding: 0;
         color: #555;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        background: url("../img/bg.png") no-repeat fixed right bottom #b0c2b3;        
+        background: url("../img/bg.png") no-repeat fixed right bottom #bdcfdd;        
 }
  
 #page
@@ -51,6 +51,11 @@ body
         font-size: 200%;
         background: url('../img/logo') no-repeat;
         height:100px;
+}
+
+.vr-right {
+    border-right: 1px dashed #ddd;
+    padding-right: 20px;
 }
  
 div.flash-error, div.flash-notice, div.flash-success
@@ -131,7 +136,7 @@ div.search-form
 }
  
 a {
-  color: #3C7E80;
+  color: #004e8d;
   text-decoration: none;
 }
  

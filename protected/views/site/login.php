@@ -9,9 +9,11 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<h1>Login</h1>
+<div class="row-fluid">
+	<div class="span4 vr-right">
+		<fieldset>
+	<legend>Iniciar Sessi&oacute;n</legend>
 
-<p>Please fill out the following form with your login credentials:</p>
 
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -51,3 +53,7 @@ $this->breadcrumbs=array(
 
 <?php $this->endWidget(); ?>
 </div><!-- form -->
+</fieldset>
+	</div>
+	<div class="span8">Descripci&oacute;n</div>
+</div>

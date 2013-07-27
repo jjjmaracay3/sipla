@@ -21,7 +21,7 @@
 <div class="container" id="page">
 
 	<div id="header">
-		<a href="/Sipla/site/index.jsp"><div id="logo"></div></a>
+		<a href="/Sipla/site/login.jsp"><div id="logo"></div></a>
 	</div><!-- header -->
 
 	<div id="mainmenu">
@@ -35,7 +35,7 @@
                                 array(
                                         'class'=>'bootstrap.widgets.TbMenu',        
 			'items'=>array(
-				array('label'=>'Inicio', 'icon'=>'home', 'url'=>array('/site/index')),
+				array('label'=>'Inicio', 'icon'=>'home', 'url'=>array('/site/login')),
 				array('label'=>'Solicitudes', 'icon'=>'edit', 'url'=>array('/solicitud/index')),
 				array('label'=>'Detalle', 'url'=>array('/detalleSolicitud/index')),
 				array('label'=>'Departamento', 'icon'=>'map-marker','url'=>array('/departamento/index')),
