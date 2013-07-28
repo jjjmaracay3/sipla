@@ -44,7 +44,7 @@ class Solicitud extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nu_funcionario, nu_numero_departamento, al_estado_solicitud, fe_solicitud', 'required'),
+			//array('nu_funcionario, nu_numero_departamento, al_estado_solicitud, fe_solicitud', 'required'),
 			array('nu_funcionario, nu_numero_departamento', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.

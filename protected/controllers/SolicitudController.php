@@ -32,7 +32,7 @@ class SolicitudController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','SelectD1','SelectD2'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -62,24 +62,39 @@ class SolicitudController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Solicitud;
-		$modelb=new DetalleSolicitud;//incorporamos los dos modelos a xx
-	
+		$model  = new Solicitud;
+		$modelb = new DetalleSolicitud;//incorporamos los dos modelos a xx
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Solicitud'],$_POST['DetalleSolicitud']))
+		if(isset($_POST['DetalleSolicitud']))
 		{
-			$model->attributes=$_POST['Solicitud'];
+                    $model->nu_funcionario          = Yii::app()->user->nu_funcionario;
+                    $model->nu_numero_departamento  = Yii::app()->user->nu_numero_departamento;
+                    $model->al_estado_solicitud     = '1';
+                    $model->fe_solicitud            = date("Y-m-d");
 
-			$modelb->attributes=$_POST['DetalleSolicitud'];
+                    if ($model->save()){
+                        $nu_solicitud = $model->ObtenerNumero();
+                        $nu_solicitud = $nu_solicitud[0]['nu_solicitud'];//asignamos del arreglo, el pos "0" dentro de XX
 
-			$model->save();
-				$nu_solicitud = $model->ObtenerNumero();
-				$modelb->nu_solicitud=$nu_solicitud[0]['nu_solicitud'];//asignamos del arreglo, el pos "0" dentro de XX
-				if ($modelb->save())
-					$this->redirect(array('view','id'=>$model->nu_solicitud));
+                        $cant = $_POST['cant'];
+			
+			for ($i=1; $i<=$cant; $i++)
+			{
+				$nu_clasificacion_articulo  = $_POST['DetalleSolicitud']['nu_clasificacion_articulo-'.$i];
+				$nu_tipo_articulo           = $_POST['DetalleSolicitud']['nu_tipo_articulo-'.$i];
+				$nu_articulo                = $_POST['DetalleSolicitud']['nu_articulo-'.$i];
+				$nu_cantidad_solicitada     = $_POST['DetalleSolicitud']['nu_cantidad_solicitada-'.$i];
+				$al_justificacion           = $_POST['DetalleSolicitud']['al_justificacion-'.$i];
+								
+				$sql="INSERT INTO detalle_solicitud (nu_solicitud,nu_clasificacion_articulo,nu_tipo_articulo,nu_articulo,nu_cantidad_solicitada,al_justificacion) VALUES (".$nu_solicitud.",".$nu_clasificacion_articulo.",".$nu_tipo_articulo.",".$nu_articulo.",".$nu_cantidad_solicitada.",'".$al_justificacion."')";
+				$sql=Yii::app()->db->createCommand($sql)->execute();
+			}
+                            
+                        $this->redirect(array('view','id'=>$model->nu_solicitud));
+                    }
 		}
 
 		$this->render('create',array(
@@ -192,4 +207,52 @@ class SolicitudController extends Controller
 			Yii::app()->end();
 		}
 	}
+
+        public function actionSelectD1(){
+
+            $SQL="SELECT * FROM tipo_articulo WHERE nu_clasificacion_articulo = '".$_GET['opcion']."' ORDER BY al_nombre_tipo";
+            $SQL=Yii::app()->db->createCommand($SQL)->queryAll();
+            $cant = count($SQL);
+
+            $idSelectDestino = $_GET['idSelectDestino'];
+
+            $nrovar = explode("-", $idSelectDestino);
+
+            $nombrevar = explode("DetalleSolicitud_", $idSelectDestino);
+            $nombrevar = "DetalleSolicitud[".$nombrevar[1]."]";
+
+            $sel = '<select name="'.$nombrevar.'" id="'.$idSelectDestino.'" onChange="cargaContenido(2,this.id,';
+            $sel.= "'DetalleSolicitud_nu_articulo-".$nrovar[1]."'";
+            $sel.= ')">';
+
+            echo $sel;
+            echo "<option value=''>[ Seleccione ]</option>";
+            for ($k=0; $k<$cant; $k++){
+                $des = $SQL[$k]["al_nombre_tipo"];
+                $value = $SQL[$k]["nu_tipo_articulo"];
+                echo "<option value=".$value.">".$des."</option>";
+            }
+            echo "</select>";
+        }
+
+        public function actionSelectD2(){
+
+            $SQL="SELECT * FROM articulo_tecnologico WHERE nu_tipo_articulo = '".$_GET['opcion']."' ORDER BY al_nombre_articulo";
+            $SQL=Yii::app()->db->createCommand($SQL)->queryAll();
+            $cant = count($SQL);
+
+            $idSelectDestino = $_GET['idSelectDestino'];
+
+            $nombrevar = explode("DetalleSolicitud_", $idSelectDestino);
+            $nombrevar = "DetalleSolicitud[".$nombrevar[1]."]";
+
+            echo '<select name="'.$nombrevar.'" id="'.$idSelectDestino.'">';
+            echo "<option value=''>[ Seleccione ]</option>";
+            for ($k=0; $k<$cant; $k++){
+                $des = $SQL[$k]["al_nombre_articulo"];
+                $value = $SQL[$k]["nu_articulo"];
+                echo "<option value=".$value.">".$des."</option>";
+            }
+            echo "</select>";
+        }        
 }

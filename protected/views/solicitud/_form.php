@@ -1,4 +1,133 @@
 <?php
+	$SQL="SELECT * FROM clasificacion_articulo ORDER BY al_nombre_clasificacion DESC";
+	$SQL=Yii::app()->db->createCommand($SQL)->queryAll();
+	$cant = count($SQL);
+?>
+<script>
+function nuevoAjax()
+{ 
+	var xmlhttp=false;
+	try	{ xmlhttp=new ActiveXObject("Msxml2.XMLHTTP");	}
+	catch(e){
+		try	{
+			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		catch(E){
+			if (!xmlhttp && typeof XMLHttpRequest!='undefined') xmlhttp=new XMLHttpRequest();
+		}
+	}
+	return xmlhttp; 
+}
+
+function cargaContenido(action,idSelectOrigen,idSelectDestino)
+{
+	var selectOrigen=document.getElementById(idSelectOrigen);
+	var opcionselect=selectOrigen.options[selectOrigen.selectedIndex].value;
+	var selectDestino=document.getElementById(idSelectDestino);
+	var ajax=nuevoAjax();
+	if (action===1){
+		ajax.open("GET", "SelectD1?idSelectDestino="+idSelectDestino+"&opcion="+opcionselect, true);
+	}else{
+		ajax.open("GET", "SelectD2?idSelectDestino="+idSelectDestino+"&opcion="+opcionselect, true);
+	}
+	ajax.onreadystatechange=function() 
+	{ 
+		if (ajax.readyState==4)
+		{
+			selectDestino.parentNode.innerHTML=ajax.responseText;
+		} 
+	}
+	ajax.send(null);
+}
+</script>
+<SCRIPT language="javascript">
+    var nextinput = 0;
+
+    function asignar(obj,valor){
+            cmp = document.getElementById(obj);
+            cmp.value = valor;
+    }
+    function addRow(tableID) {
+
+        nextinput++;
+        asignar('cant',nextinput);
+         var table = document.getElementById(tableID);
+         var rowCount = table.rows.length;
+         var row = table.insertRow(rowCount);
+
+         var cell1 = row.insertCell(0);
+         var element1 = document.createElement("input");
+         element1.type = "checkbox";
+         cell1.appendChild(element1);
+
+         var cell2 = row.insertCell(1);
+         var element2 = document.createElement("select");
+         element2.id = "DetalleSolicitud_nu_clasificacion_articulo-"+nextinput;
+         element2.name = "DetalleSolicitud[nu_clasificacion_articulo-"+nextinput+"]";
+         element2.setAttribute('onchange','cargaContenido(1,this.id,"DetalleSolicitud_nu_tipo_articulo-'+nextinput+'")');
+         element2.options.add(new Option("Seleccione",""));	   
+         <?php 
+              for ($k=0; $k<$cant; $k++){
+                      $al_nombre_clasificacion = $SQL[$k]["al_nombre_clasificacion"];
+                      $nu_clasificacion_articulo = $SQL[$k]["nu_clasificacion_articulo"];
+         ?>
+                      var valor = "<?=$al_nombre_clasificacion?>";
+                      var descripcion = "<?=$nu_clasificacion_articulo?>";
+                      element2.options.add(new Option(valor,descripcion));
+         <?php } ?>
+         cell2.appendChild(element2);
+
+         var cell3 = row.insertCell(2);
+         var element3 = document.createElement("select");
+         element3.id = "DetalleSolicitud_nu_tipo_articulo-"+nextinput;
+         element3.name = "DetalleSolicitud[nu_tipo_articulo-"+nextinput+"]";
+         element3.options.add(new Option("Seleccione",""));
+         cell3.appendChild(element3);	   
+
+         var cell4 = row.insertCell(3);
+         var element4 = document.createElement("select");
+         element4.id = "DetalleSolicitud_nu_articulo-"+nextinput;
+         element4.name = "DetalleSolicitud[nu_articulo-"+nextinput+"]";	
+         element4.options.add(new Option("Seleccione",""));
+         cell4.appendChild(element4);	 
+
+         var cell5 = row.insertCell(4);
+         var element5 = document.createElement("input");
+         element5.type = "text";
+         element5.id = "DetalleSolicitud_nu_cantidad_solicitada-"+nextinput;
+         element5.name = "DetalleSolicitud[nu_cantidad_solicitada-"+nextinput+"]";
+         cell5.appendChild(element5);	 
+
+         var cell6 = row.insertCell(5);
+         var element6 = document.createElement("input");
+         element6.type = "text";
+         element6.id = "DetalleSolicitud_al_justificacion-"+nextinput;
+         element6.name = "DetalleSolicitud[al_justificacion-"+nextinput+"]";	   
+         cell6.appendChild(element6);	 
+    }
+
+    function deleteRow(tableID) {
+        try {
+        var table = document.getElementById(tableID);
+        var rowCount = table.rows.length;
+
+        for(var i=0; i<rowCount; i++) {
+            var row = table.rows[i];
+            var chkbox = row.cells[0].childNodes[0];
+            if(null != chkbox && true == chkbox.checked) {
+                table.deleteRow(i);
+                rowCount--;
+                i--;
+               nextinput--;
+               asignar('cant',nextinput);
+            }
+        }
+        }catch(e) {
+                     alert(e);
+        }
+    }
+</SCRIPT>
+<?php
 /* @var $this SolicitudController */
 /* @var $model Solicitud */
 /* @var $form CActiveForm wqwq*/
@@ -17,127 +146,31 @@
 
 	echo $form->errorSummary($model,$modelb); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'nu_funcionario'); ?>
-		<?php echo $form->textField($model,'nu_funcionario'); ?>
-		<?php echo $form->error($model,'nu_funcionario'); ?>
-	</div>
+    <h4>Detalle Solicitud</h4>
+     <INPUT type="button" value="Agregar" onclick="addRow('dataTable');" />
+     <INPUT type="button" value="Borrar" onclick="deleteRow('dataTable');" />
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'nu_numero_departamento'); ?>
-		<?php echo $form->textField($model,'nu_numero_departamento'); ?>
-		<?php echo $form->error($model,'nu_numero_departamento'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'al_estado_solicitud'); ?>
-		<?php echo $form->dropdownList($model,'al_estado_solicitud',array('1'=>'Activa','0'=>'Atendida')); ?>
-		<?php echo $form->error($model,'al_estado_solicitud'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'fe_solicitud'); ?>
-		<?php #echo $form->textField($model,'fe_solicitud');
-		$this->widget('zii.widgets.jui.CJuiDatePicker',
-			array(
-			'model'=>$model,
-			'attribute'=>'fe_solicitud',
-			'language' => 'es',
-			'options' => array(
-								'dateFormat'=>'yy-mm-dd',
-								'constrainInput'=>'false',
-								'duration'=>'fast',
-								'showAnim'=>'slide',
-								)) );
-
-
-		 ?>
-		 
-		<?php echo $form->error($model,'fe_solicitud'); ?>
-	</div>
-
-
-
-
- <?php ////MANUEL: TRES COMBOS DEPENDIENTE //////////////////////////// ?>
-<div class="row">
-		<?php echo $form->labelEx($modelb,'nu_clasificacion_articulo'); ?>
-		<?php echo $form->dropDownList($modelb,'nu_clasificacion_articulo',
-		CHtml::ListData(ClasificacionArticulo::model()->findAll(),'nu_clasificacion_articulo','al_nombre_clasificacion'),
-			array(
-				'ajax'=>array(
-					'type'=>'POST',
-					'url'=>CController::createUrl('DetalleSolicitud/Selectdos'),
-					'update'=>'#'.CHtml::activeId($modelb,'nu_tipo_articulo'),
-					'beforeSend' => 'function(){
-					   $("#nu_tipo_articulo").find("option").remove();
-                       $("#nu_articulo").find("option").remove();					   					   
-					}',
-				),'prompt'=>'Seleccione'	
-			)
-		); ?>
-		<?php echo $form->error($modelb,'nu_clasificacion_articulo'); ?>
-	</div>
-
-    <div class="row">
-		<?php echo $form->labelEx($modelb,'nu_tipo_articulo'); ?>
-		<?php 
-		$lista_dos = array();
-		if(isset($modelb->nu_tipo_articulo)){
-			$id_uno = intval($modelb->nu_clasificacion_articulo); 
-			$lista_dos = CHtml::listData(TipoArticulo::model()->findAll("nu_clasificacion_articulo = '$id_uno'"),'nu_tipo_articulo','al_nombre_tipo');
-		}                
-		echo $form->dropDownList($modelb,'nu_tipo_articulo',$lista_dos,
-				array(
-					'ajax'=>array(
-					  'type'=>'POST',
-					  'url'=>CController::createUrl('DetalleSolicitud/Selecttres'),
-					  'update'=>'#'.CHtml::activeId($modelb,'nu_articulo'),
-					  'beforeSend' => 'function(){
-					  	$("#nu_articulo").find("option").remove();
-					  }',   
-						
-					),
-					
-					'prompt'=>'Seleccione')
-		); 
-		?>
-		<?php echo $form->error($modelb,'nu_tipo_articulo'); ?>
-	</div>
-
-
-<div class="row">
-		<?php echo $form->labelEx($modelb,'nu_articulo'); ?>
-		<?php 
-		$lista_tres = array();
-		if(isset($modelb->nu_articulo)){
-			$id_dos = intval($modelb->nu_tipo_articulo); 
-			$lista_tres = CHtml::listData(ArticuloTecnologico::model()->findAll("nu_tipo_articulo = '$id_dos'"),'nu_articulo','al_nombre_articulo');
-		}
-		echo $form->dropDownList($modelb,'nu_articulo',$lista_tres,
-			array('prompt'=>'Seleccione')
-		); 
-		?>
-		<?php echo $form->error($modelb,'nu_articulo'); ?>
-	</div>
-
-
-
-
-
-	<div class="row">
-		<?php echo $form->labelEx($modelb,'nu_cantidad_solicitada'); ?>
-		<?php echo $form->textField($modelb,'nu_cantidad_solicitada'); ?>
-		<?php echo $form->error($modelb,'nu_cantidad_solicitada'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($modelb,'al_justificacion'); ?>
-		<?php echo $form->textField($modelb,'al_justificacion'); ?>
-		<?php echo $form->error($modelb,'al_justificacion'); ?>
-	</div>
-
-
+	<table width="100%" id="dataTable">
+            <tr>
+                <td width="15">&nbsp;</td>
+                <td width="150">
+                        <?php echo $form->labelEx($modelb,'nu_clasificacion_articulo'); ?>				
+                </td>
+                <td width="150">
+                        <?php echo $form->labelEx($modelb,'nu_tipo_articulo'); ?>				
+                </td>
+                <td width="150">
+                        <?php echo $form->labelEx($modelb,'nu_articulo'); ?>				
+                </td>
+                <td width="150">
+                        <?php echo $form->labelEx($modelb,'nu_cantidad_solicitada'); ?>
+                </td>	
+                <td width="150">
+                        <?php echo $form->labelEx($modelb,'al_justificacion'); ?>
+                </td>	
+            </tr>
+	</table>
+	<input id="cant" type="hidden" name="cant" value="" maxlength="5" size="5">
 
 	<div class="row buttons">
 		<?php $this->widget('bootstrap.widgets.TbButton', array(
