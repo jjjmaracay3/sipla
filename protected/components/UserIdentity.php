@@ -22,7 +22,10 @@ private $_id;
 		 else
 		 {
 			 $this->_id=$user->nu_funcionario;
-		 	 //$this->setState('rol', $user->rol);
+                         $this->setState('nu_funcionario', $user->nu_funcionario);                         
+                         $this->setState('nu_numero_departamento', $user->nu_numero_departamento);		 	 
+                         $this->setState('nu_rol', $user->nu_rol);
+
 			 $this->username=$user->username;
 			 $this->errorCode=self::ERROR_NONE;
 		 }

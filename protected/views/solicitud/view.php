@@ -17,7 +17,7 @@ $this->menu=array(
 ?>
 
 <h3>View Solicitud #<?php echo $model->nu_solicitud; ?></h3>
-
+<h5>Su solicitud de Articulos Tecnologicos fue enviada exitosamente, pronto nos comunicaremos con usted con el fin de darle respuesta a su requerimiento en el menor tiempo posible.</h5>
 <?php $this->widget('bootstrap.widgets.TbDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(

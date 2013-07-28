@@ -46,7 +46,7 @@ class DetalleSolicitud extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nu_solicitud, nu_clasificacion_articulo, nu_tipo_articulo, nu_articulo, nu_cantidad_solicitada, al_justificacion', 'required'),
+			array('nu_clasificacion_articulo, nu_tipo_articulo, nu_articulo, nu_cantidad_solicitada, al_justificacion', 'required'),
 			array('nu_solicitud, nu_clasificacion_articulo, nu_tipo_articulo, nu_articulo, nu_cantidad_solicitada', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
