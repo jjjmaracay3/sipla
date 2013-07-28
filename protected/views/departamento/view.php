@@ -5,15 +5,15 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Departamento','url'=>array('index')),
-	array('label'=>'Create Departamento','url'=>array('create')),
-	array('label'=>'Update Departamento','url'=>array('update','id'=>$model->nu_numero_departamento)),
-	array('label'=>'Delete Departamento','url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$model->nu_numero_departamento),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Departamento','url'=>array('admin')),
+	array('label'=>'Listar Departamento','url'=>array('index')),
+	array('label'=>'Crear Departamento','url'=>array('create')),
+	array('label'=>'Actualizar Departamento','url'=>array('update','id'=>$model->nu_numero_departamento)),
+	array('label'=>'Eliminar Departamento','url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$model->nu_numero_departamento),'confirm'=>'Esta seguro de eliminar este Departamento?')),
+	array('label'=>'Administrar Departamento','url'=>array('admin')),
 );
 ?>
 
-<h3>View Departamento #<?php echo $model->nu_numero_departamento; ?></h3>
+<h3>Ver Departamento #<?php echo $model->nu_numero_departamento; ?></h3>
 
 <?php $this->widget('bootstrap.widgets.TbDetailView',array(
 	'data'=>$model,

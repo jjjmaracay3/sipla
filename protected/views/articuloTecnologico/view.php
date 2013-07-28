@@ -9,15 +9,15 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List ArticuloTecnologico','url'=>array('index')),
-	array('label'=>'Create ArticuloTecnologico','url'=>array('create')),
-	array('label'=>'Update ArticuloTecnologico','url'=>array('update','id'=>$model->nu_articulo)),
-	array('label'=>'Delete ArticuloTecnologico','url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$model->nu_articulo),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage ArticuloTecnologico','url'=>array('admin')),
+	array('label'=>'Listar Articulo Tecnologico','url'=>array('index')),
+	array('label'=>'Crear Articulo Tecnologico','url'=>array('create')),
+	array('label'=>'Actualizar Articulo Tecnologico','url'=>array('update','id'=>$model->nu_articulo)),
+	array('label'=>'Eliminar Articulo Tecnologico','url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$model->nu_articulo),'confirm'=>'Esta seguro de eliminar este Articulo Tecnologico?')),
+	array('label'=>'Administrar Articulo Tecnologico','url'=>array('admin')),
 );
 ?>
 
-<h3>View ArticuloTecnologico #<?php echo $model->nu_articulo; ?></h3>
+<h3>Ver Art&iacuteculo Tecnol&oacutegico #<?php echo $model->nu_articulo; ?></h3>
 
 <?php $this->widget('bootstrap.widgets.TbDetailView',array(
 	'data'=>$model,

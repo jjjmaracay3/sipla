@@ -2,17 +2,17 @@
 $this->breadcrumbs=array(
 	'Tipo Articulos'=>array('index'),
 	$model->nu_tipo_articulo=>array('view','id'=>$model->nu_tipo_articulo),
-	'Update',
+	'Actualizar',
 );
 
 $this->menu=array(
-	array('label'=>'List TipoArticulo','url'=>array('index')),
-	array('label'=>'Create TipoArticulo','url'=>array('create')),
-	array('label'=>'View TipoArticulo','url'=>array('view','id'=>$model->nu_tipo_articulo)),
-	array('label'=>'Manage TipoArticulo','url'=>array('admin')),
+	array('label'=>'Listar Tipo de Articulo','url'=>array('index')),
+	array('label'=>'Crear Tipo de Articulo','url'=>array('create')),
+	array('label'=>'Ver Tipo de Articulo','url'=>array('view','id'=>$model->nu_tipo_articulo)),
+	array('label'=>'Administrar Tipo de Articulo','url'=>array('admin')),
 );
 ?>
 
-<h3>Update TipoArticulo <?php echo $model->nu_tipo_articulo; ?></h3>
+<h3>Actualizar TipoArticulo <?php echo $model->nu_tipo_articulo; ?></h3>
 
 <?php echo $this->renderPartial('_form',array('model'=>$model)); ?>

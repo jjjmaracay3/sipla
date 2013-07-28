@@ -4,13 +4,13 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create TipoArticulo','url'=>array('create')),
-	array('label'=>'Manage TipoArticulo','url'=>array('admin')),
+	array('label'=>'Crear Tipo de Articulo','url'=>array('create')),
+	array('label'=>'Administrar Tipo de Articulo','url'=>array('admin')),
 );
 ?>
 
 
-<h3>Tipo Articulos</h3>
+<h3>Tipo de Articulos</h3>
 
 <?php $this->widget('bootstrap.widgets.TbListView',array(
 	'dataProvider'=>$dataProvider,

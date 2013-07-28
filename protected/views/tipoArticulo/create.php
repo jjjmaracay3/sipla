@@ -1,15 +1,15 @@
 <?php
 $this->breadcrumbs=array(
 	'Tipo Articulos'=>array('index'),
-	'Create',
+	'Crear',
 );
 
 $this->menu=array(
-	array('label'=>'List TipoArticulo','url'=>array('index')),
-	array('label'=>'Manage TipoArticulo','url'=>array('admin')),
+	array('label'=>'Listar Tipo de Articulo','url'=>array('index')),
+	array('label'=>'Administrar Tipo de Articulo','url'=>array('admin')),
 );
 ?>
 
-<h3>Create TipoArticulo</h3>
+<h3>Crear Tipo de Articulo</h3>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

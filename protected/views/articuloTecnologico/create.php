@@ -1,14 +1,14 @@
 <?php
 $this->breadcrumbs=array(
 	'Articulo Tecnologicos'=>array('index'),
-	'Create',
+	'Crear',
 );
 
 $this->menu=array(
-	array('label'=>'List ArticuloTecnologico','url'=>array('index')),
-	array('label'=>'Manage ArticuloTecnologico','url'=>array('admin')),
+	array('label'=>'Listar Articulo Tecnologico','url'=>array('index')),
+	array('label'=>'Administrar Articulo Tecnologico','url'=>array('admin')),
 );?>
 
-<h3>Create ArticuloTecnologico</h3>
+<h3>Crear Art&iacuteculo Tecnol&oacutegico</h3>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
