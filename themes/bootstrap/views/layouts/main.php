@@ -35,7 +35,7 @@
                                 array(
                                         'class'=>'bootstrap.widgets.TbMenu',        
 			'items'=>array(
-				array('label'=>'Inicio', 'icon'=>'home', 'url'=>array('/site/login')),
+				array('label'=>'Inicio', 'icon'=>'home', 'url'=>array('/site/index')),
 				array('label'=>'Solicitudes', 'icon'=>'inbox', 'url'=>array('/solicitud/index')),
 				array('label'=>'Nota entrega', 'url'=>array('/notaEntrega/index')),
 				array('label'=>'Departamento', 'icon'=>'map-marker','url'=>array('/departamento/index')),

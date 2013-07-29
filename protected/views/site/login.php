@@ -57,17 +57,12 @@ $this->breadcrumbs=array(
 </fieldset>
 	</div>
 	<div class="span8">Descripci&oacute;n
-	
-	
-	<p class="well">
-    Lorem ipsum dolor sit <a href="#" rel="tooltip" title="First tooltip">amet</a>,
-    consectetur adipiscing elit.
-    Fusce ut velit sem, id elementum elit. Quisque tincidunt magna in quam luctus a ultrices tellus luctus.
-    Pellentesque at tellus urna.
-    Ut congue, <a href="#" rel="tooltip" title="Another tooltip">nibh eu</a> interdum commodo,
-    ligula urna consequat tortor, at vehicula tellus est a orci.
-    Maecenas nec ligula sed ipsum posuere sollicitudin pretium ac sapien.
-    Sed odio dui, pretium eu pellentesque ac,
+	<p class="well" style="font-size: 14px; text-align: justify;" >
+    <b>El Sistema de Planificacion de Adquisiciones Tecnologicas (SIPLA),</b> Está dirigido a la optimización de los procesos de solicitudes y planificación de adqusiciones
+    de equipos tecnológicos informáticos, por parte del personal administrativo que hace vida en el Colegio Universitario de Caracas - CUC. Según tu rol en el sistema podrás 
+    registrar de forma sencilla tu solicitud sobre cualqueir equipo de cómputo o insumo que tu departamento necesite en su labor diaria, podras planificar de forma sencilla y confiable
+    los largos planes de compra y hasta crear con un solo click las requisiciones de compra que siempre gozan de urgencia. 
+     Lorem ipsum dolor sit <a href="#" rel="tooltip" title="First tooltip">amet</a>,
     <a href="#" rel="tooltip" title="Yet another tooltip">tempor</a> sed sem.
 
 </p></div>
