@@ -2,11 +2,10 @@
 /* @var $this SolicitudController */
 /* @var $data Solicitud */
 ?>
-
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('nu_solicitud')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->nu_solicitud), array('view', 'id'=>$data->nu_solicitud)); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('nu_solicitud')); ?>:
+	<?php echo CHtml::link(CHtml::encode($data->nu_solicitud), array('view', 'id'=>$data->nu_solicitud)); ?></b>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nu_funcionario')); ?>:</b>
@@ -21,15 +20,15 @@
 	<?php echo CHtml::encode($data->al_estado_solicitud); ?>
 	<br/>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Articulos')); ?>:</b>
+	<b><?php  echo CHtml::encode($data->getAttributeLabel('Articulos')); ?>:</b>
 	<?php 
 	foreach ($data->detalle as $det) {
-	echo '<br>'.$det->nu_cantidad_solicitada.'<br>';
-	echo $det->nu_articulo.'<br>';
+	echo '<br>'.$det->nu_cantidad_solicitada.' ';
+	echo $det->nuArticulo->al_nombre_articulo.' ';
 	} ?>
-	<br />
+	
 
-
+	<br/>
 	<b><?php echo CHtml::encode($data->getAttributeLabel('fe_solicitud')); ?>:</b>
 	<?php echo CHtml::encode($data->fe_solicitud); ?>
 	<br />

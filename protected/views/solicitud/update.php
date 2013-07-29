@@ -3,7 +3,7 @@
 /* @var $model Solicitud */
 
 $this->breadcrumbs=array(
-	'Solicituds'=>array('index'),
+	'Solicitudes'=>array('index'),
 	$model->nu_solicitud=>array('view','id'=>$model->nu_solicitud),
 	'Update',
 );

@@ -1,13 +1,10 @@
 <?php
 
 
- 
-
 $this->breadcrumbs=array(
 	'Articulo Tecnologicos'=>array('index'),
 	$model->nu_articulo,
 );
-
 $this->menu=array(
 	array('label'=>'Listar Articulo Tecnologico','url'=>array('index')),
 	array('label'=>'Crear Articulo Tecnologico','url'=>array('create')),

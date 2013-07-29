@@ -3,7 +3,7 @@
 /* @var $model Solicitud */
 
 $this->breadcrumbs=array(
-	'Solicituds'=>array('index'),
+	'Solicitudes'=>array('index'),
 	'Crear',
 );
 
@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h4>Crear Solicitud</h4>
+<h3>Crear Solicitud</h3>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model,'modelb'=>$modelb)); ?>

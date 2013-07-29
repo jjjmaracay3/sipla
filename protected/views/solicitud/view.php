@@ -1,12 +1,10 @@
 <?php
 /* @var $this SolicitudController */
 /* @var $model Solicitud */
-
 $this->breadcrumbs=array(
-	'Solicituds'=>array('index'),
+	'Solicitudes'=>array('index'),
 	$model->nu_solicitud,
 );
-
 $this->menu=array(
 	array('label'=>'Listar Solicitud', 'url'=>array('index')),
 	array('label'=>'Crear Solicitud', 'url'=>array('create')),

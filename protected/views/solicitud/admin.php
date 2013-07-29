@@ -3,7 +3,7 @@
 /* @var $model Solicitud */
 
 $this->breadcrumbs=array(
-	'Solicituds'=>array('index'),
+	'Solicitudes'=>array('index'),
 	'Administrar',
 );
 
@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h4>Administrar Solicitud</h4>
+<h3>Administrar Solicitud</h3>
 
 <p>
 Tambi&eacuten puede escribir un operador de comparaci&oacuten (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>

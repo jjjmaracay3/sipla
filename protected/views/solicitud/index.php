@@ -3,7 +3,7 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Solicituds',
+	'Solicitudes',
 );
 
 $this->menu=array(
@@ -12,9 +12,9 @@ $this->menu=array(
 );
 ?>
 
-<h3>Solicituds</h3>
+<h3>Solicitudes</h3>
 
-<?php $this->widget('zii.widgets.CListView', array(
+<?php $this->widget('bootstrap.widgets.TbListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
 )); ?>

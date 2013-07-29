@@ -75,8 +75,8 @@ class Solicitud extends CActiveRecord
 	{
 		return array(
 			'nu_solicitud' => 'Numero de solicitud',
-			'nu_funcionario' => 'Numero de funcionario',
-			'nu_numero_departamento' => 'Numero de departamento',
+			'nu_funcionario' => 'Funcionario',
+			'nu_numero_departamento' => 'Departamento',
 			'al_estado_solicitud' => 'Estado de solicitud',
 			'fe_solicitud' => 'Fecha de solicitud',
 		);
