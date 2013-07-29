@@ -1,15 +1,15 @@
 <?php
 $this->breadcrumbs=array(
 	'Nota Entregas'=>array('index'),
-	'Create',
+	'Crear',
 );
 
 $this->menu=array(
-	array('label'=>'List NotaEntrega','url'=>array('index')),
-	array('label'=>'Manage NotaEntrega','url'=>array('admin')),
+	array('label'=>'Listar Nota de Entrega','url'=>array('index')),
+	array('label'=>'Administrar Nota de Entrega','url'=>array('admin')),
 );
 ?>
 
-<h3>Create NotaEntrega</h3>
+<h3>Crear Nota de Entrega</h3>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

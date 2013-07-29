@@ -1,15 +1,15 @@
 <?php
 $this->breadcrumbs=array(
 	'Departamentos'=>array('index'),
-	'Create',
+	'Crear',
 );
 
 $this->menu=array(
-	array('label'=>'List Departamento','url'=>array('index')),
-	array('label'=>'Manage Departamento','url'=>array('admin')),
+	array('label'=>'Listar Departamento','url'=>array('index')),
+	array('label'=>'Administrar Departamento','url'=>array('admin')),
 );
 ?>
 
-<h3>Create Departamento</h3>
+<h3>Crear Departamento</h3>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

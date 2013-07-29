@@ -5,15 +5,15 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Funcionario','url'=>array('index')),
-	array('label'=>'Create Funcionario','url'=>array('create')),
-	array('label'=>'Update Funcionario','url'=>array('update','id'=>$model->nu_funcionario)),
-	array('label'=>'Delete Funcionario','url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$model->nu_funcionario),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Funcionario','url'=>array('admin')),
+	array('label'=>'Listar Funcionario','url'=>array('index')),
+	array('label'=>'Crear Funcionario','url'=>array('create')),
+	array('label'=>'Actualizar Funcionario','url'=>array('update','id'=>$model->nu_funcionario)),
+	array('label'=>'Eliminar Funcionario','url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$model->nu_funcionario),'confirm'=>'Esta seguro de eliminar este Funcionario?')),
+	array('label'=>'Administrar Funcionario','url'=>array('admin')),
 );
 ?>
 
-<h3>View Funcionario #<?php echo $model->nu_funcionario; ?></h3>
+<h3>Ver Funcionario #<?php echo $model->nu_funcionario; ?></h3>
 
 <?php $this->widget('bootstrap.widgets.TbDetailView',array(
 	'data'=>$model,

@@ -4,12 +4,12 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create ClasificacionArticulo','url'=>array('create')),
-	array('label'=>'Manage ClasificacionArticulo','url'=>array('admin')),
+	array('label'=>'Crear Clasificacion de Articulo','url'=>array('create')),
+	array('label'=>'Administrar Clasificacion de Articulo','url'=>array('admin')),
 );
 ?>
 
-<h3>Clasificacion Articulos</h3>
+<h3>Clasificaci&oacuten de Art&iacuteculo</h3>
 
 <?php $this->widget('bootstrap.widgets.TbListView',array(
 	'dataProvider'=>$dataProvider,

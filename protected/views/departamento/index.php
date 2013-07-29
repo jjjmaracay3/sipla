@@ -4,8 +4,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Departamento','url'=>array('create')),
-	array('label'=>'Manage Departamento','url'=>array('admin')),
+	array('label'=>'Crear Departamento','url'=>array('create')),
+	array('label'=>'Administrar Departamento','url'=>array('admin')),
 );
 ?>
 

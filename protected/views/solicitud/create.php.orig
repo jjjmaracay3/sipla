@@ -1,0 +1,22 @@
+<?php
+/* @var $this SolicitudController */
+/* @var $model Solicitud */
+
+$this->breadcrumbs=array(
+	'Solicituds'=>array('index'),
+	'Crear',
+);
+
+$this->menu=array(
+	array('label'=>'Listar Solicitud', 'url'=>array('index')),
+	array('label'=>'Administrar Solicitud', 'url'=>array('admin')),
+);
+?>
+
+<<<<<<< HEAD
+<h3>Create Solicitud</h3>
+=======
+<h4>Crear Solicitud</h4>
+>>>>>>> e35c71cdb14e2db501e0ad689b8b458781a20692
+
+<?php echo $this->renderPartial('_form', array('model'=>$model,'modelb'=>$modelb)); ?>

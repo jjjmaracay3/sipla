@@ -4,8 +4,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Funcionario','url'=>array('create')),
-	array('label'=>'Manage Funcionario','url'=>array('admin')),
+	array('label'=>'Crear Funcionario','url'=>array('create')),
+	array('label'=>'Administrar Funcionario','url'=>array('admin')),
 );
 ?>
 

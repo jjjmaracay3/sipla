@@ -10,7 +10,7 @@ return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Sipla',
 	'language'=>'es',
-	'sourceLanguage'=>'es',
+	'sourceLanguage'=>'en',
 	'charset'=>'utf-8',
 	'theme'=>'bootstrap',
 	// preloading 'log' component

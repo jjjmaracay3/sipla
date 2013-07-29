@@ -5,15 +5,15 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List ClasificacionArticulo','url'=>array('index')),
-	array('label'=>'Create ClasificacionArticulo','url'=>array('create')),
-	array('label'=>'Update ClasificacionArticulo','url'=>array('update','id'=>$model->nu_clasificacion_articulo)),
-	array('label'=>'Delete ClasificacionArticulo','url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$model->nu_clasificacion_articulo),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage ClasificacionArticulo','url'=>array('admin')),
+	array('label'=>'Listar Clasificacion de Articulo','url'=>array('index')),
+	array('label'=>'Crear Clasificacion de Articulo','url'=>array('create')),
+	array('label'=>'Actuaizar Clasificacion de Articulo','url'=>array('update','id'=>$model->nu_clasificacion_articulo)),
+	array('label'=>'Eliminar Clasificacion de Articulo','url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$model->nu_clasificacion_articulo),'confirm'=>'Esta seguro de eliminar esta Clasificion de Articulo?')),
+	array('label'=>'Administrar Clasificacion de Articulo','url'=>array('admin')),
 );
 ?>
 
-<h3>View ClasificacionArticulo #<?php echo $model->nu_clasificacion_articulo; ?></h3>
+<h3>Ver Clasificaci&oacuten de Art&iacuteculos #<?php echo $model->nu_clasificacion_articulo; ?></h3>
 
 <?php $this->widget('bootstrap.widgets.TbDetailView',array(
 	'data'=>$model,

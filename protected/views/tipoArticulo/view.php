@@ -5,15 +5,15 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List TipoArticulo','url'=>array('index')),
-	array('label'=>'Create TipoArticulo','url'=>array('create')),
-	array('label'=>'Update TipoArticulo','url'=>array('update','id'=>$model->nu_tipo_articulo)),
-	array('label'=>'Delete TipoArticulo','url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$model->nu_tipo_articulo),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage TipoArticulo','url'=>array('admin')),
+	array('label'=>'Listar Tipo de Articulo','url'=>array('index')),
+	array('label'=>'Crear Tipo de Articulo','url'=>array('create')),
+	array('label'=>'Actualizar Tipo de Articulo','url'=>array('update','id'=>$model->nu_tipo_articulo)),
+	array('label'=>'Eliminar Tipo de Articulo','url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$model->nu_tipo_articulo),'confirm'=>'Estas seguro de eliminar este Tipo de Articulo?')),
+	array('label'=>'Administrar Tipo de Articulo','url'=>array('admin')),
 );
 ?>
 
-<h3>View TipoArticulo #<?php echo $model->nu_tipo_articulo; ?></h3>
+<h3>Ver TipoArticulo #<?php echo $model->nu_tipo_articulo; ?></h3>
 
 <?php $this->widget('bootstrap.widgets.TbDetailView',array(
 	'data'=>$model,

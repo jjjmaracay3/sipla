@@ -1,15 +1,15 @@
 <?php
 $this->breadcrumbs=array(
 	'Clasificacion Articulos'=>array('index'),
-	'Create',
+	'Crear',
 );
 
 $this->menu=array(
-	array('label'=>'List ClasificacionArticulo','url'=>array('index')),
-	array('label'=>'Manage ClasificacionArticulo','url'=>array('admin')),
+	array('label'=>'Listar Clasificacion de Articulo','url'=>array('index')),
+	array('label'=>'Administrar Clasificacion de Articulo','url'=>array('admin')),
 );
 ?>
 
-<h3>Create ClasificacionArticulo</h3>
+<h3>Crear Clasificaci&oacuten de Art&iacuteculo</h3>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

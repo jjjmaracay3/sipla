@@ -4,12 +4,12 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create ArticuloTecnologico','url'=>array('create')),
-	array('label'=>'Manage ArticuloTecnologico','url'=>array('admin')),
+	array('label'=>'Crear Articulo Tecnologico','url'=>array('create')),
+	array('label'=>'Administrar Articulo Tecnologico','url'=>array('admin')),
 );
 ?>
 
-<h3>Articulo Tecnologicos</h3>
+<h3>Art&iacuteculo Tecnol&oacutegico</h3>
 
 <?php $this->widget('bootstrap.widgets.TbListView',array(
 	'dataProvider'=>$dataProvider,
