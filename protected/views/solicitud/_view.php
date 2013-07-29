@@ -16,9 +16,7 @@
 	<?php echo CHtml::encode($data->departamento->al_nombre_departamento); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('al_estado_solicitud')); ?>:</b>
-	<?php echo CHtml::encode($data->al_estado_solicitud); ?>
-	<br/>
+	
 
 	<b><?php  echo CHtml::encode($data->getAttributeLabel('Articulos')); ?>:</b>
 	<?php 

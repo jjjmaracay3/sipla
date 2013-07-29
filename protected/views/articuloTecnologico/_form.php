@@ -25,8 +25,11 @@
         'matcher'=>"js:function(item) {
             return ~item.toLowerCase().indexOf(this.query.toLowerCase());
         }",
-    ),
+            ),
 )); ?>
+
+
+
 
 	<?php echo $form->textFieldRow($model,'al_modelo_articulo',array('class'=>'span5')); ?>
 
@@ -44,6 +47,10 @@
 			'type'=>'primary',
 			'label'=>$model->isNewRecord ? 'Crear' : 'Guardar',
 		)); ?>
+		<?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'reset', 'label'=>'Reinicializar')); ?>
+
 	</div>
+
+
 
 <?php $this->endWidget(); ?>

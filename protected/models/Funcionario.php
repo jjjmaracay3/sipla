@@ -83,16 +83,16 @@ class Funcionario extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'nu_funcionario' => 'Nu Funcionario',
-			'nu_numero_departamento' => 'Nu Numero Departamento',
-			'nu_rol' => 'Nu Rol',
-			'al_nombre_funcionario' => 'Al Nombre Funcionario',
-			'al_apellido_funcionario' => 'Al Apellido Funcionario',
-			'nu_cedula_funcionario' => 'Nu Cedula Funcionario',
-			'al_cargo_funcionario' => 'Al Cargo Funcionario',
-			'al_correo_funcionario' => 'Al Correo Funcionario',
-			'username' => 'Username',
-			'password' => 'Password',
+			'nu_funcionario' => 'Funcionario',
+			'nu_numero_departamento' => 'Departamento',
+			'nu_rol' => 'Rol',
+			'al_nombre_funcionario' => 'Nombre funcionario',
+			'al_apellido_funcionario' => 'Apellido funcionario',
+			'nu_cedula_funcionario' => 'Cedula',
+			'al_cargo_funcionario' => 'Cargo de funcionario',
+			'al_correo_funcionario' => 'Correo de funcionario',
+			'username' => 'Usuario',
+			'password' => 'Clave',
 			'session' => 'Session',
 		);
 	}

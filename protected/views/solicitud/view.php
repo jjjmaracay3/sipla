@@ -22,7 +22,7 @@ $this->menu=array(
 		'nu_solicitud',
 		'funcionario.al_nombre_funcionario',
 		'departamento.al_nombre_departamento',
-		'al_estado_solicitud',
+		//'al_estado_solicitud',
 		'fe_solicitud',
 	),
 )); ?>

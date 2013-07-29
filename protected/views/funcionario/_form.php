@@ -8,10 +8,10 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<?php echo $form->dropdownListRow($model,'nu_numero_departamento',CHtml::listData(Departamento::model()->findAll(),
-		'nu_numero_departamento','al_nombre_departamento'),array('empty'=>'Seleccione Departamento')); ?>
+		'nu_numero_departamento','al_nombre_departamento'),array('empty'=>'Seleccione...')); ?>
 
 	<?php echo $form->dropdownListRow($model,'nu_rol',CHtml::listData(RolFuncionario::model()->findAll(),
-		'nu_rol','al_nombre_rol'),array('empty'=>'Seleccione Rol')); ?>
+		'nu_rol','al_nombre_rol'),array('empty'=>'Seleccione...')); ?>
 
 	<?php echo $form->textFieldRow($model,'al_nombre_funcionario',array('class'=>'span5')); ?>
 
@@ -35,6 +35,7 @@
 			'type'=>'primary',
 			'label'=>$model->isNewRecord ? 'Crear' : 'Guardar',
 		)); ?>
+		<?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'reset', 'label'=>'Reinicializar')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

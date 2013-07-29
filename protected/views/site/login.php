@@ -16,29 +16,30 @@ $this->breadcrumbs=array(
 
 
 <div class="form">
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'login-form',
+<?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm', array(
+	'id'=>'inlineForm',
+    'type'=>'inline',
+	//'id'=>'login-form',
 	'enableClientValidation'=>true,
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
 	),
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Los campos con <span class="required">*</span> son requeridos.</p>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username'); ?>
+		<?php echo $form->textFieldRow($model,'username'); ?>
 		<?php echo $form->error($model,'username'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password'); ?>
+		<?php echo $form->passwordFieldRow($model,'password'); ?>
 		<?php echo $form->error($model,'password'); ?>
 		<p class="hint">
-			Hint: You may login with <kbd>demo</kbd>/<kbd>demo</kbd> or <kbd>admin</kbd>/<kbd>admin</kbd>.
-		</p>
+			Si olvido <kbd>usuario</kbd>/<kbd>clave</kbd>  consulte a la oficina de Desarrollo Tecnologico.
 	</div>
 
 	<div class="row rememberMe">
@@ -48,7 +49,8 @@ $this->breadcrumbs=array(
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Login',array("class"=>"btn btn-primary")); ?>
+		<?php echo CHtml::submitButton('Entrar',array("class"=>"btn btn-primary")); ?>
+
 	</div>
 
 <?php $this->endWidget(); ?>
@@ -57,13 +59,12 @@ $this->breadcrumbs=array(
 </fieldset>
 	</div>
 	<div class="span8">Descripci&oacute;n
-	<p class="well" style="font-size: 14px; text-align: justify;" >
-    <b>El Sistema de Planificacion de Adquisiciones Tecnologicas (SIPLA),</b> Está dirigido a la optimización de los procesos de solicitudes y planificación de adqusiciones
+	<p class="well"  style="font-size: 14px; text-align: justify;" >
+    <b>El Sistema de Planificación de Adquisiciones Tecnológicas (SIPLA),</b> Está dirigido a la optimización de los procesos de solicitudes y planificación de adquisiciones
     de equipos tecnológicos informáticos, por parte del personal administrativo que hace vida en el Colegio Universitario de Caracas - CUC. Según tu rol en el sistema podrás 
-    registrar de forma sencilla tu solicitud sobre cualqueir equipo de cómputo o insumo que tu departamento necesite en su labor diaria, podras planificar de forma sencilla y confiable
-    los largos planes de compra y hasta crear con un solo click las requisiciones de compra que siempre gozan de urgencia. 
-     Lorem ipsum dolor sit <a href="#" rel="tooltip" title="First tooltip">amet</a>,
-    <a href="#" rel="tooltip" title="Yet another tooltip">tempor</a> sed sem.
+    registrar de forma sencilla tu solicitud sobre cualquier equipo de cómputo o insumo que tu departamento necesite en su labor diaria, también puedes planificar de forma sencilla y confiable
+    los largos planes de compra y hasta crear con un solo clic las requisiciones de compra que siempre tienen carácter de urgencia. 
+    <a href="#" rel="tooltip" title="First tooltip">Descargar manual de usuario aquí</a>.
 
 </p></div>
 </div>

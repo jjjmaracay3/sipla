@@ -37,29 +37,34 @@
 			'items'=>array(
 				array('label'=>'Inicio', 'icon'=>'home', 'url'=>array('/site/index')),
 				array('label'=>'Solicitudes', 'icon'=>'inbox', 'url'=>array('/solicitud/index')),
-				array('label'=>'Nota entrega', 'url'=>array('/notaEntrega/index')),
-				array('label'=>'Departamento', 'icon'=>'map-marker','url'=>array('/departamento/index')),
+				array('label'=>'Planificar', 'icon'=>'calendar', 'url'=>'#', 'items'=>array(
+				array('label'=>'Plan de compra', 'icon'=>'time', 'url'=>array('/articuloTecnologico/admin')),
+				 '---',
+				array('label'=>'Requisicion de compra', 'icon'=>'shopping-cart', 'url'=>array('/articuloTecnologico/admin')),
+				)),
+				//array('label'=>'Nota entrega', 'url'=>array('/notaEntrega/index')),
+				//array('label'=>'Departamento', 'icon'=>'map-marker','url'=>array('/departamento/index')),
 				//array('label'=>'Funcionarios','url'=>array('funcionario/index')),
 				//array('label'=>'Roles', 'url'=>array('/rolFuncionario/index')),
 				//array('label'=>'Articulos','url'=>array('articuloTecnologico/index')),
-				array('label'=>'Tipo', 'url'=>array('/tipoArticulo/index')),
-				array('label'=>'Clasificar', 'url'=>array('/clasificacionArticulo/index')),
+				//array('label'=>'Tipo', 'url'=>array('/tipoArticulo/index')),
+				//array('label'=>'Clasificar', 'url'=>array('/clasificacionArticulo/index')),
 
 				 //array('label'=>'Home', 'url'=>'#', 'active'=>true),
                 //array('label'=>'Link', 'url'=>'#'),
                 array('label'=>'Administrar', 'icon'=>'folder-open', 'url'=>'#', 'items'=>array(
-                    array('label'=>'Catalogo de articulos','icon'=>'ok-sign','url'=>array('articuloTecnologico/index')),
-                    array('label'=>'Funcionarios', 'icon'=>'ok-sign', 'url'=>array('funcionario/index')),
-                    array('label'=>'Something else here', 'url'=>'#'),
+                    array('label'=>'Catalogo de articulos','icon'=>'print','url'=>array('articuloTecnologico/index')),
+                    array('label'=>'Funcionarios', 'icon'=>'user', 'url'=>array('funcionario/index')),
+                   //array('label'=>'Something else here', 'url'=>'#'),
                     '---',
                     array('label'=>'Otros CRUD'),
-                    array('label'=>'Departamento', 'icon'=>'plus-sign', 'url'=>array('/departamento/index')),
+                    array('label'=>'Departamento', 'icon'=>'map-marker', 'url'=>array('/departamento/index')),
                     array('label'=>'Roles', 'icon'=>'plus-sign','url'=>array('/rolFuncionario/index')),
                     array('label'=>'Clasificacion de un articulo', 'icon'=>'plus-sign', 'url'=>array('/clasificacionArticulo/index')),
                     array('label'=>'Tipo de un articulo', 'icon'=>'plus-sign', 'url'=>array('/tipoArticulo/index')),
                     //array('label'=>'One more separated link', 'url'=>'#'),
                 )),
-				
+					
 							  array('label'=>'Entrar', 'url'=>array('/site/login'), 'icon'=>'lock', 'visible'=>Yii::app()->user->isGuest),
 							  array('label'=>'Salir ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'icon'=>'user', 'visible'=>!Yii::app()->user->isGuest)
 			),
@@ -95,7 +100,7 @@
 <div id="footer">
 	<hr class="soften">
 		<p style="font-weight:bold;">Sistema de Planificaci&oacute;n de Adquisiciones Tecnol&oacute;gicas</p>
-		<p>&copy; SIPLA <?php echo date('Y'); ?>. - <?php echo Yii::powered(); ?>. - <?php echo Yii::powered(); ?></p>
+		<p> CUC <?php echo date('Y'); ?>. - <?php echo Yii::powered(); ?>
 	</div><!-- footer -->
 
 	<script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/bootstrap.js"></script>
