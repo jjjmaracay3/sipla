@@ -140,6 +140,15 @@ function cargaContenido(action,idSelectOrigen,idSelectDestino)
 	'enableAjaxValidation'=>false,
 )); ?>
 
+<?php $this->widget('bootstrap.widgets.TbButtonGroup', array(
+    'buttons'=>array(
+        array('label'=>'1', 'url'=>'#'),
+        array('label'=>'2', 'url'=>'#'),
+        array('label'=>'3', 'url'=>'#'),
+        array('label'=>'4', 'url'=>'#'),
+    ),
+)); ?>
+
 	<p class="note"><?php echo Yii::t('app','Fields with');?> <span class="required">*</span> <?php echo Yii::t('app','are required');?></p>
 
 	<?php if($model->isNewRecord==false){$modelb=DetalleSolicitud::model()->findByPk($model->nu_solicitud);}

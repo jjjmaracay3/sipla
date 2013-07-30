@@ -2,6 +2,8 @@
 /* @var $this SolicitudController */
 /* @var $data Solicitud */
 ?>
+
+
 <div class="view">
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nu_solicitud')); ?>:

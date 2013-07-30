@@ -10585,3 +10585,300 @@ Stack trace:
 REQUEST_URI=/Sipla/articulos/admin.jsp
 HTTP_REFERER=http://localhost/Sipla/site/index.jsp
 ---
+2013/07/29 20:12:53 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  update o delete en «solicitud» viola la llave foránea «solicitud_nota_entrega_fk» en la tabla «nota_entrega»
+DETAIL:  La llave (nu_solicitud)=(10) todavía es referida desde la tabla «nota_entrega».. La sentencia SQL ejecutada fue: DELETE FROM "solicitud" WHERE "solicitud"."nu_solicitud"=10.
+in /var/www/Sipla/protected/controllers/SolicitudController.php (152)
+in /var/www/Sipla/index.php (13)
+2013/07/29 20:12:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  update o delete en «solicitud» viola la llave foránea «solicitud_nota_entrega_fk» en la tabla «nota_entrega»
+DETAIL:  La llave (nu_solicitud)=(10) todavía es referida desde la tabla «nota_entrega».. The SQL statement executed was: DELETE FROM "solicitud" WHERE "solicitud"."nu_solicitud"=10' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1745): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1168): CActiveRecord->deleteByPk(10)
+#2 /var/www/Sipla/protected/controllers/SolicitudController.php(152): CActiveRecord->delete()
+#3 [internal function]: SolicitudController->actionDelete('10')
+#4 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(SolicitudController), Array)
+#5 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(SolicitudController), Object(ReflectionMethod), Array)
+#6 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /var/www/yii/framework/web/CController.php(1116): CFilterChain->run()
+#9 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#10 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#16 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('delete')
+#18 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('solicitud/delet...')
+#19 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#20 /var/www/Sipla/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/Sipla/solicitud/delete/10.jsp?ajax=solicitud-grid
+HTTP_REFERER=http://localhost/Sipla/solicitud/admin.jsp
+---
+2013/07/30 01:30:17 [error] [exception.CException] exception 'CException' with message 'Propiedad "TbButton"."0" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/yii/framework/web/CWidgetFactory.php(161): CComponent->__set('0', Array)
+#1 /var/www/yii/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'bootstrap.widge...', Array)
+#2 /var/www/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 /var/www/Sipla/protected/views/site/index.php(58): CBaseController->widget('bootstrap.widge...', Array)
+#4 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#5 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', NULL, true)
+#6 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sipla/...', NULL, true)
+#7 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#8 /var/www/Sipla/protected/controllers/SiteController.php(32): CController->render('index')
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#10 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#14 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
+#15 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/Sipla/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/Sipla/site/index.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/index.jsp
+---
+2013/07/30 01:31:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "localhost" solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('localhost')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('localhost')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/localhost/...')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Sipla/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Sipla/site/localhost/sozi2.svg
+HTTP_REFERER=http://localhost/Sipla/site/index.jsp
+---
+2013/07/30 01:31:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "localhost" solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('localhost')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('localhost')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/localhost/...')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Sipla/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Sipla/site/localhost/sozi2.svg
+HTTP_REFERER=http://localhost/Sipla/site/index.jsp
+---
+2013/07/30 01:32:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "localhost" solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('localhost')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('localhost')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/localhost/...')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Sipla/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Sipla/site/localhost/sozi2.svg
+HTTP_REFERER=http://localhost/Sipla/site/index.jsp
+---
+2013/07/30 08:47:33 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para el tipo numeric: «vcxvxcvcxv». La sentencia SQL ejecutada fue: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_marca_articulo", "al_modelo_articulo", "al_descripcion_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php (72)
+in /var/www/Sipla/index.php (13)
+2013/07/30 08:47:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para el tipo numeric: «vcxvxcvcxv». The SQL statement executed was: INSERT INTO "articulo_tecnologico" ("nu_tipo_articulo", "al_nombre_articulo", "al_marca_articulo", "al_modelo_articulo", "al_descripcion_articulo", "de_precio_unitario", "al_color_articulo", "al_unidad_medida") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php(72): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ArticuloTecnologicoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/create.jsp
+---
+2013/07/30 08:49:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "pdf" solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('pdf')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('pdf')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Sipla/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/pdf.jsp
+---
+2013/07/30 08:54:38 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «username»
+DETAIL:  Ya existe la llave (username)=(gfdgfd).. La sentencia SQL ejecutada fue: INSERT INTO "funcionario" ("nu_numero_departamento", "nu_rol", "al_nombre_funcionario", "al_apellido_funcionario", "nu_cedula_funcionario", "al_cargo_funcionario", "al_correo_funcionario", "username", "password") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8).
+in /var/www/Sipla/protected/controllers/FuncionarioController.php (72)
+in /var/www/Sipla/index.php (13)
+2013/07/30 08:54:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «username»
+DETAIL:  Ya existe la llave (username)=(gfdgfd).. The SQL statement executed was: INSERT INTO "funcionario" ("nu_numero_departamento", "nu_rol", "al_nombre_funcionario", "al_apellido_funcionario", "nu_cedula_funcionario", "al_cargo_funcionario", "al_correo_funcionario", "username", "password") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/FuncionarioController.php(72): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): FuncionarioController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('funcionario/cre...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/funcionario/create.jsp
+HTTP_REFERER=http://localhost/Sipla/funcionario/create.jsp
+---
+2013/07/30 08:54:58 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «username»
+DETAIL:  Ya existe la llave (username)=(gfdgfd).. La sentencia SQL ejecutada fue: INSERT INTO "funcionario" ("nu_numero_departamento", "nu_rol", "al_nombre_funcionario", "al_apellido_funcionario", "nu_cedula_funcionario", "al_cargo_funcionario", "al_correo_funcionario", "username", "password") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8).
+in /var/www/Sipla/protected/controllers/FuncionarioController.php (72)
+in /var/www/Sipla/index.php (13)
+2013/07/30 08:54:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «username»
+DETAIL:  Ya existe la llave (username)=(gfdgfd).. The SQL statement executed was: INSERT INTO "funcionario" ("nu_numero_departamento", "nu_rol", "al_nombre_funcionario", "al_apellido_funcionario", "nu_cedula_funcionario", "al_cargo_funcionario", "al_correo_funcionario", "username", "password") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/FuncionarioController.php(72): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): FuncionarioController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('funcionario/cre...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/funcionario/create.jsp
+HTTP_REFERER=http://localhost/Sipla/funcionario/create.jsp
+---
+2013/07/30 08:55:16 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «username»
+DETAIL:  Ya existe la llave (username)=(gfdgfd).. La sentencia SQL ejecutada fue: INSERT INTO "funcionario" ("nu_numero_departamento", "nu_rol", "al_nombre_funcionario", "al_apellido_funcionario", "nu_cedula_funcionario", "al_cargo_funcionario", "al_correo_funcionario", "username", "password") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8).
+in /var/www/Sipla/protected/controllers/FuncionarioController.php (72)
+in /var/www/Sipla/index.php (13)
+2013/07/30 08:55:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «username»
+DETAIL:  Ya existe la llave (username)=(gfdgfd).. The SQL statement executed was: INSERT INTO "funcionario" ("nu_numero_departamento", "nu_rol", "al_nombre_funcionario", "al_apellido_funcionario", "nu_cedula_funcionario", "al_cargo_funcionario", "al_correo_funcionario", "username", "password") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/FuncionarioController.php(72): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): FuncionarioController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('funcionario/cre...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/funcionario/create.jsp
+HTTP_REFERER=http://localhost/Sipla/funcionario/create.jsp
+---
+2013/07/30 08:56:59 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «username»
+DETAIL:  Ya existe la llave (username)=(gfdgfd).. La sentencia SQL ejecutada fue: INSERT INTO "funcionario" ("nu_numero_departamento", "nu_rol", "al_nombre_funcionario", "al_apellido_funcionario", "nu_cedula_funcionario", "al_cargo_funcionario", "al_correo_funcionario", "username", "password") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8).
+in /var/www/Sipla/protected/controllers/FuncionarioController.php (72)
+in /var/www/Sipla/index.php (13)
+2013/07/30 08:56:59 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «username»
+DETAIL:  Ya existe la llave (username)=(gfdgfd).. The SQL statement executed was: INSERT INTO "funcionario" ("nu_numero_departamento", "nu_rol", "al_nombre_funcionario", "al_apellido_funcionario", "nu_cedula_funcionario", "al_cargo_funcionario", "al_correo_funcionario", "username", "password") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/FuncionarioController.php(72): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): FuncionarioController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('funcionario/cre...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/funcionario/create.jsp
+HTTP_REFERER=http://localhost/Sipla/funcionario/create.jsp
+---
+2013/07/30 08:59:20 [error] [exception.CException] exception 'CException' with message 'Propiedad "Funcionario"."al_username" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('al_username')
+#1 /var/www/yii/framework/web/helpers/CHtml.php(2255): CActiveRecord->__get('al_username')
+#2 /var/www/yii/framework/web/helpers/CHtml.php(1980): CHtml::resolveValue(Object(Funcionario), 'al_username')
+#3 /var/www/yii/framework/web/helpers/CHtml.php(1257): CHtml::activeInputField('text', Object(Funcionario), 'al_username', Array)
+#4 /var/www/yii/framework/zii/widgets/grid/CDataColumn.php(97): CHtml::activeTextField(Object(Funcionario), 'al_username', Array)
+#5 /var/www/Sipla/protected/extensions/bootstrap/widgets/TbDataColumn.php(53): CDataColumn->renderFilterCellContent()
+#6 /var/www/yii/framework/zii/widgets/grid/CGridView.php(505): TbDataColumn->renderFilterCell()
+#7 /var/www/yii/framework/zii/widgets/grid/CGridView.php(483): CGridView->renderFilter()
+#8 /var/www/yii/framework/zii/widgets/grid/CGridView.php(453): CGridView->renderTableHeader()
+#9 /var/www/yii/framework/zii/widgets/CBaseListView.php(160): CGridView->renderItems()
+#10 [internal function]: CBaseListView->renderSection(Array)
+#11 /var/www/yii/framework/zii/widgets/CBaseListView.php(143): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#12 /var/www/yii/framework/zii/widgets/CBaseListView.php(128): CBaseListView->renderContent()
+#13 /var/www/yii/framework/web/CBaseController.php(173): CBaseListView->run()
+#14 /var/www/Sipla/protected/views/funcionario/admin.php(62): CBaseController->widget('bootstrap.widge...', Array)
+#15 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#16 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#17 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#18 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#19 /var/www/Sipla/protected/controllers/FuncionarioController.php(148): CController->render('admin', Array)
+#20 /var/www/yii/framework/web/actions/CInlineAction.php(49): FuncionarioController->actionAdmin()
+#21 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#22 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#23 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#24 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#25 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#26 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#27 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#28 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#30 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('funcionario/adm...')
+#31 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#32 /var/www/Sipla/index.php(13): CApplication->run()
+#33 {main}
+REQUEST_URI=/Sipla/funcionario/admin.jsp
+HTTP_REFERER=http://localhost/Sipla/funcionario/index.jsp
+---
+2013/07/30 09:01:30 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «nu_rol»
+DETAIL:  Ya existe la llave (nu_rol)=(1).. La sentencia SQL ejecutada fue: INSERT INTO "rol_funcionario" ("al_nombre_rol", "al_descipcion_rol") VALUES (:yp0, :yp1).
+in /var/www/Sipla/protected/controllers/RolFuncionarioController.php (72)
+in /var/www/Sipla/index.php (13)
+2013/07/30 09:01:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «nu_rol»
+DETAIL:  Ya existe la llave (nu_rol)=(1).. The SQL statement executed was: INSERT INTO "rol_funcionario" ("al_nombre_rol", "al_descipcion_rol") VALUES (:yp0, :yp1)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/RolFuncionarioController.php(72): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): RolFuncionarioController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('rolFuncionario/...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/rolFuncionario/create.jsp
+HTTP_REFERER=http://localhost/Sipla/rolFuncionario/create.jsp
+---

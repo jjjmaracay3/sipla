@@ -43,9 +43,9 @@ o <b>=</b>) al principio de cada uno de los valores de b&uacutesqueda para espec
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'nu_numero_departamento',
-		'nu_rol',
-		'al_nombre_funcionario',
+		'nuNumeroDepartamento.al_nombre_departamento',
+		'nuRol.al_nombre_rol',
+		'username',
 		/*'al_apellido_funcionario',
 		'nu_cedula_funcionario',
 		'nu_funcionario',
