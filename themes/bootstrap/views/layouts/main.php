@@ -28,14 +28,18 @@
 	<div id="mainmenu">
 
 		<?php $this->widget('bootstrap.widgets.TbNavbar', array(
-                 'type'=>'default', // null or 'inverse'
+
+                'type'=>'inverse', // null or 'inverse'
                 'brand'=>'Sipla',
                 'brandUrl'=>'#',
                 'collapse'=>true,
                 'items'=>array(
                                 array(
-                                        'class'=>'bootstrap.widgets.TbMenu',        
-			'items'=>array(
+                                        'class'=>'bootstrap.widgets.TbMenu',
+                                        'type'=>'tabs',
+                                        'stacked'=>false,
+          
+				'items'=>array(
 				array('label'=>'Inicio', 'icon'=>'home', 'url'=>array('/site/index')),
 				array('label'=>'Solicitudes', 'icon'=>'inbox', 'url'=>array('/solicitud/index')),
 				array('label'=>'Planificar', 'icon'=>'calendar', 'url'=>'#', 'items'=>array(
