@@ -10882,3 +10882,233 @@ Stack trace:
 REQUEST_URI=/Sipla/rolFuncionario/create.jsp
 HTTP_REFERER=http://localhost/Sipla/rolFuncionario/create.jsp
 ---
+2013/07/30 10:36:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "index.jsp" solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('index.jsp')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index.jsp')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Sipla/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/index.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/admin.jsp
+---
+2013/07/30 10:37:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "login.py" solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('login.py')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('login.py')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login.py')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Sipla/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Sipla/site/login.py
+HTTP_REFERER=http://localhost/Sipla/
+---
+2013/07/30 10:37:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "login.py" solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('login.py')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('login.py')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login.py')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Sipla/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Sipla/site/login.py
+HTTP_REFERER=http://localhost/Sipla/
+---
+2013/07/30 10:37:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "login.py" solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('login.py')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('login.py')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login.py')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Sipla/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Sipla/site/login.py
+HTTP_REFERER=http://localhost/Sipla/
+---
+2013/07/30 10:37:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "login.py" solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('login.py')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('login.py')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login.py')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Sipla/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Sipla/site/login.py
+HTTP_REFERER=http://localhost/Sipla/
+---
+2013/07/30 10:37:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "login.py" solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('login.py')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('login.py')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login.py')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Sipla/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Sipla/site/login.py
+HTTP_REFERER=http://localhost/Sipla/
+---
+2013/07/30 10:42:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "index.jsp" solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('index.jsp')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index.jsp')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index.jsp')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Sipla/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Sipla/site/index.jsp
+HTTP_REFERER=http://172.17.0.238/Sipla/site/index.jsp
+---
+2013/07/30 11:07:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "index.jsp" solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('index.jsp')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index.jsp')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index.jsp')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Sipla/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Sipla/site/index.jsp
+HTTP_REFERER=http://localhost/Sipla/funcionario/index
+---
+2013/07/30 11:07:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "index.jsp" solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('index.jsp')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index.jsp')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index.jsp')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Sipla/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Sipla/site/index.jsp
+HTTP_REFERER=http://localhost/Sipla/site/index.jsp
+---
+2013/07/30 11:07:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "index.jsp" solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('index.jsp')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index.jsp')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index.jsp')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Sipla/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Sipla/site/index.jsp
+HTTP_REFERER=http://localhost/Sipla/site/index
+---
+2013/07/30 13:35:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "index." solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('index.')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index.')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index.')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Sipla/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Sipla/site/index.jsp
+HTTP_REFERER=http://localhost/Sipla/site/index
+---
+2013/07/30 13:35:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "index." solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('index.')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index.')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index.')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Sipla/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Sipla/site/index.jsp
+HTTP_REFERER=http://localhost/Sipla/site/index.jsp
+---
+2013/07/30 13:35:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "index." solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('index.')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index.')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index.')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Sipla/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Sipla/site/index.jsp
+HTTP_REFERER=http://localhost/Sipla/site/index.jsp
+---
+2013/07/30 13:35:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "index." solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('index.')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index.')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index.')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Sipla/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Sipla/site/index.jsp
+HTTP_REFERER=http://localhost/Sipla/site/index.jsp
+---
+2013/07/30 13:35:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "index." solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('index.')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index.')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index.')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Sipla/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Sipla/site/index.jsp
+HTTP_REFERER=http://localhost/Sipla/site/index.jsp
+---
+2013/07/30 13:35:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "index." solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('index.')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index.')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index.')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Sipla/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Sipla/site/index.jsp
+HTTP_REFERER=http://localhost/Sipla/site/index.jsp
+---
+2013/07/30 13:35:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "index." solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('index.')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index.')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index.')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Sipla/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Sipla/site/index.jsp
+HTTP_REFERER=http://localhost/Sipla/site/index.jsp
+---
+2013/07/30 13:35:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "index." solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('index.')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index.')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index.')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Sipla/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Sipla/site/index.jsp
+HTTP_REFERER=http://localhost/Sipla/site/index.jsp
+---
+2013/07/30 13:35:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "index." solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('index.')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index.')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index.')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Sipla/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Sipla/site/index.jsp
+---
+2013/07/30 13:35:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "index." solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('index.')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index.')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index.')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Sipla/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Sipla/site/index.jsp
+HTTP_REFERER=http://localhost/Sipla/site/indexjsp
+---
+2013/07/30 13:35:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "index." solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('index.')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index.')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index.')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Sipla/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Sipla/site/index.jsp
+HTTP_REFERER=http://localhost/Sipla/site/
+---
