@@ -29,14 +29,14 @@
 
 		<?php $this->widget('bootstrap.widgets.TbNavbar', array(
 
-                'type'=>'inverse', // null or 'inverse'
+                'type'=>'default', // null or 'inverse'
                 'brand'=>'Sipla',
                 'brandUrl'=>'#',
                 'collapse'=>true,
                 'items'=>array(
                                 array(
                                         'class'=>'bootstrap.widgets.TbMenu',
-                                        'type'=>'tabs',
+                                        'type'=>'pills',
                                         'stacked'=>false,
           
 				'items'=>array(

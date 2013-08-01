@@ -33,3 +33,121 @@ Stack trace:
 REQUEST_URI=/Sipla/solicitud/index.jsp
 HTTP_REFERER=http://localhost/Sipla/site/index.jsp
 ---
+2013/08/01 14:52:19 [error] [exception.CException] exception 'CException' with message 'Propiedad "TbTabs"."brand" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/yii/framework/web/CWidgetFactory.php(161): CComponent->__set('brand', 'Sipla')
+#1 /var/www/yii/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'bootstrap.widge...', Array)
+#2 /var/www/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 /var/www/Sipla/themes/bootstrap/views/layouts/main.php(77): CBaseController->widget('bootstrap.widge...', Array)
+#4 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#5 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#6 /var/www/yii/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#7 /var/www/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#8 /var/www/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#9 /var/www/yii/framework/web/CBaseController.php(206): COutputProcessor->run()
+#10 /var/www/yii/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 /var/www/Sipla/themes/bootstrap/views/layouts/column1.php(6): CBaseController->endContent()
+#12 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#13 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#14 /var/www/yii/framework/web/CController.php(784): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#15 /var/www/Sipla/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#16 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#17 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#18 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#19 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#21 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#22 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/Sipla/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/Sipla/site/login.jsp
+HTTP_REFERER=http://localhost/Sipla/site/index.jsp
+---
+2013/08/01 14:52:41 [error] [exception.CException] exception 'CException' with message 'Propiedad "TbTabs"."brandUrl" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/yii/framework/web/CWidgetFactory.php(161): CComponent->__set('brandUrl', '#')
+#1 /var/www/yii/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'bootstrap.widge...', Array)
+#2 /var/www/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 /var/www/Sipla/themes/bootstrap/views/layouts/main.php(77): CBaseController->widget('bootstrap.widge...', Array)
+#4 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#5 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#6 /var/www/yii/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#7 /var/www/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#8 /var/www/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#9 /var/www/yii/framework/web/CBaseController.php(206): COutputProcessor->run()
+#10 /var/www/yii/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 /var/www/Sipla/themes/bootstrap/views/layouts/column1.php(6): CBaseController->endContent()
+#12 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#13 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#14 /var/www/yii/framework/web/CController.php(784): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#15 /var/www/Sipla/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#16 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#17 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#18 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#19 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#21 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#22 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/Sipla/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/Sipla/site/login.jsp
+HTTP_REFERER=http://localhost/Sipla/site/index.jsp
+---
+2013/08/01 14:52:52 [error] [exception.CException] exception 'CException' with message 'Propiedad "TbTabs"."collapse" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/yii/framework/web/CWidgetFactory.php(161): CComponent->__set('collapse', true)
+#1 /var/www/yii/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'bootstrap.widge...', Array)
+#2 /var/www/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 /var/www/Sipla/themes/bootstrap/views/layouts/main.php(77): CBaseController->widget('bootstrap.widge...', Array)
+#4 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#5 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#6 /var/www/yii/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#7 /var/www/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#8 /var/www/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#9 /var/www/yii/framework/web/CBaseController.php(206): COutputProcessor->run()
+#10 /var/www/yii/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 /var/www/Sipla/themes/bootstrap/views/layouts/column1.php(6): CBaseController->endContent()
+#12 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sipla/...')
+#13 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sipla/...', Array, true)
+#14 /var/www/yii/framework/web/CController.php(784): CBaseController->renderFile('/var/www/Sipla/...', Array, true)
+#15 /var/www/Sipla/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#16 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#17 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#18 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#19 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#21 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#22 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/Sipla/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/Sipla/site/login.jsp
+HTTP_REFERER=http://localhost/Sipla/site/index.jsp
+---
+2013/08/01 14:53:18 [error] [php] Illegal string offset 'itemOptions' (/var/www/Sipla/protected/extensions/bootstrap/widgets/TbTabs.php:135)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(173): TbTabs->run()
+#1 /var/www/Sipla/themes/bootstrap/views/layouts/main.php(77): SiteController->widget()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require()
+#3 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#4 /var/www/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#5 /var/www/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#6 /var/www/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#7 /var/www/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#8 /var/www/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#9 /var/www/Sipla/themes/bootstrap/views/layouts/column1.php(6): SiteController->endContent()
+#10 /var/www/yii/framework/web/CBaseController.php(126): require()
+#11 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#12 /var/www/yii/framework/web/CController.php(784): SiteController->renderFile()
+#13 /var/www/Sipla/protected/controllers/SiteController.php(98): SiteController->render()
+#14 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#15 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#16 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#17 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#18 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#19 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#20 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#21 /var/www/Sipla/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sipla/site/login.jsp
+in /var/www/Sipla/protected/extensions/bootstrap/widgets/TbTabs.php (135)
+in /var/www/Sipla/protected/extensions/bootstrap/widgets/TbTabs.php (140)
+in /var/www/Sipla/protected/extensions/bootstrap/widgets/TbTabs.php (84)
