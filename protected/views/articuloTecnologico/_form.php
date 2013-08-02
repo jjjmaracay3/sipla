@@ -14,7 +14,6 @@
 
 	<?php echo $form->textFieldRow($model,'al_nombre_articulo',array('class'=>'span5')); ?>
 
-	<?php echo $form->textFieldRow($model,'al_marca_articulo',array('class'=>'span5')); ?>
 
 	<?php echo $form->dropDownListRow($model, 'al_marca_articulo', array('empty'=>'Seleccione Marca','Acer', 'Apple', 'Asus', 'Cisco', 'Compaq', 'Dell', 'HP', 'IBM y Lenovo', 'Lanpro', 'Samsung', 'Siragon', 'Sony', 'Toshiba', '3com','Gennius','Microsoft','Taurus','Kingston','Assus','SoneView','Intel','AMD',
         	'Biostar','MSI','Foxconn','Ashrock','ATI','Nvidia GeForce','Stylus','Lexmark','Canon','Xerox','Epson','Benq','MarkVision','Centon','Spectek','Sun','Kavac','Imation','Verbatim','Fujifilm','Quantum','Maxell','Adobe','Linksys','Tp-link','D-link',

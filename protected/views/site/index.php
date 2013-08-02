@@ -21,21 +21,20 @@ $this->pageTitle=Yii::app()->name;
  
 <div class="modal-header">
     <a class="close" data-dismiss="modal">&times;</a>
-    <h4>Especial reconocimiento a:</h4>
+    <h4 style="font-size: 14px; text-align: center;">Ministerio del Poder Popular de Educación Universitaria (MPPEU).
+Colegio Universitario de Caracas.</h4>
 </div>
  
-<div class="modal-body">
+<div class="modal-body" style="font-size: 14px; text-align: center;" >
+<p><h4>Programa Nacional de Formación en Informática</p></h4>
 
-Ministerio del Poder Popular de Educación Universitaria (MPPEU).
-Colegio Universitario de Caracas.
-Programa Nacional de Formación en Informática
-Docente Asesor:<p>Eliceo Aguirre</p>
-Representante de la comunidad:<p>Alejandro Amaro Escalona</p>
-Integrantes:
-    <p>Alfredo Aguilar</p>
-    <p>Jhonny Maracay</p>
-    <p>Marbely Bauza</p>
-        <p>Saúl Martínezr</p>
+<b>Docente Asesor:</b><p>Eliceo Aguirre</p>
+<b>Representante de la comunidad:</b><p>Alejandro Amaro Escalona</p>
+<b>Autores:</b>
+    <p>Alfredo Aguilar - 
+    Jhonny Maracay - 
+    Marbely Bauza - 
+        Saúl Martínez</p>
 </div>
  
 <div class="modal-footer">
@@ -61,7 +60,7 @@ Integrantes:
 <?php echo '   '; $this->widget('bootstrap.widgets.TbButton', array(
     'size'=>'normal',
      'block'=>true,
-    'label'=>'Presentación del sistema','url'=>'../../sozi2.svg',
+    'label'=>'Presentación del sistema','url'=>'../../Sipla.svg',
     'type'=>'info', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
     //'size'=>'normal',
 )); ?>

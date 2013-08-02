@@ -1338,3 +1338,245 @@ Stack trace:
 REQUEST_URI=/Sipla/articuloTecnologico/create.jsp
 HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/index.jsp
 ---
+2013/08/02 02:29:29 [error] [php] Use of undefined constant php - assumed 'php' (/var/www/Sipla/protected/views/funcionario/_view.php:48)
+Stack trace:
+#0 /var/www/yii/framework/zii/widgets/CListView.php(281): FuncionarioController->renderFile()
+#1 /var/www/yii/framework/zii/widgets/CBaseListView.php(160): TbListView->renderItems()
+#2 unknown(0): TbListView->renderSection()
+#3 /var/www/yii/framework/zii/widgets/CBaseListView.php(143): preg_replace_callback()
+#4 /var/www/yii/framework/zii/widgets/CBaseListView.php(128): TbListView->renderContent()
+#5 /var/www/yii/framework/web/CBaseController.php(173): TbListView->run()
+#6 /var/www/Sipla/protected/views/funcionario/index.php(17): FuncionarioController->widget()
+#7 /var/www/yii/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii/framework/web/CBaseController.php(95): FuncionarioController->renderInternal()
+#9 /var/www/yii/framework/web/CController.php(869): FuncionarioController->renderFile()
+#10 /var/www/yii/framework/web/CController.php(782): FuncionarioController->renderPartial()
+#11 /var/www/Sipla/protected/controllers/FuncionarioController.php(133): FuncionarioController->render()
+#12 /var/www/yii/framework/web/actions/CInlineAction.php(49): FuncionarioController->actionIndex()
+#13 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /var/www/yii/framework/web/filters/CFilterChain.php(133): FuncionarioController->runAction()
+#15 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /var/www/yii/framework/web/filters/CInlineFilter.php(58): FuncionarioController->filterAccessControl()
+#18 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#20 /var/www/yii/framework/web/CController.php(265): FuncionarioController->runActionWithFilters()
+#21 /var/www/yii/framework/web/CWebApplication.php(282): FuncionarioController->run()
+#22 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#24 /var/www/Sipla/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sipla/funcionario/index.jsp
+in /var/www/Sipla/protected/views/funcionario/_view.php (48)
+in /var/www/Sipla/protected/views/funcionario/index.php (17)
+in /var/www/Sipla/protected/controllers/FuncionarioController.php (133)
+2013/08/02 02:29:59 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Invalid request. Please do not repeat this request again.' in /var/www/Sipla/protected/controllers/FuncionarioController.php:122
+Stack trace:
+#0 [internal function]: FuncionarioController->actionDelete('13')
+#1 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(FuncionarioController), Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(FuncionarioController), Object(ReflectionMethod), Array)
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('delete')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('funcionario/del...')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/Sipla/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/Sipla/funcionario/delete/13.jsp
+HTTP_REFERER=http://localhost/Sipla/funcionario/admin.jsp
+---
+2013/08/02 02:32:28 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Invalid request. Please do not repeat this request again.' in /var/www/Sipla/protected/controllers/FuncionarioController.php:122
+Stack trace:
+#0 [internal function]: FuncionarioController->actionDelete('13')
+#1 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(FuncionarioController), Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(FuncionarioController), Object(ReflectionMethod), Array)
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('delete')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('funcionario/del...')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/Sipla/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/Sipla/funcionario/delete/13.jsp
+HTTP_REFERER=http://localhost/Sipla/funcionario/admin.jsp
+---
+2013/08/02 02:33:21 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Invalid request. Please do not repeat this request again.' in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php:122
+Stack trace:
+#0 [internal function]: ArticuloTecnologicoController->actionDelete('16')
+#1 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ArticuloTecnologicoController), Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ArticuloTecnologicoController), Object(ReflectionMethod), Array)
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('delete')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/Sipla/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/delete/16.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/admin.jsp?ArticuloTecnologico_page=2
+---
+2013/08/02 02:33:51 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in /var/www/yii/framework/web/CController.php:1118
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('delete')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('solicitud/delet...')
+#10 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /var/www/Sipla/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/Sipla/solicitud/delete/18.jsp
+HTTP_REFERER=http://localhost/Sipla/solicitud/admin.jsp
+---
+2013/08/02 02:34:09 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Invalid request. Please do not repeat this request again.' in /var/www/Sipla/protected/controllers/RequisicionCompraController.php:122
+Stack trace:
+#0 [internal function]: RequisicionCompraController->actionDelete('2')
+#1 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(RequisicionCompraController), Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(RequisicionCompraController), Object(ReflectionMethod), Array)
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('delete')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('requisicionComp...')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/Sipla/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/Sipla/requisicionCompra/delete/2.jsp
+HTTP_REFERER=http://localhost/Sipla/requisicionCompra/admin.jsp
+---
+2013/08/02 02:34:20 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Invalid request. Please do not repeat this request again.' in /var/www/Sipla/protected/controllers/PlanCompraController.php:122
+Stack trace:
+#0 [internal function]: PlanCompraController->actionDelete('4')
+#1 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(PlanCompraController), Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PlanCompraController), Object(ReflectionMethod), Array)
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('delete')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('planCompra/dele...')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/Sipla/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/Sipla/planCompra/delete/4.jsp
+HTTP_REFERER=http://localhost/Sipla/planCompra/admin.jsp
+---
+2013/08/02 12:20:43 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Invalid request. Please do not repeat this request again.' in /var/www/Sipla/protected/controllers/ArticuloTecnologicoController.php:122
+Stack trace:
+#0 [internal function]: ArticuloTecnologicoController->actionDelete('16')
+#1 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ArticuloTecnologicoController), Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ArticuloTecnologicoController), Object(ReflectionMethod), Array)
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('delete')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('articuloTecnolo...')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/Sipla/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/Sipla/articuloTecnologico/delete/16.jsp
+HTTP_REFERER=http://localhost/Sipla/articuloTecnologico/admin.jsp?ArticuloTecnologico_page=2
+---
+2013/08/02 12:24:45 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[22003]: Numeric value out of range: 7 ERROR:  el valor «42343432432» está fuera de rango para el tipo integer. La sentencia SQL ejecutada fue: INSERT INTO "departamento" ("al_nombre_departamento", "nu_tlf_departamento") VALUES (:yp0, :yp1).
+in /var/www/Sipla/protected/controllers/DepartamentoController.php (72)
+in /var/www/Sipla/index.php (13)
+2013/08/02 12:24:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[22003]: Numeric value out of range: 7 ERROR:  el valor «42343432432» está fuera de rango para el tipo integer. The SQL statement executed was: INSERT INTO "departamento" ("al_nombre_departamento", "nu_tlf_departamento") VALUES (:yp0, :yp1)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sipla/protected/controllers/DepartamentoController.php(72): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): DepartamentoController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('departamento/cr...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sipla/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sipla/departamento/create.jsp
+HTTP_REFERER=http://localhost/Sipla/departamento/create.jsp
+---
+2013/08/02 12:27:33 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Invalid request. Please do not repeat this request again.' in /var/www/Sipla/protected/controllers/FuncionarioController.php:122
+Stack trace:
+#0 [internal function]: FuncionarioController->actionDelete('13')
+#1 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(FuncionarioController), Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(FuncionarioController), Object(ReflectionMethod), Array)
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('delete')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('funcionario/del...')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/Sipla/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/Sipla/funcionario/delete/13.jsp
+HTTP_REFERER=http://localhost/Sipla/funcionario/admin.jsp
+---
+2013/08/02 12:27:37 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Invalid request. Please do not repeat this request again.' in /var/www/Sipla/protected/controllers/FuncionarioController.php:122
+Stack trace:
+#0 [internal function]: FuncionarioController->actionDelete('13')
+#1 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(FuncionarioController), Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(FuncionarioController), Object(ReflectionMethod), Array)
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('delete')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('funcionario/del...')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/Sipla/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/Sipla/funcionario/delete/13.jsp
+HTTP_REFERER=http://localhost/Sipla/funcionario/admin.jsp
+---

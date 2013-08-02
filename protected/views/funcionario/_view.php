@@ -15,7 +15,7 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('al_nombre_funcionario')); ?>:</b>
 	<?php echo CHtml::encode($data->al_nombre_funcionario); ?>
 	<br />
-
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('al_apellido_funcionario')); ?>:</b>
 	<?php echo CHtml::encode($data->al_apellido_funcionario); ?>
 	<br />
