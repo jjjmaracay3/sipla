@@ -32,7 +32,7 @@ class SolicitudController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','SelectD1','SelectD2'),
+				'actions'=>array('create','update','SelectD1','SelectD2','atender'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -139,6 +139,13 @@ class SolicitudController extends Controller
 		}
 
 		$this->render('update',array('model'=>$model,'modelb'=>$modelb,
+		));
+	}
+
+	public function actionAtender($id)
+	{
+		$this->render('view',array(
+			'model'=>$this->loadModel($id),
 		));
 	}
 

@@ -25,10 +25,17 @@ $this->pageTitle=Yii::app()->name;
 </div>
  
 <div class="modal-body">
-    <b><p>Profesor Gerson Albano</p>
-    <p>Profesor Eliceo Aguirre</p>
-    <p>Profesor Alejandro Amaro</p>
-    <p>Profesor Gladys de León</p></b>
+
+Ministerio del Poder Popular de Educación Universitaria (MPPEU).
+Colegio Universitario de Caracas.
+Programa Nacional de Formación en Informática
+Docente Asesor:<p>Eliceo Aguirre</p>
+Representante de la comunidad:<p>Alejandro Amaro Escalona</p>
+Integrantes:
+    <p>Alfredo Aguilar</p>
+    <p>Jhonny Maracay</p>
+    <p>Marbely Bauza</p>
+        <p>Saúl Martínezr</p>
 </div>
  
 <div class="modal-footer">
@@ -43,6 +50,8 @@ $this->pageTitle=Yii::app()->name;
 <?php $this->endWidget(); ?>
 <?php $this->widget('bootstrap.widgets.TbButton', array(
     'label'=>'Consulta créditos aquí',
+     'size'=>'normal',
+     'block'=>true,
     'type'=>'primary',
     'htmlOptions'=>array(
         'data-toggle'=>'modal',
@@ -50,9 +59,11 @@ $this->pageTitle=Yii::app()->name;
     ),
 )); ?>
 <?php echo '   '; $this->widget('bootstrap.widgets.TbButton', array(
+    'size'=>'normal',
+     'block'=>true,
     'label'=>'Presentación del sistema','url'=>'../../sozi2.svg',
     'type'=>'info', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
-    'size'=>'normal',
+    //'size'=>'normal',
 )); ?>
 </div>
 

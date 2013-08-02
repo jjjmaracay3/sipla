@@ -1,31 +1,4 @@
-<?php
-/* @var $this SolicitudController */
-/* @var $model Solicitud */
 
-$this->breadcrumbs=array(
-	'Solicitudes'=>array('index'),
-	'Administrar',
-);
-
-$this->menu=array(
-	array('label'=>'Listar Solicitud', 'url'=>array('index')),
-	array('label'=>'Atender Solicitud', 'url'=>array('#')),
-	array('label'=>'Crear Solicitud', 'url'=>array('create')),
-);
-
-Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
-	$('.search-form').toggle();
-	return false;
-});
-$('.search-form form').submit(function(){
-	$.fn.yiiGridView.update('solicitud-grid', {
-		data: $(this).serialize()
-	});
-	return false;
-});
-");
-?>
 
 <h3>Administrar Solicitud</h3>
 
@@ -42,7 +15,7 @@ o <b>=</b>) al principio de cada uno de los valores de b&uacutesqueda para espec
 </div><!-- search-form -->
 
 <?php $this->widget('bootstrap.widgets.TbGridView', array(
-
+	
 	'type'=>'striped bordered condensed hover',
 	'id'=>'solicitud-grid',
 	'dataProvider'=>$model->search(),

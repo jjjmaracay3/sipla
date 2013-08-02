@@ -21,7 +21,7 @@
 
 	<?php echo $form->dropdownListRow($model,'al_cargo_funcionario',array('2'=>'Jefe de Area','1'=>'Analista','0'=>'Soporte')); ?>
 
-	<?php echo $form->textFieldRow($model,'al_correo_funcionario',array('class'=>'span5')); ?>
+	 <?php echo $form->textFieldRow($model, 'al_correo_funcionario', array('prepend'=>'@')); ?>
 
 	<?php echo $form->textFieldRow($model,'username',array('class'=>'span5')); ?>
 

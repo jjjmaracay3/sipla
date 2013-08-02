@@ -6,10 +6,11 @@ $this->breadcrumbs=array(
 	$model->nu_solicitud,
 );
 $this->menu=array(
-	array('label'=>'Listar Solicitud', 'url'=>array('index')),
+	//array('label'=>'Listar Solicitud', 'url'=>array('index')),
 	array('label'=>'Crear Solicitud', 'url'=>array('create')),
-	array('label'=>'Actualizar Solicitud', 'url'=>array('update', 'id'=>$model->nu_solicitud)),
-	array('label'=>'Eliminar Solicitud', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->nu_solicitud),'confirm'=>'Esta usted seguro de eliminar esta solicitud?')),
+	array('label'=>'Atender Solicitud', 'url'=>array('#')),
+	//array('label'=>'Actualizar Solicitud', 'url'=>array('update', 'id'=>$model->nu_solicitud)),
+	//array('label'=>'Eliminar Solicitud', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->nu_solicitud),'confirm'=>'Esta usted seguro de eliminar esta solicitud?')),
 	array('label'=>'Administrar Solicitud', 'url'=>array('admin')),
 );
 ?>

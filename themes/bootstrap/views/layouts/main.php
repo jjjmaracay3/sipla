@@ -28,53 +28,55 @@
 	<div id="mainmenu">
 
 		<?php $this->widget('bootstrap.widgets.TbNavbar', array(
+    'type'=>'default', // null or 'inverse'
+    'brand'=>'Sipla',
+    'brandUrl'=>'#',
+    'collapse'=>true, // requires bootstrap-responsive.css
+    'items'=>array(
+        array(
+            'class'=>'bootstrap.widgets.TbMenu',
+		'type'=>'pills',
 
-                'type'=>'default', // null or 'inverse'
-                'brand'=>'Sipla',
-                'brandUrl'=>'#',
-                'collapse'=>true,
-                'items'=>array(
-                                array(
-                                        'class'=>'bootstrap.widgets.TbMenu',
-                                        'type'=>'pills',
-                                        'stacked'=>false,
-          
-				'items'=>array(
-				array('label'=>'Inicio', 'icon'=>'home', 'url'=>array('/site/index')),
+            'items'=>array(
+               array('label'=>'Inicio', 'icon'=>'home', 'url'=>array('/site/index')),
 				array('label'=>'Solicitudes', 'icon'=>'inbox', 'url'=>array('/solicitud/index')),
-				array('label'=>'Planificar', 'icon'=>'calendar', 'url'=>'#', 'items'=>array(
-				array('label'=>'Plan de compra', 'icon'=>'time', 'url'=>array('/articuloTecnologico/admin')),
-				 '---',
-				array('label'=>'Requisicion de compra', 'icon'=>'shopping-cart', 'url'=>array('/articuloTecnologico/admin')),
-				)),
-				//array('label'=>'Nota entrega', 'url'=>array('/notaEntrega/index')),
-				//array('label'=>'Departamento', 'icon'=>'map-marker','url'=>array('/departamento/index')),
-				//array('label'=>'Funcionarios','url'=>array('funcionario/index')),
-				//array('label'=>'Roles', 'url'=>array('/rolFuncionario/index')),
-				//array('label'=>'Articulos','url'=>array('articuloTecnologico/index')),
-				//array('label'=>'Tipo', 'url'=>array('/tipoArticulo/index')),
-				//array('label'=>'Clasificar', 'url'=>array('/clasificacionArticulo/index')),
+                array('label'=>'Plan de compra', 'icon'=>'calendar', 'url'=>array('/planCompra/index')),
+                array('label'=>'Requisiciones', 'icon'=>'shopping-cart', 'url'=>array('requisicionCompra/index')),
+                //array('label'=>'Planificar Incorporación', 'icon'=>'calendar','url'=>'#', 'items'=>array(
+                  // array('label'=>'Plan de compra', 'icon'=>'time', 'url'=>array('/planCompra/index')),
+				 //'---',
+				//array('label'=>'Requisicion de compra', 'icon'=>'shopping-cart', 'url'=>array('requisicionCompra/index')),
+                //)),
 
-				 //array('label'=>'Home', 'url'=>'#', 'active'=>true),
-                //array('label'=>'Link', 'url'=>'#'),
-                array('label'=>'Administrar', 'icon'=>'folder-open', 'url'=>'#', 'items'=>array(
+                 array('label'=>'Gestionar', 'icon'=>'folder-open', 'url'=>'#', 'items'=>array(
                     array('label'=>'Catalogo de articulos','icon'=>'print','url'=>array('articuloTecnologico/index')),
-                    array('label'=>'Funcionarios', 'icon'=>'user', 'url'=>array('funcionario/index')),
+                    array('label'=>'Usuarios', 'icon'=>'user', 'url'=>array('funcionario/index')),
                    //array('label'=>'Something else here', 'url'=>'#'),
                     '---',
                     array('label'=>'Otros CRUD'),
-                    array('label'=>'Departamento', 'icon'=>'map-marker', 'url'=>array('/departamento/index')),
+                    array('label'=>'Departamentos', 'icon'=>'map-marker', 'url'=>array('/departamento/index')),
                     array('label'=>'Roles', 'icon'=>'plus-sign','url'=>array('/rolFuncionario/index')),
                     array('label'=>'Clasificacion de un articulo', 'icon'=>'plus-sign', 'url'=>array('/clasificacionArticulo/index')),
                     array('label'=>'Tipo de un articulo', 'icon'=>'plus-sign', 'url'=>array('/tipoArticulo/index')),
                     //array('label'=>'One more separated link', 'url'=>'#'),
                 )),
-					
-							  array('label'=>'Entrar', 'url'=>array('/site/login'), 'icon'=>'lock', 'visible'=>Yii::app()->user->isGuest),
+            ),
+        ),
+        //'<form class="navbar-search pull-left" action=""><input type="text" class="search-query span2" placeholder="Search"></form>',
+        array(
+            'class'=>'bootstrap.widgets.TbMenu',
+            'type'=>'pills',
+            'htmlOptions'=>array('class'=>'pull-right'),
+            'items'=>array(
+               
+                    array('label'=>'Entrar', 'url'=>array('/site/login'), 'icon'=>'lock', 'visible'=>Yii::app()->user->isGuest),
 							  array('label'=>'Salir ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'icon'=>'user', 'visible'=>!Yii::app()->user->isGuest)
-			),
-			)
-		))); ?>
+                
+            ),
+        ),
+    ),
+)); ?>
+
 	</div><!-- mainmenu -->
 	
 	<?php if(isset($this->breadcrumbs)):?>

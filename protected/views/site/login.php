@@ -5,7 +5,7 @@
 
 $this->pageTitle=Yii::app()->name . ' - Login';
 $this->breadcrumbs=array(
-	'Login',
+	'Sesion',
 );
 ?>
 
@@ -17,9 +17,9 @@ $this->breadcrumbs=array(
 
 <div class="form">
 <?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm', array(
-	'id'=>'inlineForm',
+	//'id'=>'inlineForm',
     'type'=>'inline',
-	//'id'=>'login-form',
+	'id'=>'login-form',
 	'enableClientValidation'=>true,
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,

@@ -43,19 +43,20 @@ o <b>=</b>) al principio de cada uno de los valores de b&uacutesqueda para espec
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'nu_articulo',
-		'nu_tipo_articulo',
+		//'nu_articulo',
+		'nuTipoArticulo.al_nombre_tipo',
 		'al_nombre_articulo',
-		/*'al_marca_articulo',
-		'al_modelo_articulo',
-		'al_descripcion_articulo',
+		'al_marca_articulo',
+		//'al_modelo_articulo',
+		//'al_descripcion_articulo',
 		
-		'de_precio_unitario',
-		'al_color_articulo',
-		'al_unidad_medida',
-		*/
+		//'de_precio_unitario',
+		//'al_color_articulo',
+		//'al_unidad_medida',
+		
 		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
+			'htmlOptions'=>array('style'=>'width: 50px'),
 		),
 	),
 )); ?>

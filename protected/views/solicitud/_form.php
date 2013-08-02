@@ -140,15 +140,6 @@ function cargaContenido(action,idSelectOrigen,idSelectDestino)
 	'enableAjaxValidation'=>false,
 )); ?>
 
-<?php $this->widget('bootstrap.widgets.TbButtonGroup', array(
-    'buttons'=>array(
-        array('label'=>'1', 'url'=>'#'),
-        array('label'=>'2', 'url'=>'#'),
-        array('label'=>'3', 'url'=>'#'),
-        array('label'=>'4', 'url'=>'#'),
-    ),
-)); ?>
-
 	<p class="note"><?php echo Yii::t('app','Fields with');?> <span class="required">*</span> <?php echo Yii::t('app','are required');?></p>
 
 	<?php if($model->isNewRecord==false){$modelb=DetalleSolicitud::model()->findByPk($model->nu_solicitud);}
@@ -158,11 +149,16 @@ function cargaContenido(action,idSelectOrigen,idSelectDestino)
     <h4>Detalle Solicitud</h4>
      <INPUT type="button" value="Agregar" onclick="addRow('dataTable');" />
      <INPUT type="button" value="Borrar" onclick="deleteRow('dataTable');" />
+    <p>
+        <p>
 
 	<table width="100%" id="dataTable">
             <tr>
                 <td width="15">&nbsp;</td>
                 <td width="150">
+                    <?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
+
+                        )); ?>
                         <?php echo $form->labelEx($modelb,'nu_clasificacion_articulo'); ?>				
                 </td>
                 <td width="150">
@@ -179,6 +175,8 @@ function cargaContenido(action,idSelectOrigen,idSelectDestino)
                 </td>	
             </tr>
 	</table>
+
+    <?php $this->endWidget(); ?>
 	<input id="cant" type="hidden" name="cant" value="" maxlength="5" size="5">
 
 	<div class="row buttons">
